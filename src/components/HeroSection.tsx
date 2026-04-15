@@ -1,11 +1,19 @@
 import { motion } from "framer-motion";
-import heroBed from "@/assets/hero-bed.jpg";
+import logoHR from "@/assets/logo-hr.png";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroBed} alt="Cama articulada HR Colchões com tecnologia Eko7" width={1920} height={1080} className="w-full h-full object-cover" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 hero-bg opacity-70" />
       </div>
 
@@ -16,6 +24,11 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-2xl mx-auto text-center"
         >
+          <img
+            src={logoHR}
+            alt="HR Colchões - Distribuidor Autorizado Eko'7"
+            className="w-40 md:w-52 mx-auto mb-6"
+          />
           <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-accent mb-4 bg-accent/10 rounded-full px-4 py-1.5">
             Tecnologia Eko'7 — Porto Alegre
           </span>
@@ -23,10 +36,10 @@ const HeroSection = () => {
             Tecnologia Integrativa: <br className="hidden sm:block" />
             <span className="text-accent">Transforme seus Dias</span> através do Sono
           </h1>
-          <p className="text-primary-foreground/70 text-lg max-w-lg mb-8">
+          <p className="text-primary-foreground/70 text-lg max-w-lg mx-auto mb-8">
             Colchões e camas articuladas com infravermelho longo e tecnologia magnética para um sono verdadeiramente reparador.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             <a
               href="#catalogo"
               className="inline-flex items-center px-6 py-3 rounded-lg bg-accent text-accent-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
