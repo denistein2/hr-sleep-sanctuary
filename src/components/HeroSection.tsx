@@ -14,7 +14,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-2xl"
+          className="max-w-2xl mx-auto text-center"
         >
           <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-accent mb-4 bg-accent/10 rounded-full px-4 py-1.5">
             Tecnologia Eko'7 — Porto Alegre
