@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import iso9001 from "@/assets/iso-9001.png";
+import iso14001 from "@/assets/iso-14001.png";
+import icvPremium from "@/assets/icv-premium.png";
 
 const Footer = () => {
   return (
@@ -34,7 +37,21 @@ const Footer = () => {
             </address>
           </div>
         </div>
-        <div className="border-t border-primary-foreground/10 mt-10 pt-6 text-center text-xs text-primary-foreground/40">
+
+        {/* Certificações Eko'7 */}
+        <div className="border-t border-primary-foreground/10 mt-10 pt-8">
+          <h4 className="font-display text-sm font-bold uppercase tracking-wider text-center mb-2">Certificações Eko'7</h4>
+          <p className="text-primary-foreground/50 text-xs text-center max-w-2xl mx-auto mb-6">
+            Certificados pela SBRTO e Instituto Coluna Vertebral (ICV), os produtos Eko'7 seguem rigorosos padrões de qualidade, assegurando ergonomia e conforto em nível de excelência.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+            <img src={iso9001} alt="ISO 9001 — Sistema de Gestão da Qualidade" className="h-16 md:h-20 object-contain" />
+            <img src={iso14001} alt="ISO 14001 — Sistema de Gestão Ambiental" className="h-16 md:h-20 object-contain" />
+            <img src={icvPremium} alt="Instituto Coluna Vertebral — Qualidade ICV Premium" className="h-16 md:h-20 object-contain" />
+          </div>
+        </div>
+
+        <div className="border-t border-primary-foreground/10 mt-8 pt-6 text-center text-xs text-primary-foreground/40">
           © {new Date().getFullYear()} HR Colchões — Todos os direitos reservados.
         </div>
       </div>
