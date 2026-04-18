@@ -5,58 +5,14 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-
-interface CategoryData {
-  title: string;
-  seoTitle: string;
-  seoDescription: string;
-  description: string;
-  benefits: string[];
-}
-
-const categoriesData: Record<string, CategoryData> = {
-  "colchoes-terapeuticos": {
-    title: "Colchões Terapêuticos",
-    seoTitle: "Colchões Terapêuticos Eko'7 — Sono Reparador | HR Colchões",
-    seoDescription: "Colchões terapêuticos com infravermelho longo e tecnologia magnética Eko'7 para sono reparador profundo. Alívio de dores e melhora na qualidade de vida em Porto Alegre.",
-    description: "Nossos colchões terapêuticos combinam infravermelho longo e tecnologia magnética para um sono verdadeiramente reparador, aliviando dores e promovendo o bem-estar.",
-    benefits: ["Infravermelho longo", "Tecnologia magnética", "Alívio de dores crônicas", "Melhora na circulação", "Sono profundo e reparador"],
-  },
-  "camas-articuladas": {
-    title: "Camas Articuladas & Box",
-    seoTitle: "Camas Articuladas Eko'7 — Conforto Premium | HR Colchões",
-    seoDescription: "Camas articuladas elétricas com tecnologia Eko'7. Regulagem personalizada para máximo conforto e saúde. Distribuidor em Porto Alegre.",
-    description: "Camas articuladas com regulagem elétrica e tecnologia integrativa Eko'7 para o máximo conforto e bem-estar no seu descanso diário.",
-    benefits: ["Regulagem elétrica", "Posições personalizáveis", "Motor silencioso", "Controle remoto", "Compatível com colchões Eko'7"],
-  },
-  "cabeceiras": {
-    title: "Cabeceiras",
-    seoTitle: "Cabeceiras Premium — Design Sofisticado | HR Colchões",
-    seoDescription: "Cabeceiras premium com design sofisticado para transformar seu quarto. Diversas opções de estilo em Porto Alegre.",
-    description: "Cabeceiras com design sofisticado que complementam perfeitamente seu quarto, oferecendo estilo e funcionalidade.",
-    benefits: ["Design exclusivo", "Materiais premium", "Fácil instalação", "Diversas cores", "Estofamento de alta qualidade"],
-  },
-  "poltronas-puffs": {
-    title: "Poltronas & Puffs",
-    seoTitle: "Poltronas e Puffs Premium — Conforto | HR Colchões",
-    seoDescription: "Poltronas e puffs com conforto premium para todos os ambientes. Descubra nossa linha em Porto Alegre.",
-    description: "Poltronas e puffs projetados para oferecer conforto premium em todos os ambientes da sua casa.",
-    benefits: ["Conforto ergonômico", "Design moderno", "Materiais duráveis", "Variedade de modelos", "Para todos os ambientes"],
-  },
-  "vestuario-acessorios": {
-    title: "Vestuário & Acessórios",
-    seoTitle: "Vestuário e Acessórios Eko'7 — Tecnologia no Dia a Dia | HR Colchões",
-    seoDescription: "Travesseiros, mantas e acessórios com tecnologia magnética e infravermelho longo Eko'7. Bem-estar 24 horas em Porto Alegre.",
-    description: "Travesseiros, mantas e vestuário com tecnologia Eko'7 para levar os benefícios do infravermelho longo e tecnologia magnética para o seu dia a dia.",
-    benefits: ["Travesseiros terapêuticos", "Mantas com infravermelho", "Vestuário funcional", "Tecnologia Eko'7", "Bem-estar contínuo"],
-  },
-};
+import { getCategoryBySlug, getProductsByCategory } from "@/data/products";
 
 const CategoryPage = () => {
   const { slug } = useParams();
-  const data = slug ? categoriesData[slug] : undefined;
+  const category = slug ? getCategoryBySlug(slug) : undefined;
+  const products = slug ? getProductsByCategory(slug) : [];
 
-  if (!data) {
+  if (!category) {
     return (
       <>
         <Header />
@@ -73,7 +29,7 @@ const CategoryPage = () => {
 
   return (
     <>
-      <SEOHead title={data.seoTitle} description={data.seoDescription} />
+      <SEOHead title={category.seoTitle} description={category.seoDescription} />
       <Header />
       <main className="pt-24 pb-20">
         <div className="container px-4">
@@ -86,30 +42,78 @@ const CategoryPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">{data.title}</h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mb-10">{data.description}</p>
+            <div className="mb-10">
+              <span className="text-4xl mb-3 block">{category.emoji}</span>
+              <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">{category.name}</h1>
+              <p className="text-muted-foreground text-lg max-w-2xl">{category.description}</p>
+            </div>
 
-            <div className="glass-card rounded-2xl p-8 max-w-2xl">
-              <h2 className="font-display text-xl font-bold text-foreground mb-4">Benefícios</h2>
-              <ul className="space-y-3">
-                {data.benefits.map((b) => (
-                  <li key={b} className="flex items-center gap-3 text-foreground/80">
-                    <span className="w-2 h-2 rounded-full bg-accent shrink-0" />
-                    {b}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-8">
-                <a
-                  href="https://wa.me/5551984910838"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 rounded-lg bg-accent text-accent-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {products.map((product, i) => (
+                <motion.div
+                  key={product.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: i * 0.1 }}
                 >
-                  Solicitar Orçamento via WhatsApp
-                </a>
-              </div>
+                  <Link
+                    to={`/produtos/${product.categorySlug}/${product.slug}`}
+                    className="group glass-card rounded-xl overflow-hidden flex flex-col h-full hover:border-accent/30 transition-all duration-300"
+                  >
+                    {product.images.length > 0 && (
+                      <div className="aspect-video bg-muted/20 overflow-hidden">
+                        <img
+                          src={product.images[0]}
+                          alt={product.name}
+                          className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                    )}
+                    <div className="p-5 flex flex-col flex-1">
+                      <h2 className="font-display text-lg font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+                        {product.name}
+                      </h2>
+                      <p className="text-sm text-muted-foreground mb-4 flex-1 line-clamp-2">
+                        {product.shortDescription}
+                      </p>
+
+                      {product.technologies.length > 0 && (
+                        <div className="mb-3">
+                          <div className="flex flex-wrap gap-1.5">
+                            {product.technologies.slice(0, 3).map((tech) => (
+                              <span key={tech} className="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20">
+                                {tech}
+                              </span>
+                            ))}
+                            {product.technologies.length > 3 && (
+                              <span className="text-xs px-2 py-0.5 rounded-full bg-muted text-muted-foreground border border-border">
+                                +{product.technologies.length - 3}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      )}
+
+                      <span className="inline-flex items-center gap-1 text-xs font-semibold text-accent group-hover:gap-2 transition-all mt-auto">
+                        Ver detalhes <ArrowLeft className="w-3.5 h-3.5 rotate-180" />
+                      </span>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="glass-card rounded-2xl p-8 max-w-xl">
+              <h2 className="font-display text-xl font-bold text-foreground mb-2">Ficou interessado?</h2>
+              <p className="text-sm text-muted-foreground mb-6">Entre em contato pelo WhatsApp para saber preços, disponibilidade e condições especiais.</p>
+              <a
+                href="https://wa.me/5551984910838"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 rounded-lg bg-accent text-accent-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
+              >
+                Solicitar Orçamento via WhatsApp
+              </a>
             </div>
           </motion.div>
         </div>

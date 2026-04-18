@@ -17,18 +17,14 @@ const HeroSection = () => {
         <div className="absolute inset-0 hero-bg opacity-70" />
       </div>
 
-      <div className="container relative z-10 px-4 py-20 md:py-32">
+      <div className="container relative z-10 px-4 py-16 md:py-24">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-2xl mx-auto text-center"
         >
-          <img
-            src={logoHR}
-            alt="HR Colchões - Distribuidor Autorizado Eko'7"
-            className="w-40 md:w-52 mx-auto mb-6"
-          />
+
           <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-accent mb-4 bg-accent/10 rounded-full px-4 py-1.5">
             Tecnologia Eko'7 — Porto Alegre
           </span>

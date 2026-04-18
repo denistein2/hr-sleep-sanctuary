@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import iso9001 from "@/assets/iso-9001.png";
-import iso14001 from "@/assets/iso-14001.png";
-import icvPremium from "@/assets/icv-premium.png";
+import iso9001 from "@/assets/img/Entenda-a-ISO-9001.png";
+import iso14001 from "@/assets/img/Gemini_Generated_Image_xxw1ltxxw1ltxxw1.png";
+import icvPremium from "@/assets/img/inst.png";
 
 const Footer = () => {
   return (
@@ -44,10 +44,16 @@ const Footer = () => {
           <p className="text-primary-foreground/50 text-xs text-center max-w-2xl mx-auto mb-6">
             Certificados pela SBRTO e Instituto Coluna Vertebral (ICV), os produtos Eko'7 seguem rigorosos padrões de qualidade, assegurando ergonomia e conforto em nível de excelência.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
-            <img src={iso9001} alt="ISO 9001 — Sistema de Gestão da Qualidade" className="h-16 md:h-20 object-contain" />
-            <img src={iso14001} alt="ISO 14001 — Sistema de Gestão Ambiental" className="h-16 md:h-20 object-contain" />
-            <img src={icvPremium} alt="Instituto Coluna Vertebral — Qualidade ICV Premium" className="h-16 md:h-20 object-contain" />
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+            <div className="bg-white rounded-lg p-2 shadow-sm flex items-center justify-center w-24 h-24 md:w-32 md:h-32">
+              <img src={iso9001} alt="ISO 9001 — Sistema de Gestão da Qualidade" className="max-h-full max-w-full object-contain mix-blend-multiply" />
+            </div>
+            <div className="bg-white rounded-lg p-2 shadow-sm flex items-center justify-center w-24 h-24 md:w-32 md:h-32">
+              <img src={iso14001} alt="ISO 14001 — Sistema de Gestão Ambiental" className="max-h-full max-w-full object-contain mix-blend-multiply" />
+            </div>
+            <div className="bg-white rounded-lg p-2 shadow-sm flex items-center justify-center w-24 h-24 md:w-32 md:h-32">
+              <img src={icvPremium} alt="Instituto Coluna Vertebral — Qualidade ICV Premium" className="max-h-full max-w-full object-contain mix-blend-multiply" />
+            </div>
           </div>
         </div>
 

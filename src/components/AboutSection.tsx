@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import consultantImg from "@/assets/consultant.jpg";
+import consultantImg from "@/assets/img/consultant.jpg";
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-20 md:py-28 bg-background">
+    <section id="sobre" className="py-12 md:py-16 bg-background">
       <div className="container px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="glass-card rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-4xl mx-auto"
+          className="glass-card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-10 max-w-4xl mx-auto"
         >
           <img
             src={consultantImg}

@@ -2,14 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const productCategories = [
-  { name: "Colchões Terapêuticos", slug: "/produtos/colchoes-terapeuticos" },
-  { name: "Camas Articuladas & Box", slug: "/produtos/camas-articuladas" },
-  { name: "Cabeceiras", slug: "/produtos/cabeceiras" },
-  { name: "Poltronas & Puffs", slug: "/produtos/poltronas-puffs" },
-  { name: "Vestuário & Acessórios", slug: "/produtos/vestuario-acessorios" },
-];
+import { categories } from "@/data/products";
+import logoImg from "@/assets/img/Logo Novo.png";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,11 +12,20 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-lg border-b border-border/50">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <Link to="/" className="flex items-center gap-3">
-          <span className="font-display text-xl font-bold text-primary tracking-tight">HR Colchões</span>
-          <span className="hidden sm:inline-block text-[10px] font-medium text-muted-foreground border border-border rounded-full px-2 py-0.5">
-            Distribuidor Eko'7
-          </span>
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="bg-white rounded-lg p-1.5 shadow-sm border border-border/50 transition-transform group-hover:scale-105">
+            <img 
+              src={logoImg} 
+              alt="HR Colchões" 
+              className="h-10 w-auto mix-blend-multiply" 
+            />
+          </div>
+          <div className="flex flex-col">
+            <span className="font-display text-sm font-bold text-primary tracking-tight leading-tight">HR Colchões</span>
+            <span className="text-[9px] font-medium text-muted-foreground uppercase tracking-widest">
+              Distribuidor Eko'7
+            </span>
+          </div>
         </Link>
 
         {/* Desktop nav */}
@@ -33,12 +36,14 @@ const Header = () => {
               Produtos <ChevronDown className="w-3.5 h-3.5" />
             </button>
             {dropdownOpen && (
-              <div className="absolute top-full left-0 mt-1 w-56 bg-card border border-border rounded-lg shadow-lg py-2 animate-fade-in">
-                {productCategories.map((cat) => (
-                  <Link key={cat.slug} to={cat.slug} className="block px-4 py-2 text-sm text-foreground/80 hover:bg-muted hover:text-foreground transition-colors">
+              <div className="absolute top-full left-0 w-56 pt-2 animate-fade-in shadow-xl">
+                <div className="bg-card border border-border rounded-lg py-2">
+                {categories.map((cat) => (
+                  <Link key={cat.slug} to={`/produtos/${cat.slug}`} className="block px-4 py-2 text-sm text-foreground/80 hover:bg-muted hover:text-foreground transition-colors">
                     {cat.name}
                   </Link>
                 ))}
+                </div>
               </div>
             )}
           </div>
@@ -64,8 +69,8 @@ const Header = () => {
           <nav className="container px-4 py-4 flex flex-col gap-3 text-sm font-medium">
             <Link to="/" onClick={() => setMobileOpen(false)} className="py-2 text-foreground/80">Início</Link>
             <p className="text-xs text-muted-foreground uppercase tracking-wider mt-2">Produtos</p>
-            {productCategories.map((cat) => (
-              <Link key={cat.slug} to={cat.slug} onClick={() => setMobileOpen(false)} className="py-1.5 pl-3 text-foreground/80">
+            {categories.map((cat) => (
+              <Link key={cat.slug} to={`/produtos/${cat.slug}`} onClick={() => setMobileOpen(false)} className="py-1.5 pl-3 text-foreground/80">
                 {cat.name}
               </Link>
             ))}
