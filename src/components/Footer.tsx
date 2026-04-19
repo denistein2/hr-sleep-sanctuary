@@ -57,8 +57,13 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 mt-8 pt-6 text-center text-xs text-primary-foreground/40">
-          © {new Date().getFullYear()} HR Colchões — Todos os direitos reservados.
+        <div className="border-t border-primary-foreground/10 mt-8 pt-6 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-primary-foreground/40">
+          <p>© {new Date().getFullYear()} HR Colchões — Todos os direitos reservados.</p>
+          <nav aria-label="Links legais" className="flex gap-4">
+            <Link to="/privacidade" className="hover:text-primary-foreground transition-colors">
+              Política de Privacidade
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

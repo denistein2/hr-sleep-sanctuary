@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import SEOHead from "@/components/SEOHead";
 
 const NotFound = () => {
   const location = useLocation();
@@ -9,15 +10,23 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-muted">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
-        <a href="/" className="text-primary underline hover:text-primary/90">
-          Return to Home
-        </a>
+    <>
+      <SEOHead
+        title="Página não encontrada (404) | HR Colchões"
+        description="A página que você procurou não existe. Volte ao início para conhecer nossa linha Eko'7."
+        path={location.pathname}
+        noIndex
+      />
+      <div className="flex min-h-screen items-center justify-center bg-muted">
+        <div className="text-center">
+          <h1 className="mb-4 text-4xl font-bold">404</h1>
+          <p className="mb-4 text-xl text-muted-foreground">Página não encontrada</p>
+          <a href="/" className="text-primary underline hover:text-primary/90">
+            Voltar ao início
+          </a>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
