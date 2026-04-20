@@ -47,7 +47,7 @@ const Header = () => {
               </div>
             )}
           </div>
-          <a href="#sobre" className="text-foreground/80 hover:text-foreground transition-colors">Sobre</a>
+          <Link to="/sobre" className="text-foreground/80 hover:text-foreground transition-colors">Sobre</Link>
           <a href="#contato" className="text-foreground/80 hover:text-foreground transition-colors">Contato</a>
         </nav>
 
@@ -74,7 +74,7 @@ const Header = () => {
                 {cat.name}
               </Link>
             ))}
-            <a href="#sobre" onClick={() => setMobileOpen(false)} className="py-2 text-foreground/80">Sobre</a>
+            <Link to="/sobre" onClick={() => setMobileOpen(false)} className="py-2 text-foreground/80">Sobre</Link>
             <a href="#contato" onClick={() => setMobileOpen(false)} className="py-2 text-foreground/80">Contato</a>
           </nav>
         </div>
