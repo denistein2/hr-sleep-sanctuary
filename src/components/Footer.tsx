@@ -112,9 +112,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 mt-8 pt-6 text-center text-xs text-primary-foreground/40 space-y-1">
-          <p>© {new Date().getFullYear()} HR Colchões — Todos os direitos reservados.</p>
-          <p>CNPJ: 37.637.457/0001-11</p>
+        <div className="border-t border-primary-foreground/10 mt-8 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-primary-foreground/40 text-center md:text-left">
+          <div className="space-y-1">
+            <p>© {new Date().getFullYear()} HR Colchões — Todos os direitos reservados.</p>
+            <p>CNPJ: 37.637.457/0001-11</p>
+          </div>
+          <nav aria-label="Links legais" className="flex gap-4">
+            <Link to="/privacidade" className="hover:text-primary-foreground transition-colors">
+              Política de Privacidade
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

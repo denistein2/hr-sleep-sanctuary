@@ -1,46 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/sobre</loc>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/privacidade</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
   <!-- Categories -->
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/camas-e-box</loc>
-    <lastmod>2026-04-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes</loc>
-    <lastmod>2026-04-18</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios</loc>
-    <lastmod>2026-04-18</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/camas-e-bases</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/cabeceiras</loc>
-    <lastmod>2026-04-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/cadeiras</loc>
-    <lastmod>2026-04-18</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/travesseiros</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/produtos/fitness</loc>
-    <lastmod>2026-04-18</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Products - Camas e Bases -->
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/camas-e-bases/flexibed-roma</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/camas-e-bases/flexibed-lisboa</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/camas-e-bases/flexibed-gran-jaguar</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/camas-e-bases/box-classico</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/camas-e-bases/box-slim</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/camas-e-bases/box-bau</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/camas-e-bases/box-bau-lunar</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/camas-e-bases/conjunto-bicama-bau</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/camas-e-bases/bau-de-peseira</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Products - Colchões -->
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/comfort</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/diamante</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/lunar</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/news</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/softnews</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/pangeia</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/serie-ouro</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/unico</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Products - Travesseiros -->
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/travesseiros/travesseiro-cervical</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/travesseiros/travesseiro-soft</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/travesseiros/travesseiro-visco-elastico</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Products - Vestuário e Acessórios -->
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/tenis-fn7</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/camiseta-masculina</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/regata-masculina</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/bermuda-masculina</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/macacao-feminino</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/macaquinho-feminino</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/regata-feminina</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/legging-feminina</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/top-feminino</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/shorts-feminino</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/sutia-feminino</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/calcinha-feminina</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

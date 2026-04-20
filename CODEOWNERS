@@ -1,0 +1,18 @@
+# CODEOWNERS — HR Colchões
+# Revisores automáticos para arquivos críticos.
+# Formato: caminho  @usuario1 @usuario2
+
+# Default — qualquer mudança notifica o time
+*                       @denistein2
+
+# Dados de produto e SEO são críticos
+/src/data/              @denistein2
+/src/components/SEOHead.tsx  @denistein2
+/public/robots.txt      @denistein2
+/public/sitemap.xml     @denistein2
+
+# Infra e segurança
+/vercel.json            @denistein2
+/.github/               @denistein2
+/SECURITY.md            @denistein2
+/LICENSE                @denistein2

@@ -29,7 +29,31 @@ const CategoryPage = () => {
 
   return (
     <>
-      <SEOHead title={category.seoTitle} description={category.seoDescription} />
+      <SEOHead
+        title={category.seoTitle}
+        description={category.seoDescription}
+        path={`/produtos/${category.slug}`}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: category.name,
+          description: category.description,
+          url: `https://hrcolchoes.steintechnology.com.br/produtos/${category.slug}`,
+          isPartOf: {
+            "@type": "WebSite",
+            name: "HR Colchões",
+            url: "https://hrcolchoes.steintechnology.com.br/",
+          },
+          breadcrumb: {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Início", item: "https://hrcolchoes.steintechnology.com.br/" },
+              { "@type": "ListItem", position: 2, name: "Catálogo", item: "https://hrcolchoes.steintechnology.com.br/#catalogo" },
+              { "@type": "ListItem", position: 3, name: category.name },
+            ],
+          },
+        }}
+      />
       <Header />
       <main className="pt-24 pb-20">
         <div className="container px-4">

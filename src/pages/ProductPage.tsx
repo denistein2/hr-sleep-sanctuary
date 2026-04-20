@@ -53,6 +53,27 @@ const ProductPage = () => {
       <SEOHead
         title={`${productData.name} — ${category.name} | HR Colchões`}
         description={productData.shortDescription}
+        path={`/produtos/${category.slug}/${productData.slug}`}
+        type="product"
+        image={images[0]?.startsWith("http") ? images[0] : `https://hrcolchoes.steintechnology.com.br${images[0] ?? "/img/og-image.jpg"}`}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: productData.name,
+          description: productData.shortDescription,
+          image: images.map((img) =>
+            img.startsWith("http") ? img : `https://hrcolchoes.steintechnology.com.br${img}`
+          ),
+          category: category.name,
+          brand: { "@type": "Brand", name: "Eko'7" },
+          offers: {
+            "@type": "Offer",
+            availability: "https://schema.org/InStock",
+            priceCurrency: "BRL",
+            url: `https://hrcolchoes.steintechnology.com.br/produtos/${category.slug}/${productData.slug}`,
+            seller: { "@type": "Organization", name: "HR Colchões" },
+          },
+        }}
       />
       <Header />
       <main className="pt-24 pb-20">
