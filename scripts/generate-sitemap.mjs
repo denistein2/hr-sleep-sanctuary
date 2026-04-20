@@ -43,6 +43,7 @@ const today = new Date().toISOString().slice(0, 10);
 
 const urls = [
   { loc: `${SITE_URL}/`, changefreq: "weekly", priority: "1.0" },
+  { loc: `${SITE_URL}/sobre`, changefreq: "monthly", priority: "1.0" },
   { loc: `${SITE_URL}/privacidade`, changefreq: "yearly", priority: "0.3" },
   ...categorySlugs.map((s) => ({
     loc: `${SITE_URL}/produtos/${s}`,
