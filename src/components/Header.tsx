@@ -2,12 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { categories } from "@/data/products";
+import { getActiveHeaderLinks } from "@/data/navigation";
 import logoImg from "@/assets/img/Logo Novo.png";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const activeLinks = getActiveHeaderLinks();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-lg border-b border-border/50">
@@ -38,9 +39,9 @@ const Header = () => {
             {dropdownOpen && (
               <div className="absolute top-full left-0 w-56 pt-2 animate-fade-in shadow-xl">
                 <div className="bg-card border border-border rounded-lg py-2">
-                {categories.map((cat) => (
-                  <Link key={cat.slug} to={`/produtos/${cat.slug}`} className="block px-4 py-2 text-sm text-foreground/80 hover:bg-muted hover:text-foreground transition-colors">
-                    {cat.name}
+                {activeLinks.map((link) => (
+                  <Link key={link.id} to={`/produtos/${link.slug}`} className="block px-4 py-2 text-sm text-foreground/80 hover:bg-muted hover:text-foreground transition-colors">
+                    {link.name}
                   </Link>
                 ))}
                 </div>
@@ -69,9 +70,9 @@ const Header = () => {
           <nav className="container px-4 py-4 flex flex-col gap-3 text-sm font-medium">
             <Link to="/" onClick={() => setMobileOpen(false)} className="py-2 text-foreground/80">Início</Link>
             <p className="text-xs text-muted-foreground uppercase tracking-wider mt-2">Produtos</p>
-            {categories.map((cat) => (
-              <Link key={cat.slug} to={`/produtos/${cat.slug}`} onClick={() => setMobileOpen(false)} className="py-1.5 pl-3 text-foreground/80">
-                {cat.name}
+            {activeLinks.map((link) => (
+              <Link key={link.id} to={`/produtos/${link.slug}`} onClick={() => setMobileOpen(false)} className="py-1.5 pl-3 text-foreground/80">
+                {link.name}
               </Link>
             ))}
             <Link to="/sobre" onClick={() => setMobileOpen(false)} className="py-2 text-foreground/80">Sobre</Link>

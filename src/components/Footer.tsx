@@ -1,8 +1,48 @@
 import { Link } from "react-router-dom";
 import { Instagram } from "lucide-react";
 import logoImg from "@/assets/img/Logo Novo.png";
+import { navigationData, NavItem } from "@/data/navigation";
 
 const Footer = () => {
+  const renderNavSection = (items: NavItem[]) => (
+    <ul className="space-y-4">
+      {items.map((item) => (
+        <li key={item.id}>
+          {item.active && item.slug ? (
+            <Link
+              to={`/produtos/${item.slug}`}
+              className={`text-sm font-semibold hover:text-primary-foreground transition-colors block ${item.subItems ? 'mb-1' : ''}`}
+            >
+              {item.name}
+            </Link>
+          ) : (
+            <span className="text-sm font-semibold text-primary-foreground/80 block mb-1">
+              {item.name}
+            </span>
+          )}
+          {item.subItems && item.subItems.length > 0 && (
+            <ul className="space-y-1.5 pl-3 text-sm border-l-2 border-primary-foreground/10">
+              {item.subItems.map((subItem) => (
+                <li key={subItem.id} className={!subItem.active ? "text-primary-foreground/60" : ""}>
+                  {subItem.active && subItem.slug ? (
+                    <Link
+                      to={`/produtos/${subItem.slug}`}
+                      className="text-primary-foreground/80 hover:text-primary-foreground transition-colors block"
+                    >
+                      {subItem.name}
+                    </Link>
+                  ) : (
+                    <span>{subItem.name}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  );
+
   return (
     <footer className="bg-primary text-primary-foreground py-14">
       <div className="container px-4">
@@ -29,57 +69,8 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <h4 className="font-display text-sm font-bold uppercase tracking-wider mb-6">Produtos</h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-6">
-              <div>
-                <ul className="space-y-4">
-                  <li>
-                    <Link to="/produtos/colchoes" className="text-sm font-semibold hover:text-primary-foreground transition-colors block">
-                      Colchões Terapêuticos e Tecnológicos
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/produtos/camas-e-bases" className="text-sm font-semibold hover:text-primary-foreground transition-colors block mb-1">
-                      Camas Articuladas
-                    </Link>
-                    <ul className="space-y-1.5 pl-3 text-sm text-primary-foreground/60 border-l-2 border-primary-foreground/10">
-                      <li>Box Tradicional e Box Baú</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <span className="text-sm font-semibold text-primary-foreground/80 block mb-1">Mobiliário Ergonômico</span>
-                    <ul className="space-y-1.5 pl-3 text-sm text-primary-foreground/60 border-l-2 border-primary-foreground/10">
-                      <li>Poltronas</li>
-                      <li>Cadeiras de Escritório</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <span className="text-sm font-semibold text-primary-foreground/80 block mb-1">Linha Têxtil e Conforto</span>
-                    <ul className="space-y-1.5 pl-3 text-sm border-l-2 border-primary-foreground/10">
-                      <li><Link to="/produtos/travesseiros" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Travesseiros</Link></li>
-                      <li className="text-primary-foreground/60">Lençóis</li>
-                      <li className="text-primary-foreground/60">Toalhas de Banho</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <ul className="space-y-4">
-                  <li>
-                    <span className="text-sm font-semibold text-primary-foreground/80 block mb-1">Linha Fitness e Calçados</span>
-                    <ul className="space-y-1.5 pl-3 text-sm border-l-2 border-primary-foreground/10">
-                      <li><Link to="/produtos/fitness" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Colchonetes</Link></li>
-                      <li><Link to="/produtos/vestuario-acessorios" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Leggings e Tops (Infravermelho)</Link></li>
-                      <li><Link to="/produtos/vestuario-acessorios" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Tênis Magnéticos e Ortopédicos</Link></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <span className="text-sm font-semibold text-primary-foreground/80 block mb-1">Acessórios Magnéticos</span>
-                    <ul className="space-y-1.5 pl-3 text-sm text-primary-foreground/60 border-l-2 border-primary-foreground/10">
-                      <li>Palmilhas Magnéticas</li>
-                      <li>Pulseiras Magnéticas</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+              <div>{renderNavSection(navigationData.slice(0, 5))}</div>
+              <div>{renderNavSection(navigationData.slice(5))}</div>
             </div>
           </div>
 
