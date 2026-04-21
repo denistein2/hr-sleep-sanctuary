@@ -30,13 +30,22 @@ export const categories: Category[] = [
     seoDescription: "Linha completa de colchões Eko'7. Distribuidor oficial em Porto Alegre/RS.",
   },
   {
-    id: "camas-e-bases",
-    name: "Camas e Bases",
-    slug: "camas-e-bases",
+    id: "camas-articuladas",
+    name: "Camas Articuladas",
+    slug: "camas-articuladas",
     emoji: "🛏️",
-    description: "Camas articuladas elétricas FlexiBed, conjuntos box tradicional e box baú.",
-    seoTitle: "Camas Articuladas e Bases Eko'7 | HR Colchões",
-    seoDescription: "Camas articuladas elétricas e bases box com tecnologia Eko'7 em Porto Alegre/RS.",
+    description: "Camas articuladas elétricas FlexiBed com tecnologia Eko'7 — controle elétrico de encosto, peseira e altura.",
+    seoTitle: "Camas Articuladas FlexiBed Eko'7 | HR Colchões",
+    seoDescription: "Camas articuladas elétricas FlexiBed Roma, Lisboa e Gran Jaguar com tecnologia Eko'7 em Porto Alegre/RS.",
+  },
+  {
+    id: "boxes",
+    name: "Boxes",
+    slug: "boxes",
+    emoji: "📦",
+    description: "Bases box clássico, box slim e box baú — estrutura reforçada e acabamento premium para complementar seu colchão.",
+    seoTitle: "Box Base, Box Baú e Box Slim Eko'7 | HR Colchões",
+    seoDescription: "Bases box tradicional, baú e slim com acabamento premium Eko'7 em Porto Alegre/RS.",
   },
   {
     id: "travesseiros",
@@ -80,7 +89,7 @@ export const products: Product[] = [
     id: "flexibed-roma",
     name: "FlexiBed Roma",
     slug: "flexibed-roma",
-    categorySlug: "camas-e-bases",
+    categorySlug: "camas-articuladas",
     shortDescription:
       "Cama articulada elétrica com motor silencioso e tecnologia Eko'7. Design clássico que se adapta a qualquer quarto, com regulagem elétrica de encosto e apoio para os pés.",
     technologies: ["Infravermelho Longo", "Magnetos", "Motor Silencioso", "Regulagem Elétrica"],
@@ -94,7 +103,7 @@ export const products: Product[] = [
     id: "flexibed-lisboa",
     name: "FlexiBed Lisboa",
     slug: "flexibed-lisboa",
-    categorySlug: "camas-e-bases",
+    categorySlug: "camas-articuladas",
     shortDescription:
       "Cama articulada elétrica com suporte lombar ajustável e tecnologia integrativa NanoEx. Regulagem precisa do encosto, peseira e altura para máximo conforto personalizado.",
     technologies: ["Infravermelho Longo", "Magnetos", "NanoEx", "Motor Silencioso", "Regulagem Elétrica"],
@@ -108,7 +117,7 @@ export const products: Product[] = [
     id: "flexibed-gran-jaguar",
     name: "FlexiBed Gran Jaguar",
     slug: "flexibed-gran-jaguar",
-    categorySlug: "camas-e-bases",
+    categorySlug: "camas-articuladas",
     shortDescription:
       "Modelo topo de linha com massagem integrada, motor duplo silencioso e a combinação completa da tecnologia Eko'7. Experiência terapêutica premium do encosto aos pés.",
     technologies: ["Infravermelho Longo", "Magnetos", "NanoEx", "Turmalina Negra", "Motor Silencioso", "Massagem Integrada"],
@@ -122,7 +131,7 @@ export const products: Product[] = [
     id: "box-classico",
     name: "Box Clássico",
     slug: "box-classico",
-    categorySlug: "camas-e-bases",
+    categorySlug: "boxes",
     shortDescription:
       "Base box com estrutura reforçada e acabamento premium. Ideal para complementar colchões de alta densidade com estabilidade e durabilidade.",
     technologies: [],
@@ -133,7 +142,7 @@ export const products: Product[] = [
     id: "box-slim",
     name: "Box Slim",
     slug: "box-slim",
-    categorySlug: "camas-e-bases",
+    categorySlug: "boxes",
     shortDescription:
       "Base box de perfil baixo, ideal para quartos com pé-direito mais baixo ou quem prefere cama mais próxima ao chão sem abrir mão da resistência estrutural.",
     technologies: [],
@@ -144,7 +153,7 @@ export const products: Product[] = [
     id: "box-bau",
     name: "Box Baú",
     slug: "box-bau",
-    categorySlug: "camas-e-bases",
+    categorySlug: "boxes",
     shortDescription:
       "Base box com espaço interno de armazenamento. Otimiza o quarto guardando roupas de cama, travesseiros extras e acessórios com facilidade.",
     technologies: [],
@@ -155,7 +164,7 @@ export const products: Product[] = [
     id: "box-bau-lunar",
     name: "Box Baú Lunar",
     slug: "box-bau-lunar",
-    categorySlug: "camas-e-bases",
+    categorySlug: "boxes",
     shortDescription:
       "Box baú premium com tecido especial e mecanismo de abertura assistida. Alta capacidade de armazenamento com acabamento sofisticado.",
     technologies: [],
@@ -166,7 +175,7 @@ export const products: Product[] = [
     id: "conjunto-bicama-bau",
     name: "Conjunto Bicama Baú",
     slug: "conjunto-bicama-bau",
-    categorySlug: "camas-e-bases",
+    categorySlug: "boxes",
     shortDescription:
       "Conjunto bicama com base baú deslizante. Ideal para quartos de hóspedes e crianças, maximizando o aproveitamento do espaço.",
     technologies: [],
@@ -177,7 +186,7 @@ export const products: Product[] = [
     id: "bau-de-peseira",
     name: "Baú de Peseira",
     slug: "bau-de-peseira",
-    categorySlug: "camas-e-bases",
+    categorySlug: "boxes",
     shortDescription:
       "Complemento elegante posicionado aos pés da cama com espaço interno para guardar mantas, travesseiros e acessórios de cama.",
     technologies: [],

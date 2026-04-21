@@ -1,16 +1,18 @@
 import { motion } from "framer-motion";
-import heroBed from "@/assets/img/hero-bed.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
-        <img
-          src={heroBed}
-          alt="Cama articulada Eko'7 — HR Colchões Porto Alegre"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
-          fetchPriority="high"
-        />
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 hero-bg opacity-70" />
       </div>
 

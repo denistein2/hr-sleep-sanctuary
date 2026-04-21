@@ -16,15 +16,18 @@ export const navigationData: NavItem[] = [
     active: true,
   },
   {
-    id: "camas-e-bases",
-    name: "Camas Articuladas e Bases",
-    shortName: "Camas e Bases",
-    slug: "camas-e-bases",
+    id: "camas-articuladas",
+    name: "Camas Articuladas FlexiBed",
+    shortName: "Camas Articuladas",
+    slug: "camas-articuladas",
     active: true,
-    subItems: [
-      { id: "camas-articuladas", name: "Camas Articuladas FlexiBed", active: false },
-      { id: "box", name: "Box Tradicional e Box Baú", active: false },
-    ],
+  },
+  {
+    id: "boxes",
+    name: "Box e Bases",
+    shortName: "Box e Bases",
+    slug: "boxes",
+    active: true,
   },
   {
     id: "cabeceiras",
