@@ -95,7 +95,6 @@ export const products: Product[] = [
     technologies: ["Infravermelho Longo", "Magnetos", "Motor Silencioso", "Regulagem Elétrica"],
     certifications: ["ISO 9001", "ISO 14001", "INMETRO"],
     images: [
-      "/produtos/camas-e-box/cama-roma.avif",
       "/produtos/colchoes/linha-flexbed-roma.avif",
     ],
   },
@@ -109,7 +108,6 @@ export const products: Product[] = [
     technologies: ["Infravermelho Longo", "Magnetos", "NanoEx", "Motor Silencioso", "Regulagem Elétrica"],
     certifications: ["ISO 9001", "ISO 14001", "INMETRO"],
     images: [
-      "/produtos/camas-e-box/cama-lisboa.avif",
       "/produtos/colchoes/linha-flexbed-lisboa.avif",
     ],
   },
@@ -123,7 +121,6 @@ export const products: Product[] = [
     technologies: ["Infravermelho Longo", "Magnetos", "NanoEx", "Turmalina Negra", "Motor Silencioso", "Massagem Integrada"],
     certifications: ["ISO 9001", "ISO 14001", "INMETRO", "SBRTO", "ICV Premium"],
     images: [
-      "/produtos/camas-e-box/cama-gran-jaguar.avif",
       "/produtos/colchoes/linha-flexbed-gran-jaguar.avif",
     ],
   },
