@@ -83,6 +83,7 @@ export const categories: Category[] = [
 ];
 
 export const products: Product[] = [
+
   // ─── Camas & Box ────────────────────────────────────────────────────────────
 
   {
@@ -125,17 +126,6 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "box-classico",
-    name: "Box Clássico",
-    slug: "box-classico",
-    categorySlug: "boxes",
-    shortDescription:
-      "Base box com estrutura reforçada e acabamento premium. Ideal para complementar colchões de alta densidade com estabilidade e durabilidade.",
-    technologies: [],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/camas-e-box/box-classico.avif"],
-  },
-  {
     id: "box-slim",
     name: "Box Slim",
     slug: "box-slim",
@@ -156,6 +146,17 @@ export const products: Product[] = [
     technologies: [],
     certifications: ["ISO 9001", "INMETRO"],
     images: ["/produtos/camas-e-box/box-bau.avif"],
+  },
+  {
+    id: "box-classico",
+    name: "Box Clássico",
+    slug: "box-classico",
+    categorySlug: "boxes",
+    shortDescription:
+      "Base box com estrutura reforçada e acabamento premium. Ideal para complementar colchões de alta densidade com estabilidade e durabilidade.",
+    technologies: [],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/camas-e-box/box-classico.avif"],
   },
   {
     id: "box-bau-lunar",
@@ -194,6 +195,31 @@ export const products: Product[] = [
   // ─── Colchões ───────────────────────────────────────────────────────────────
 
   {
+    id: "colchao-serie-ouro",
+    name: "Série Ouro",
+    slug: "serie-ouro",
+    categorySlug: "colchoes",
+    shortDescription:
+      "Linha topo de gama com pillow top e cristal de quartzo. O ápice do conforto Eko'7, indicado para quem não abre mão do melhor em qualidade de sono.",
+    technologies: ["Infravermelho Longo", "Magnetos", "NanoEx", "Cristal de Quartzo"],
+    certifications: ["ISO 9001", "ISO 14001", "INMETRO", "ICV Premium", "SBRTO"],
+    images: [
+      "/produtos/colchoes/serie-ouro-com-pillow.avif",
+      "/produtos/colchoes/serieouro.avif",
+    ],
+  },
+  {
+    id: "colchao-pangeia",
+    name: "Pangeia",
+    slug: "pangeia",
+    categorySlug: "colchoes",
+    shortDescription:
+      "Colchão com múltiplas camadas de espuma diferenciada e turmalina negra para recuperação muscular acelerada e sono profundo e reparador.",
+    technologies: ["Infravermelho Longo", "Magnetos", "NanoEx", "Turmalina Negra"],
+    certifications: ["ISO 9001", "ISO 14001", "INMETRO"],
+    images: ["/produtos/colchoes/pangeia.avif"],
+  },
+  {
     id: "colchao-comfort",
     name: "Comfort",
     slug: "comfort",
@@ -208,15 +234,15 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "colchao-diamante",
-    name: "Diamante",
-    slug: "diamante",
+    id: "colchao-unico",
+    name: "Único",
+    slug: "unico",
     categorySlug: "colchoes",
     shortDescription:
-      "Colchão premium com turmalina negra e cristal de quartzo para benefícios terapêuticos máximos. Ideal para quem busca alívio de dores crônicas e sono profundo.",
-    technologies: ["Infravermelho Longo", "Magnetos", "NanoEx", "Turmalina Negra", "Cristal de Quartzo"],
-    certifications: ["ISO 9001", "ISO 14001", "INMETRO", "ICV Premium", "SBRTO"],
-    images: ["/produtos/colchoes/diamante-eko7.avif"],
+      "Colchão versátil com design exclusivo e tecnologia Eko'7. Uma solução completa para quem busca conforto duradouro com benefícios à saúde.",
+    technologies: ["Infravermelho Longo", "Magnetos"],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/colchoes/unico.avif"],
   },
   {
     id: "colchao-lunar",
@@ -241,6 +267,17 @@ export const products: Product[] = [
     images: ["/produtos/colchoes/news.avif"],
   },
   {
+    id: "colchao-diamante",
+    name: "Diamante",
+    slug: "diamante",
+    categorySlug: "colchoes",
+    shortDescription:
+      "Colchão premium com turmalina negra e cristal de quartzo para benefícios terapêuticos máximos. Ideal para quem busca alívio de dores crônicas e sono profundo.",
+    technologies: ["Infravermelho Longo", "Magnetos", "NanoEx", "Turmalina Negra", "Cristal de Quartzo"],
+    certifications: ["ISO 9001", "ISO 14001", "INMETRO", "ICV Premium", "SBRTO"],
+    images: ["/produtos/colchoes/diamante-eko7.avif"],
+  },
+  {
     id: "colchao-softnews",
     name: "Soft News",
     slug: "softnews",
@@ -250,42 +287,6 @@ export const products: Product[] = [
     technologies: ["Infravermelho Longo", "Magnetos", "NanoEx"],
     certifications: ["ISO 9001", "INMETRO"],
     images: ["/produtos/colchoes/softnews.avif"],
-  },
-  {
-    id: "colchao-pangeia",
-    name: "Pangeia",
-    slug: "pangeia",
-    categorySlug: "colchoes",
-    shortDescription:
-      "Colchão com múltiplas camadas de espuma diferenciada e turmalina negra para recuperação muscular acelerada e sono profundo e reparador.",
-    technologies: ["Infravermelho Longo", "Magnetos", "NanoEx", "Turmalina Negra"],
-    certifications: ["ISO 9001", "ISO 14001", "INMETRO"],
-    images: ["/produtos/colchoes/pangeia.avif"],
-  },
-  {
-    id: "colchao-serie-ouro",
-    name: "Série Ouro",
-    slug: "serie-ouro",
-    categorySlug: "colchoes",
-    shortDescription:
-      "Linha topo de gama com pillow top e cristal de quartzo. O ápice do conforto Eko'7, indicado para quem não abre mão do melhor em qualidade de sono.",
-    technologies: ["Infravermelho Longo", "Magnetos", "NanoEx", "Cristal de Quartzo"],
-    certifications: ["ISO 9001", "ISO 14001", "INMETRO", "ICV Premium", "SBRTO"],
-    images: [
-      "/produtos/colchoes/serie-ouro-com-pillow.avif",
-      "/produtos/colchoes/serieouro.avif",
-    ],
-  },
-  {
-    id: "colchao-unico",
-    name: "Único",
-    slug: "unico",
-    categorySlug: "colchoes",
-    shortDescription:
-      "Colchão versátil com design exclusivo e tecnologia Eko'7. Uma solução completa para quem busca conforto duradouro com benefícios à saúde.",
-    technologies: ["Infravermelho Longo", "Magnetos"],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/colchoes/unico.avif"],
   },
 
   // ─── Acessórios ─────────────────────────────────────────────────────────────
@@ -379,83 +380,6 @@ export const products: Product[] = [
     images: ["/produtos/acessorios/office-protect-almofada-lombar.avif"],
   },
   {
-    id: "palmilha-magnetica",
-    name: "Palmilha Magnética",
-    slug: "palmilha-magnetica",
-    categorySlug: "acessorios-magneticos",
-    shortDescription:
-      "Palmilha com magnetos e infravermelho longo Eko'7. Melhora a circulação nos pés e pernas durante o uso diário em qualquer calçado.",
-    technologies: ["Infravermelho Longo", "Magnetos"],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/acessorios/palmilha-magnetica.avif"],
-  },
-  {
-    id: "sandalia-couro-magnetica",
-    name: "Sandália de Couro Magnética",
-    slug: "sandalia-couro-magnetica",
-    categorySlug: "acessorios-magneticos",
-    shortDescription:
-      "Sandália de couro legítimo com palmilha magnética Eko'7 integrada. Conforto e elegância com benefícios terapêuticos a cada passo.",
-    technologies: ["Infravermelho Longo", "Magnetos"],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/acessorios/sandalia-couro-magnetica.avif"],
-  },
-  {
-    id: "sandalias-magneticas",
-    name: "Sandálias Magnéticas",
-    slug: "sandalias-magneticas",
-    categorySlug: "acessorios-magneticos",
-    shortDescription:
-      "Sandálias com tecnologia magnética Eko'7 para estimulação dos pontos reflexos dos pés. Ideal para uso diário com benefícios à circulação.",
-    technologies: ["Infravermelho Longo", "Magnetos"],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/acessorios/sandalias-magneticas.avif"],
-  },
-  {
-    id: "pulseiras-magneticas",
-    name: "Pulseiras Magnéticas",
-    slug: "pulseiras-magneticas",
-    categorySlug: "acessorios-magneticos",
-    shortDescription:
-      "Pulseiras com magnetos Eko'7 para uso contínuo no pulso. Estimulam pontos de acupressão e podem auxiliar no equilíbrio energético do organismo.",
-    technologies: ["Magnetos"],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/acessorios/pulseiras-magneticas.avif"],
-  },
-  {
-    id: "emplasto-magnetico",
-    name: "Emplasto Magnético",
-    slug: "emplasto-magnetico",
-    categorySlug: "acessorios-magneticos",
-    shortDescription:
-      "Emplasto adesivo com magnetos Eko'7 de aplicação localizada. Indicado para alívio pontual de dores musculares e articulares.",
-    technologies: ["Magnetos", "Infravermelho Longo"],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/acessorios/emplasto-magnetico.avif"],
-  },
-  {
-    id: "tapete-magnetico",
-    name: "Tapete Magnético",
-    slug: "tapete-magnetico",
-    categorySlug: "acessorios-magneticos",
-    shortDescription:
-      "Tapete com tecnologia Eko'7 para estimulação reflexológica dos pés. Uso diário ao levantar da cama ou em áreas de circulação frequente.",
-    technologies: ["Infravermelho Longo", "Magnetos"],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/acessorios/tapete.avif"],
-  },
-  {
-    id: "mascara-terapeutica",
-    name: "Máscara Terapêutica",
-    slug: "mascara-terapeutica",
-    categorySlug: "acessorios-magneticos",
-    shortDescription:
-      "Máscara de repouso com tecnologia Eko'7 que bloqueia a luz e emite infravermelho longo para relaxamento profundo dos olhos e região orbital.",
-    technologies: ["Infravermelho Longo", "Magnetos"],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/acessorios/mascara.avif"],
-  },
-  {
     id: "protetor-de-seios",
     name: "Protetor de Seios",
     slug: "protetor-de-seios",
@@ -510,158 +434,6 @@ export const products: Product[] = [
     certifications: ["ISO 9001", "INMETRO"],
     images: ["/produtos/acessorios/colchonete-fitness.avif"],
   },
-
-  // ─── Cabeceiras ─────────────────────────────────────────────────────────────
-
-  {
-    id: "cabeceira-cincinnati",
-    name: "Cabeceira Cincinnati",
-    slug: "cabeceira-cincinnati",
-    categorySlug: "mobiliario",
-    shortDescription:
-      "Cabeceira com design moderno e elegante para quartos contemporâneos. Tecido de alta qualidade e acabamento impecável para valorizar o ambiente.",
-    technologies: [],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/cabeceiras/cabeceira-cincinnati.avif"],
-  },
-  {
-    id: "cabeceira-cronos",
-    name: "Cabeceira Cronos",
-    slug: "cabeceira-cronos",
-    categorySlug: "mobiliario",
-    shortDescription:
-      "Cabeceira de linhas retas e design clean com estofo premium. Versatilidade para combinar com diferentes estilos de decoração.",
-    technologies: [],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/cabeceiras/cabeceira-cronos.avif"],
-  },
-  {
-    id: "cabeceira-diamante",
-    name: "Cabeceira Diamante",
-    slug: "cabeceira-diamante",
-    categorySlug: "mobiliario",
-    shortDescription:
-      "Cabeceira com capitonê em formato diamante e tecido premium. Design sofisticado que confere elegância e charme ao quarto.",
-    technologies: [],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/cabeceiras/cabeceira-diamante.avif"],
-  },
-  {
-    id: "cabeceira-havai",
-    name: "Cabeceira Havai",
-    slug: "cabeceira-havai",
-    categorySlug: "mobiliario",
-    shortDescription:
-      "Cabeceira com estofamento generoso e design descontraído. Perfeita para quartos que buscam conforto visual e sensação de aconchego.",
-    technologies: [],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/cabeceiras/cabeceira-havai.avif"],
-  },
-  {
-    id: "cabeceira-infinity",
-    name: "Cabeceira Infinity",
-    slug: "cabeceira-infinity",
-    categorySlug: "mobiliario",
-    shortDescription:
-      "Cabeceira de dimensões amplas com estofo em tecido de alta durabilidade. Design atemporal para quartos de alto padrão.",
-    technologies: [],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/cabeceiras/cabeceira-infinity.avif"],
-  },
-  {
-    id: "cabeceira-maceio",
-    name: "Cabeceira Maceió",
-    slug: "cabeceira-maceio",
-    categorySlug: "mobiliario",
-    shortDescription:
-      "Cabeceira com capitonê suave e curvas delicadas. Combina romantismo e modernidade para criar um quarto acolhedor e sofisticado.",
-    technologies: [],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/cabeceiras/cabeceira-maceio.avif"],
-  },
-  {
-    id: "cabeceira-olimpia",
-    name: "Cabeceira Olímpia",
-    slug: "cabeceira-olimpia",
-    categorySlug: "mobiliario",
-    shortDescription:
-      "Cabeceira com design imponente e acabamento premium. Transforma o quarto em um ambiente de hotel cinco estrelas com toque de exclusividade.",
-    technologies: [],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/cabeceiras/cabeceira-olimpia.avif"],
-  },
-
-  // ─── Cadeiras & Poltronas ────────────────────────────────────────────────────
-
-  {
-    id: "cadeira-diretor",
-    name: "Cadeira Diretor",
-    slug: "cadeira-diretor",
-    categorySlug: "mobiliario",
-    shortDescription:
-      "Cadeira executiva com encosto alto, apoio de braços e tecnologia Eko'7. Proporciona postura correta e conforto em longas jornadas de trabalho.",
-    technologies: ["Infravermelho Longo", "Magnetos"],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/cadeiras/cadeira-diretor.avif"],
-  },
-  {
-    id: "cadeira-presidente",
-    name: "Cadeira Presidente",
-    slug: "cadeira-presidente",
-    categorySlug: "mobiliario",
-    shortDescription:
-      "Cadeira presidente com design imponente, couro premium e tecnologia Eko'7. Para quem exige o máximo em conforto e ergonomia no trabalho.",
-    technologies: ["Infravermelho Longo", "Magnetos", "NanoEx"],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/cadeiras/cadeira-presidente.avif"],
-  },
-  {
-    id: "cadeira-secretaria",
-    name: "Cadeira Secretária",
-    slug: "cadeira-secretaria",
-    categorySlug: "mobiliario",
-    shortDescription:
-      "Cadeira secretária ergonômica com tecnologia Eko'7 para uso em escritórios. Assento confortável e regulagem de altura para diferentes usuários.",
-    technologies: ["Infravermelho Longo", "Magnetos"],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/cadeiras/cadeira-secretaria.avif"],
-  },
-  {
-    id: "poltrona-columbia",
-    name: "Poltrona Columbia",
-    slug: "poltrona-columbia",
-    categorySlug: "mobiliario",
-    shortDescription:
-      "Poltrona de relaxamento com design clássico e tecnologia Eko'7. Estofado generoso com infravermelho longo para sessões de descanso terapêutico.",
-    technologies: ["Infravermelho Longo", "Magnetos"],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/cadeiras/poltrona-columbia.avif"],
-  },
-  {
-    id: "poltrona-eko7",
-    name: "Poltrona",
-    slug: "poltrona",
-    categorySlug: "mobiliario",
-    shortDescription:
-      "Poltrona com tecnologia Eko'7 e estofado confortável para leitura, descanso ou meditação. Infravermelho longo e magnetos para bem-estar contínuo.",
-    technologies: ["Infravermelho Longo", "Magnetos"],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/cadeiras/poltrona.avif"],
-  },
-  {
-    id: "puff-eko7",
-    name: "Puff",
-    slug: "puff",
-    categorySlug: "mobiliario",
-    shortDescription:
-      "Puff versátil com tecnologia Eko'7 para descanso dos pés ou assento adicional. Estofado resistente com infravermelho longo integrado.",
-    technologies: ["Infravermelho Longo", "Magnetos"],
-    certifications: ["ISO 9001", "INMETRO"],
-    images: ["/produtos/cadeiras/puff.avif"],
-  },
-
-  // ─── Fitness & Vestuário ─────────────────────────────────────────────────────
-
   {
     id: "tenis-fn7",
     name: "Tênis FN7",
@@ -812,7 +584,231 @@ export const products: Product[] = [
     technologies: ["Infravermelho Longo", "Magnetos"],
     certifications: ["ISO 9001", "INMETRO"],
     images: ["/produtos/fitness/calcinha-fem.avif"],
+  },  {
+    id: "palmilha-magnetica",
+    name: "Palmilha Magnética",
+    slug: "palmilha-magnetica",
+    categorySlug: "acessorios-magneticos",
+    shortDescription:
+      "Palmilha com magnetos e infravermelho longo Eko'7. Melhora a circulação nos pés e pernas durante o uso diário em qualquer calçado.",
+    technologies: ["Infravermelho Longo", "Magnetos"],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/acessorios/palmilha-magnetica.avif"],
   },
+  {
+    id: "sandalia-couro-magnetica",
+    name: "Sandália de Couro Magnética",
+    slug: "sandalia-couro-magnetica",
+    categorySlug: "acessorios-magneticos",
+    shortDescription:
+      "Sandália de couro legítimo com palmilha magnética Eko'7 integrada. Conforto e elegância com benefícios terapêuticos a cada passo.",
+    technologies: ["Infravermelho Longo", "Magnetos"],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/acessorios/sandalia-couro-magnetica.avif"],
+  },
+  {
+    id: "sandalias-magneticas",
+    name: "Sandálias Magnéticas",
+    slug: "sandalias-magneticas",
+    categorySlug: "acessorios-magneticos",
+    shortDescription:
+      "Sandálias com tecnologia magnética Eko'7 para estimulação dos pontos reflexos dos pés. Ideal para uso diário com benefícios à circulação.",
+    technologies: ["Infravermelho Longo", "Magnetos"],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/acessorios/sandalias-magneticas.avif"],
+  },
+  {
+    id: "emplasto-magnetico",
+    name: "Emplasto Magnético",
+    slug: "emplasto-magnetico",
+    categorySlug: "acessorios-magneticos",
+    shortDescription:
+      "Emplasto adesivo com magnetos Eko'7 de aplicação localizada. Indicado para alívio pontual de dores musculares e articulares.",
+    technologies: ["Magnetos", "Infravermelho Longo"],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/acessorios/emplasto-magnetico.avif"],
+  },
+  {
+    id: "pulseiras-magneticas",
+    name: "Pulseiras Magnéticas",
+    slug: "pulseiras-magneticas",
+    categorySlug: "acessorios-magneticos",
+    shortDescription:
+      "Pulseiras com magnetos Eko'7 para uso contínuo no pulso. Estimulam pontos de acupressão e podem auxiliar no equilíbrio energético do organismo.",
+    technologies: ["Magnetos"],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/acessorios/pulseiras-magneticas.avif"],
+  },
+  {
+    id: "tapete-magnetico",
+    name: "Tapete Magnético",
+    slug: "tapete-magnetico",
+    categorySlug: "acessorios-magneticos",
+    shortDescription:
+      "Tapete com tecnologia Eko'7 para estimulação reflexológica dos pés. Uso diário ao levantar da cama ou em áreas de circulação frequente.",
+    technologies: ["Infravermelho Longo", "Magnetos"],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/acessorios/tapete.avif"],
+  },
+  {
+    id: "mascara-terapeutica",
+    name: "Máscara Terapêutica",
+    slug: "mascara-terapeutica",
+    categorySlug: "acessorios-magneticos",
+    shortDescription:
+      "Máscara de repouso com tecnologia Eko'7 que bloqueia a luz e emite infravermelho longo para relaxamento profundo dos olhos e região orbital.",
+    technologies: ["Infravermelho Longo", "Magnetos"],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/acessorios/mascara.avif"],
+  },
+
+  // ─── Cabeceiras ─────────────────────────────────────────────────────────────
+
+  {
+    id: "cabeceira-olimpia",
+    name: "Cabeceira Olímpia",
+    slug: "cabeceira-olimpia",
+    categorySlug: "mobiliario",
+    shortDescription:
+      "Cabeceira com design imponente e acabamento premium. Transforma o quarto em um ambiente de hotel cinco estrelas com toque de exclusividade.",
+    technologies: [],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/cabeceiras/cabeceira-olimpia.avif"],
+  },
+  {
+    id: "cabeceira-cincinnati",
+    name: "Cabeceira Cincinnati",
+    slug: "cabeceira-cincinnati",
+    categorySlug: "mobiliario",
+    shortDescription:
+      "Cabeceira com design moderno e elegante para quartos contemporâneos. Tecido de alta qualidade e acabamento impecável para valorizar o ambiente.",
+    technologies: [],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/cabeceiras/cabeceira-cincinnati.avif"],
+  },
+  {
+    id: "cabeceira-maceio",
+    name: "Cabeceira Maceió",
+    slug: "cabeceira-maceio",
+    categorySlug: "mobiliario",
+    shortDescription:
+      "Cabeceira com capitonê suave e curvas delicadas. Combina romantismo e modernidade para criar um quarto acolhedor e sofisticado.",
+    technologies: [],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/cabeceiras/cabeceira-maceio.avif"],
+  },
+  {
+    id: "puff-eko7",
+    name: "Puff",
+    slug: "puff",
+    categorySlug: "mobiliario",
+    shortDescription:
+      "Puff versátil com tecnologia Eko'7 para descanso dos pés ou assento adicional. Estofado resistente com infravermelho longo integrado.",
+    technologies: ["Infravermelho Longo", "Magnetos"],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/cadeiras/puff.avif"],
+  },
+  {
+    id: "poltrona-eko7",
+    name: "Poltrona",
+    slug: "poltrona",
+    categorySlug: "mobiliario",
+    shortDescription:
+      "Poltrona com tecnologia Eko'7 e estofado confortável para leitura, descanso ou meditação. Infravermelho longo e magnetos para bem-estar contínuo.",
+    technologies: ["Infravermelho Longo", "Magnetos"],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/cadeiras/poltrona.avif"],
+  },
+  {
+    id: "poltrona-columbia",
+    name: "Poltrona Columbia",
+    slug: "poltrona-columbia",
+    categorySlug: "mobiliario",
+    shortDescription:
+      "Poltrona de relaxamento com design clássico e tecnologia Eko'7. Estofado generoso com infravermelho longo para sessões de descanso terapêutico.",
+    technologies: ["Infravermelho Longo", "Magnetos"],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/cadeiras/poltrona-columbia.avif"],
+  },
+  {
+    id: "cadeira-presidente",
+    name: "Cadeira Presidente",
+    slug: "cadeira-presidente",
+    categorySlug: "mobiliario",
+    shortDescription:
+      "Cadeira presidente com design imponente, couro premium e tecnologia Eko'7. Para quem exige o máximo em conforto e ergonomia no trabalho.",
+    technologies: ["Infravermelho Longo", "Magnetos", "NanoEx"],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/cadeiras/cadeira-presidente.avif"],
+  },
+  {
+    id: "cabeceira-cronos",
+    name: "Cabeceira Cronos",
+    slug: "cabeceira-cronos",
+    categorySlug: "mobiliario",
+    shortDescription:
+      "Cabeceira de linhas retas e design clean com estofo premium. Versatilidade para combinar com diferentes estilos de decoração.",
+    technologies: [],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/cabeceiras/cabeceira-cronos.avif"],
+  },
+  {
+    id: "cabeceira-diamante",
+    name: "Cabeceira Diamante",
+    slug: "cabeceira-diamante",
+    categorySlug: "mobiliario",
+    shortDescription:
+      "Cabeceira com capitonê em formato diamante e tecido premium. Design sofisticado que confere elegância e charme ao quarto.",
+    technologies: [],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/cabeceiras/cabeceira-diamante.avif"],
+  },
+  {
+    id: "cabeceira-havai",
+    name: "Cabeceira Havai",
+    slug: "cabeceira-havai",
+    categorySlug: "mobiliario",
+    shortDescription:
+      "Cabeceira com estofamento generoso e design descontraído. Perfeita para quartos que buscam conforto visual e sensação de aconchego.",
+    technologies: [],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/cabeceiras/cabeceira-havai.avif"],
+  },
+  {
+    id: "cabeceira-infinity",
+    name: "Cabeceira Infinity",
+    slug: "cabeceira-infinity",
+    categorySlug: "mobiliario",
+    shortDescription:
+      "Cabeceira de dimensões amplas com estofo em tecido de alta durabilidade. Design atemporal para quartos de alto padrão.",
+    technologies: [],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/cabeceiras/cabeceira-infinity.avif"],
+  },
+  {
+    id: "cadeira-diretor",
+    name: "Cadeira Diretor",
+    slug: "cadeira-diretor",
+    categorySlug: "mobiliario",
+    shortDescription:
+      "Cadeira executiva com encosto alto, apoio de braços e tecnologia Eko'7. Proporciona postura correta e conforto em longas jornadas de trabalho.",
+    technologies: ["Infravermelho Longo", "Magnetos"],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/cadeiras/cadeira-diretor.avif"],
+  },
+  {
+    id: "cadeira-secretaria",
+    name: "Cadeira Secretária",
+    slug: "cadeira-secretaria",
+    categorySlug: "mobiliario",
+    shortDescription:
+      "Cadeira secretária ergonômica com tecnologia Eko'7 para uso em escritórios. Assento confortável e regulagem de altura para diferentes usuários.",
+    technologies: ["Infravermelho Longo", "Magnetos"],
+    certifications: ["ISO 9001", "INMETRO"],
+    images: ["/produtos/cadeiras/cadeira-secretaria.avif"],
+  },
+
+
 ];
 
 export function getCategoryBySlug(slug: string): Category | undefined {

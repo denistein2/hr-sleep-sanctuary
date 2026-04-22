@@ -73,12 +73,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/boxes/box-classico</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://hrcolchoes.steintechnology.com.br/produtos/boxes/box-slim</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -86,6 +80,12 @@
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/produtos/boxes/box-bau</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/boxes/box-classico</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -109,13 +109,25 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/serie-ouro</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/pangeia</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/comfort</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/diamante</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/unico</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -133,25 +145,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/diamante</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/softnews</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/pangeia</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/serie-ouro</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/colchoes/unico</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -205,48 +205,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios-magneticos/palmilha-magnetica</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios-magneticos/sandalia-couro-magnetica</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios-magneticos/sandalias-magneticas</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios-magneticos/pulseiras-magneticas</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios-magneticos/emplasto-magnetico</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios-magneticos/tapete-magnetico</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios-magneticos/mascara-terapeutica</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/protetor-de-seios</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -272,84 +230,6 @@
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/colchonete-fitness</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cabeceira-cincinnati</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cabeceira-cronos</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cabeceira-diamante</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cabeceira-havai</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cabeceira-infinity</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cabeceira-maceio</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cabeceira-olimpia</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cadeira-diretor</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cadeira-presidente</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cadeira-secretaria</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/poltrona-columbia</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/poltrona</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/puff</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -422,6 +302,126 @@
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/produtos/vestuario-acessorios/calcinha-feminina</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios-magneticos/palmilha-magnetica</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios-magneticos/sandalia-couro-magnetica</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios-magneticos/sandalias-magneticas</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios-magneticos/emplasto-magnetico</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios-magneticos/pulseiras-magneticas</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios-magneticos/tapete-magnetico</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/acessorios-magneticos/mascara-terapeutica</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cabeceira-olimpia</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cabeceira-cincinnati</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cabeceira-maceio</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/puff</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/poltrona</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/poltrona-columbia</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cadeira-presidente</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cabeceira-cronos</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cabeceira-diamante</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cabeceira-havai</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cabeceira-infinity</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cadeira-diretor</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/produtos/mobiliario/cadeira-secretaria</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
