@@ -195,11 +195,11 @@ export const products: Product[] = [
 
   {
     id: "colchao-comfort",
-    name: "Comfort Eko'7",
+    name: "Comfort",
     slug: "comfort",
     categorySlug: "colchoes",
     shortDescription:
-      "Colchão com tecnologia Eko'7 e duas versões de densidade — soft e firm — para adaptar o conforto ao seu estilo de sono com infravermelho longo e magnetos.",
+      "A Eko'7 traz o melhor da tecnologia ergonômica ao unir o melhor molejo ensacado do mercado com espumas de qualidade registrada EKO'7 Química®. O equilíbrio ideal entre mola e espuma para uma ergonomia perfeita. Conta com Sistema Ergonômico Cooperado. Características: altura 29 cm, tecido superior em malha, revestimento lateral em suede.",
     technologies: ["Infravermelho Longo", "Magnetos", "NanoEx"],
     certifications: ["ISO 9001", "ISO 14001", "INMETRO", "ICV Premium"],
     images: [
@@ -209,7 +209,7 @@ export const products: Product[] = [
   },
   {
     id: "colchao-diamante",
-    name: "Diamante Eko'7",
+    name: "Diamante",
     slug: "diamante",
     categorySlug: "colchoes",
     shortDescription:
@@ -479,7 +479,7 @@ export const products: Product[] = [
   },
   {
     id: "drive-eko7",
-    name: "Drive Eko'7",
+    name: "Drive",
     slug: "drive",
     categorySlug: "vestuario-acessorios",
     shortDescription:
@@ -639,7 +639,7 @@ export const products: Product[] = [
   },
   {
     id: "poltrona-eko7",
-    name: "Poltrona Eko'7",
+    name: "Poltrona",
     slug: "poltrona",
     categorySlug: "mobiliario",
     shortDescription:
@@ -650,7 +650,7 @@ export const products: Product[] = [
   },
   {
     id: "puff-eko7",
-    name: "Puff Eko'7",
+    name: "Puff",
     slug: "puff",
     categorySlug: "mobiliario",
     shortDescription:
