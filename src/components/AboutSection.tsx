@@ -23,9 +23,14 @@ const AboutSection = () => {
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-2">Consultor Especialista</p>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">Alberto Backes</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Com mais de 3 anos de experiência em Porto Alegre, Alberto é referência na consultoria de sono reparador com tecnologia Eko'7. Ele guia cada cliente na escolha ideal entre colchões terapêuticos, camas articuladas e acessórios com infravermelho longo e tecnologia magnética.
-            </p>
+            <div className="space-y-3 text-muted-foreground leading-relaxed">
+              <p>
+                Dormir bem é uma ciência, e Alberto Backes é o seu consultor nesta jornada. Especializado nas tecnologias Eko'7, ele atua em todo o Rio Grande do Sul, com base em Porto Alegre, oferecendo soluções sob medida que vão além do conforto: são ferramentas de saúde preventiva e corretiva.
+              </p>
+              <p>
+                Com foco na anatomia e nas necessidades individuais, sua consultoria abrange desde sistemas de dormir até acessórios tecnológicos para o seu dia a dia. Alberto Backes garante que a tecnologia exclusiva e patenteada pela Eko'7 trabalhe de forma integrada, promovendo máxima qualidade de vida e longevidade.
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>
