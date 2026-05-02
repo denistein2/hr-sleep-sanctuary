@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Gera public/sitemap.xml a partir dos dados em src/data/products.ts.
+ * Gera public/sitemap.xml a partir dos dados.
  * Executado pelo script `prebuild` do package.json.
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -12,32 +12,31 @@ const root = resolve(__dirname, "..");
 
 const SITE_URL = "https://hrcolchoes.steintechnology.com.br";
 const productsFile = readFileSync(resolve(root, "src/data/products.ts"), "utf8");
+const categoriesFile = readFileSync(resolve(root, "src/data/categories.ts"), "utf8");
 
-const extractSlugs = (blockRegex) => {
-  const block = productsFile.match(blockRegex);
-  if (!block) return [];
-  return [...block[1].matchAll(/slug:\s*"([^"]+)"/g)].map((m) => m[1]);
-};
-
-// categories é o primeiro array
-const categoriesBlock = productsFile.match(/export const categories:[^=]+=\s*\[([\s\S]*?)\n\];/);
-const productsBlock = productsFile.match(/export const products:[^=]+=\s*\[([\s\S]*?)\n\];/);
+const categoriesBlock = categoriesFile.match(/export const CATEGORIES = \[\s*([\s\S]*?)\n\]/);
+const productsBlock = productsFile.match(/export const PRODUCTS: Product\[\] = \[\s*([\s\S]*?)\n\];/);
 
 if (!categoriesBlock || !productsBlock) {
-  console.error("Não foi possível extrair categories/products de src/data/products.ts");
+  console.error("Não foi possível extrair categories/products");
   process.exit(1);
 }
 
-const categorySlugs = [...categoriesBlock[1].matchAll(/slug:\s*"([^"]+)"/g)].map((m) => m[1]);
+const categoryNames = [...categoriesBlock[1].matchAll(/"([^"]+)"/g)].map((m) => m[1]);
 
-const productEntries = [
-  ...productsBlock[1].matchAll(
-    /categorySlug:\s*"([^"]+)"[\s\S]*?slug:\s*"([^"]+)"|slug:\s*"([^"]+)"[\s\S]*?categorySlug:\s*"([^"]+)"/g
-  ),
-].map((m) => ({
-  categorySlug: m[1] ?? m[4],
-  slug: m[2] ?? m[3],
-}));
+const getCategorySlug = (category) => {
+  if (category === "Colchão") return "colchoes";
+  return category
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
+};
+
+const categorySlugs = categoryNames.map(getCategorySlug);
+
+const productSlugs = [...productsBlock[1].matchAll(/slug:\s*"([^"]+)"/g)].map((m) => m[1]);
 
 const today = new Date().toISOString().slice(0, 10);
 
@@ -46,12 +45,12 @@ const urls = [
   { loc: `${SITE_URL}/sobre`, changefreq: "monthly", priority: "1.0" },
   { loc: `${SITE_URL}/privacidade`, changefreq: "yearly", priority: "0.3" },
   ...categorySlugs.map((s) => ({
-    loc: `${SITE_URL}/produtos/${s}`,
+    loc: `${SITE_URL}/${s}`,
     changefreq: "weekly",
     priority: "0.8",
   })),
-  ...productEntries.map((p) => ({
-    loc: `${SITE_URL}/produtos/${p.categorySlug}/${p.slug}`,
+  ...productSlugs.map((s) => ({
+    loc: `${SITE_URL}/colchoes/${s}`,
     changefreq: "monthly",
     priority: "0.6",
   })),

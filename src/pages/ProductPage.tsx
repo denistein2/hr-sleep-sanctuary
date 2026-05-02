@@ -1,29 +1,26 @@
-import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ChevronLeft, ChevronRight, MessageCircle, ShieldCheck, Zap } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowLeft, MessageCircle, Zap, ShieldCheck, Info } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { getCategoryBySlug, getProductBySlug } from "@/data/products";
+import { PRODUCTS, INSTITUTIONAL_VIDEO_ID } from "@/data/products";
+import { YouTubeFacade } from "@/components/YouTubeFacade";
 
 const WA_NUMBER = "5551984910838";
 
-function buildWhatsAppMessage(productName: string, categoryName: string): string {
+function buildWhatsAppMessage(productName: string): string {
   return encodeURIComponent(
-    `Olá! Tenho interesse no produto *${productName}* (${categoryName}). Poderia me passar mais informações sobre disponibilidade e condições?`
+    `Olá! Tenho interesse no produto *${productName}*. Poderia me passar mais informações sobre disponibilidade e condições?`
   );
 }
 
 const ProductPage = () => {
-  const { categoria, produto } = useParams();
-  const category = categoria ? getCategoryBySlug(categoria) : undefined;
-  const productData = categoria && produto ? getProductBySlug(categoria, produto) : undefined;
+  const { slug } = useParams();
+  const productData = PRODUCTS.find((p) => p.slug === slug);
 
-  const [activeImage, setActiveImage] = useState(0);
-
-  if (!category || !productData) {
+  if (!productData) {
     return (
       <>
         <Header />
@@ -32,8 +29,8 @@ const ProductPage = () => {
             <h1 className="font-display text-2xl font-bold text-foreground mb-4">
               Produto não encontrado
             </h1>
-            <Link to="/" className="text-accent hover:underline">
-              Voltar ao início
+            <Link to="/colchoes" className="text-accent hover:underline">
+              Voltar ao catálogo
             </Link>
           </div>
         </div>
@@ -42,210 +39,162 @@ const ProductPage = () => {
     );
   }
 
-  const images = productData.images.length > 0 ? productData.images : ["/placeholder.svg"];
-  const waLink = `https://wa.me/${WA_NUMBER}?text=${buildWhatsAppMessage(productData.name, category.name)}`;
-
-  const prevImage = () => setActiveImage((i) => (i - 1 + images.length) % images.length);
-  const nextImage = () => setActiveImage((i) => (i + 1) % images.length);
+  const waLink = `https://wa.me/${WA_NUMBER}?text=${buildWhatsAppMessage(productData.name)}`;
 
   return (
     <>
       <SEOHead
-        title={`${productData.name} — ${category.name} | HR Colchões`}
-        description={productData.shortDescription}
-        path={`/produtos/${category.slug}/${productData.slug}`}
+        title={`${productData.name} | Linha Eko'7 | HR Colchões`}
+        description={productData.description}
+        path={`/colchoes/${productData.slug}`}
         type="product"
-        image={images[0]?.startsWith("http") ? images[0] : `https://hrcolchoes.steintechnology.com.br${images[0] ?? "/img/og-image.jpg"}`}
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Product",
-          name: productData.name,
-          description: productData.shortDescription,
-          image: images.map((img) =>
-            img.startsWith("http") ? img : `https://hrcolchoes.steintechnology.com.br${img}`
-          ),
-          category: category.name,
-          brand: { "@type": "Brand", name: "Eko'7" },
-          offers: {
-            "@type": "Offer",
-            availability: "https://schema.org/InStock",
-            priceCurrency: "BRL",
-            url: `https://hrcolchoes.steintechnology.com.br/produtos/${category.slug}/${productData.slug}`,
-            seller: { "@type": "Organization", name: "HR Colchões" },
-          },
-        }}
       />
       <Header />
       <main className="pt-24 pb-20">
-        <div className="container px-4 max-w-6xl">
+        <div className="container px-4 max-w-4xl">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-            <Link to="/#catalogo" className="hover:text-foreground transition-colors">
-              Catálogo
+            <Link to="/" className="hover:text-foreground transition-colors">
+              Início
             </Link>
             <span>/</span>
             <Link
-              to={`/produtos/${category.slug}`}
+              to="/colchoes"
               className="hover:text-foreground transition-colors"
             >
-              {category.name}
+              Colchões
             </Link>
             <span>/</span>
             <span className="text-foreground font-medium">{productData.name}</span>
           </nav>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* ─── Gallery ─── */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              {/* Main image */}
-              <div className="relative glass-card rounded-2xl overflow-hidden aspect-square bg-muted/20 mb-3">
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={activeImage}
-                    src={images[activeImage]}
-                    alt={`${productData.name} — imagem ${activeImage + 1}`}
-                    className="w-full h-full object-contain p-4"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.25 }}
-                  />
-                </AnimatePresence>
-
-                {images.length > 1 && (
-                  <>
-                    <button
-                      onClick={prevImage}
-                      aria-label="Imagem anterior"
-                      className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 backdrop-blur border border-border hover:bg-background transition-colors"
-                    >
-                      <ChevronLeft className="w-4 h-4" />
-                    </button>
-                    <button
-                      onClick={nextImage}
-                      aria-label="Próxima imagem"
-                      className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 backdrop-blur border border-border hover:bg-background transition-colors"
-                    >
-                      <ChevronRight className="w-4 h-4" />
-                    </button>
-                  </>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col gap-10"
+          >
+            {/* 1. Hero */}
+            <div className="text-center md:text-left">
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-4">
+                <span className="text-sm font-semibold uppercase tracking-wider text-accent">
+                  Linha {productData.line}
+                </span>
+                {productData.badge === "Launch" && (
+                  <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-accent text-accent-foreground">
+                    Lançamento
+                  </span>
+                )}
+                {productData.badge === "TopOfLine" && (
+                  <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-amber-500 text-white">
+                    Topo de Linha
+                  </span>
+                )}
+                {productData.badge === "BestSeller" && (
+                  <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-blue-500 text-white">
+                    Mais Vendido
+                  </span>
                 )}
               </div>
+              <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
+                {productData.name}
+              </h1>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
+                {productData.description}
+              </p>
+            </div>
 
-              {/* Thumbnails */}
-              {images.length > 1 && (
-                <div className="flex gap-2 flex-wrap">
-                  {images.map((src, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setActiveImage(i)}
-                      aria-label={`Ver imagem ${i + 1}`}
-                      className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                        i === activeImage
-                          ? "border-accent"
-                          : "border-border hover:border-accent/50"
-                      }`}
+            {/* 2. Especificações */}
+            <div className="glass-card rounded-2xl p-6 md:p-8">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+                <Info className="w-6 h-6 text-accent" />
+                Especificações
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
+                <div className="flex flex-col border-b border-border pb-3">
+                  <span className="text-sm text-muted-foreground">Tipo</span>
+                  <span className="font-medium">{productData.type}</span>
+                </div>
+                {productData.height && (
+                  <div className="flex flex-col border-b border-border pb-3">
+                    <span className="text-sm text-muted-foreground">Altura</span>
+                    <span className="font-medium">{productData.height}</span>
+                  </div>
+                )}
+                {productData.fabric && (
+                  <div className="flex flex-col border-b border-border pb-3">
+                    <span className="text-sm text-muted-foreground">Tecido</span>
+                    <span className="font-medium">{productData.fabric}</span>
+                  </div>
+                )}
+                {productData.warranty && (
+                  <div className="flex flex-col border-b border-border pb-3">
+                    <span className="text-sm text-muted-foreground">Garantia</span>
+                    <span className="font-medium">{productData.warranty}</span>
+                  </div>
+                )}
+                {productData.durability && (
+                  <div className="flex flex-col border-b border-border pb-3">
+                    <span className="text-sm text-muted-foreground">Durabilidade Estimada</span>
+                    <span className="font-medium">{productData.durability}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* 3. Tecnologias */}
+            {productData.technologies.length > 0 && (
+              <div className="glass-card rounded-2xl p-6 md:p-8 border-accent/20">
+                <h2 className="font-display text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+                  <Zap className="w-6 h-6 text-accent" />
+                  Tecnologias Integradas
+                </h2>
+                <div className="flex flex-wrap gap-3">
+                  {productData.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="text-sm md:text-base px-4 py-2 rounded-full bg-accent/10 text-accent border border-accent/20 font-medium"
                     >
-                      <img
-                        src={src}
-                        alt=""
-                        className="w-full h-full object-contain p-1 bg-muted/20"
-                      />
-                    </button>
+                      {tech}
+                    </span>
                   ))}
                 </div>
-              )}
-            </motion.div>
-
-            {/* ─── Info ─── */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="flex flex-col gap-6"
-            >
-              <div>
-                <Link
-                  to={`/produtos/${category.slug}`}
-                  className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-accent mb-3 hover:opacity-80 transition-opacity"
-                >
-                  <ArrowLeft className="w-3.5 h-3.5" />
-                  {category.name}
-                </Link>
-                <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  {productData.name}
-                </h1>
-                <p className="text-muted-foreground text-base leading-relaxed">
-                  {productData.shortDescription}
-                </p>
               </div>
+            )}
 
-              {/* Technologies */}
-              {productData.technologies.length > 0 && (
-                <div className="glass-card rounded-xl p-5">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Zap className="w-4 h-4 text-accent" />
-                    <p className="text-xs font-semibold uppercase tracking-wider text-accent">
-                      Tecnologias Eko'7
-                    </p>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {productData.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="text-sm px-3 py-1 rounded-full bg-accent/10 text-accent border border-accent/20 font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
+            {/* 4. Vídeo */}
+            <div className="mt-4">
+              <YouTubeFacade
+                videoId={productData.videoId ?? INSTITUTIONAL_VIDEO_ID}
+                title={`Apresentação: ${productData.name}`}
+              />
+            </div>
 
-              {/* Certifications */}
-              {productData.certifications.length > 0 && (
-                <div className="glass-card rounded-xl p-5">
-                  <div className="flex items-center gap-2 mb-3">
-                    <ShieldCheck className="w-4 h-4 text-muted-foreground" />
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Certificações
-                    </p>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {productData.certifications.map((cert) => (
-                      <span
-                        key={cert}
-                        className="text-sm px-3 py-1 rounded-full bg-muted text-muted-foreground border border-border"
-                      >
-                        {cert}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
+            {/* 5. CTA WhatsApp */}
+            <div className="mt-8 flex flex-col items-center">
+              <a
+                href={waLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#25D366] text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200"
+              >
+                <MessageCircle className="w-6 h-6" />
+                Falar sobre o {productData.name}
+              </a>
+            </div>
 
-              {/* CTA */}
-              <div className="glass-card rounded-xl p-5 border-accent/20">
-                <p className="text-sm text-muted-foreground mb-4">
-                  Quer saber preço, medidas disponíveis ou condições especiais? Fale com um
-                  consultor agora pelo WhatsApp.
-                </p>
-                <a
-                  href={waLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 w-full justify-center px-6 py-3.5 rounded-lg bg-[#25D366] text-white font-semibold text-sm hover:opacity-90 transition-opacity"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  Solicitar informações via WhatsApp
-                </a>
-              </div>
-            </motion.div>
-          </div>
+            {/* 6. Link discreto */}
+            <div className="text-center mt-6">
+              <a
+                href={productData.officialUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-foreground hover:underline transition-colors"
+              >
+                Ver na Eko'7 oficial
+              </a>
+            </div>
+          </motion.div>
         </div>
       </main>
       <Footer />

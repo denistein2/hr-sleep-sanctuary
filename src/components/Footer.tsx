@@ -10,7 +10,7 @@ const Footer = () => {
         <li key={item.id}>
           {item.active && item.slug ? (
             <Link
-              to={`/produtos/${item.slug}`}
+              to={`/${item.slug}`}
               className={`text-sm font-semibold hover:text-primary-foreground transition-colors block ${item.subItems ? 'mb-1' : ''}`}
             >
               {item.name}
@@ -26,7 +26,7 @@ const Footer = () => {
                 <li key={subItem.id} className={!subItem.active ? "text-primary-foreground/60" : ""}>
                   {subItem.active && subItem.slug ? (
                     <Link
-                      to={`/produtos/${subItem.slug}`}
+                      to={`/${subItem.slug}`}
                       className="text-primary-foreground/80 hover:text-primary-foreground transition-colors block"
                     >
                       {subItem.name}
@@ -69,8 +69,8 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <h4 className="font-display text-sm font-bold uppercase tracking-wider mb-6">Produtos</h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-6">
-              <div>{renderNavSection(navigationData.slice(0, 5))}</div>
-              <div>{renderNavSection(navigationData.slice(5))}</div>
+              <div>{renderNavSection(navigationData.slice(0, 7))}</div>
+              <div>{renderNavSection(navigationData.slice(7))}</div>
             </div>
           </div>
 

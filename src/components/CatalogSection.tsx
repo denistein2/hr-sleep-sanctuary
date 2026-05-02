@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { categories } from "@/data/products";
+import { navigationData } from "@/data/navigation";
 
 const CatalogSection = () => {
   return (
@@ -19,21 +19,20 @@ const CatalogSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {categories.map((cat, i) => (
+          {navigationData.map((cat, i) => (
             <motion.div
-              key={cat.slug}
+              key={cat.id}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.5, delay: i * 0.05 }}
             >
               <Link
-                to={`/produtos/${cat.slug}`}
+                to={`/${cat.slug}`}
                 className="group glass-card rounded-xl p-6 flex flex-col h-full hover:border-accent/30 transition-all duration-300"
               >
-                <span className="text-3xl mb-4">{cat.emoji}</span>
                 <h3 className="font-display text-lg font-bold text-foreground mb-2 group-hover:text-accent transition-colors">{cat.name}</h3>
-                <p className="text-sm text-muted-foreground mb-4 flex-1">{cat.description}</p>
+                <p className="text-sm text-muted-foreground mb-4 flex-1">Explore a linha de {cat.name.toLowerCase()} da Eko'7.</p>
                 <span className="inline-flex items-center gap-1 text-xs font-semibold text-accent group-hover:gap-2 transition-all">
                   Ver mais <ArrowRight className="w-3.5 h-3.5" />
                 </span>

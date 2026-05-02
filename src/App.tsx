@@ -10,6 +10,7 @@ import ProductPage from "./pages/ProductPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import SobrePage from "./pages/SobrePage";
 import NotFound from "./pages/NotFound";
+import PlaceholderPage from "./pages/PlaceholderPage";
 import CookieConsent from "@/components/CookieConsent";
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -25,10 +26,11 @@ const App = () => (
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/produtos/:slug" element={<CategoryPage />} />
-            <Route path="/produtos/:categoria/:produto" element={<ProductPage />} />
+            <Route path="/colchoes" element={<CategoryPage />} />
+            <Route path="/colchoes/:slug" element={<ProductPage />} />
             <Route path="/privacidade" element={<PrivacyPage />} />
             <Route path="/sobre" element={<SobrePage />} />
+            <Route path="/:slug" element={<PlaceholderPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <CookieConsent />

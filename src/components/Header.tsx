@@ -40,7 +40,7 @@ const Header = () => {
               <div className="absolute top-full left-0 w-56 pt-2 animate-fade-in shadow-xl">
                 <div className="bg-card border border-border rounded-lg py-2">
                 {activeLinks.map((link) => (
-                  <Link key={link.id} to={`/produtos/${link.slug}`} className="block px-4 py-2 text-sm text-foreground/80 hover:bg-muted hover:text-foreground transition-colors">
+                  <Link key={link.id} to={`/${link.slug}`} className="block px-4 py-2 text-sm text-foreground/80 hover:bg-muted hover:text-foreground transition-colors">
                     {link.name}
                   </Link>
                 ))}
@@ -71,7 +71,7 @@ const Header = () => {
             <Link to="/" onClick={() => setMobileOpen(false)} className="py-2 text-foreground/80">Início</Link>
             <p className="text-xs text-muted-foreground uppercase tracking-wider mt-2">Produtos</p>
             {activeLinks.map((link) => (
-              <Link key={link.id} to={`/produtos/${link.slug}`} onClick={() => setMobileOpen(false)} className="py-1.5 pl-3 text-foreground/80">
+              <Link key={link.id} to={`/${link.slug}`} onClick={() => setMobileOpen(false)} className="py-1.5 pl-3 text-foreground/80">
                 {link.name}
               </Link>
             ))}
