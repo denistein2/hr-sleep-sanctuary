@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
+import { Helmet } from "react-helmet-async";
+import { SITE_URL } from "@/config/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -9,6 +11,9 @@ const UPDATED_AT = "19 de abril de 2026";
 
 const PrivacyPage = () => (
   <>
+    <Helmet>
+      <link rel="canonical" href={`${SITE_URL}/privacidade`} />
+    </Helmet>
     <SEOHead
       title="Política de Privacidade | HR Colchões"
       description="Política de privacidade e tratamento de dados pessoais da HR Colchões em conformidade com a LGPD (Lei nº 13.709/2018)."

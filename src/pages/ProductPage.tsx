@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { ArrowLeft, MessageCircle, Zap, ShieldCheck, Info } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
@@ -7,6 +8,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { PRODUCTS, INSTITUTIONAL_VIDEO_ID } from "@/data/products";
 import { YouTubeFacade } from "@/components/YouTubeFacade";
+import { SITE_URL } from "@/config/site";
 
 const WA_NUMBER = "5551984910838";
 
@@ -41,8 +43,51 @@ const ProductPage = () => {
 
   const waLink = `https://wa.me/${WA_NUMBER}?text=${buildWhatsAppMessage(productData.name)}`;
 
+  const productSchema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": productData.name,
+    "description": productData.description,
+    "brand": {
+      "@type": "Brand",
+      "name": "Eko'7"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Eko'7",
+      "url": "https://eko7.com.br"
+    },
+    "category": productData.line,
+    "url": `${SITE_URL}/colchoes/${productData.slug}`,
+    ...(productData.warranty && {
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Garantia",
+          "value": productData.warranty
+        },
+        ...(productData.durability ? [{
+          "@type": "PropertyValue",
+          "name": "Durabilidade média",
+          "value": productData.durability
+        }] : []),
+        ...(productData.height ? [{
+          "@type": "PropertyValue",
+          "name": "Altura",
+          "value": productData.height
+        }] : [])
+      ]
+    })
+  };
+
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href={`${SITE_URL}/colchoes/${productData.slug}`} />
+        <script type="application/ld+json">
+          {JSON.stringify(productSchema)}
+        </script>
+      </Helmet>
       <SEOHead
         title={`${productData.name} | Linha Eko'7 | HR Colchões`}
         description={productData.description}

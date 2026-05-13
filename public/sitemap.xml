@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://hrcolchoes.steintechnology.com.br/sobre</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -19,88 +25,82 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/acessorio</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/acessorios</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/box-e-cama</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/cabeceira</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/cadeira-e-poltrona</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/calcados</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/colchoes</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchonetes</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/colchonete</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/linha-fitness</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/linha-intima</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/linha-pet</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/linha-textil</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/puff</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/tapete</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/tapetes</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/travesseiro</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/travesseiros</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/colchoes/diamante</loc>

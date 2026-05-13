@@ -1,4 +1,6 @@
 import SEOHead from "@/components/SEOHead";
+import { Helmet } from "react-helmet-async";
+import { SITE_URL } from "@/config/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -12,6 +14,9 @@ import icvPremium from "@/assets/img/inst.png";
 const SobrePage = () => {
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href={`${SITE_URL}/sobre`} />
+      </Helmet>
       <SEOHead
         title="Sobre a HR Colchões — Distribuidor Eko'7 em Porto Alegre"
         description="Conheça a HR Colchões, distribuidor autorizado do Grupo Eko'7. Saiba mais sobre nossas tecnologias de padrão mundial para um sono verdadeiramente reparador."

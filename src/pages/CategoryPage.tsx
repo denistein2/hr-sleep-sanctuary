@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { SITE_URL } from "@/config/site";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,6 +14,9 @@ const LINE_ORDER: ProductLine[] = ["Premium", "Conforto", "Cama", "Acessorio"];
 const CategoryPage = () => {
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href={`${SITE_URL}/colchoes`} />
+      </Helmet>
       <SEOHead
         title="Linha Eko'7 | HR Colchões"
         description="Descubra a linha completa de colchões, camas articuladas e acessórios terapêuticos Eko'7."

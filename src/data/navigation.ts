@@ -1,4 +1,4 @@
-import { CATEGORIES, getCategorySlug } from './categories';
+import { CATEGORIES } from './categories';
 
 export interface NavItem {
   id: string;
@@ -10,10 +10,10 @@ export interface NavItem {
 }
 
 export const navigationData: NavItem[] = CATEGORIES.map(category => ({
-  id: getCategorySlug(category),
-  name: category,
-  shortName: category,
-  slug: category === "Colchão" ? "colchoes" : getCategorySlug(category),
+  id: category.slug,
+  name: category.name,
+  shortName: category.name,
+  slug: category.slug,
   active: true,
 }));
 

@@ -1,4 +1,6 @@
 import SEOHead from "@/components/SEOHead";
+import { Helmet } from "react-helmet-async";
+import { SITE_URL } from "@/config/site";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -9,6 +11,9 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => (
   <>
+    <Helmet>
+      <link rel="canonical" href={`${SITE_URL}/`} />
+    </Helmet>
     <SEOHead
       title="HR Colchões — Sono Reparador com Tecnologia Eko'7 | Porto Alegre"
       description="Colchões terapêuticos, camas articuladas e acessórios com infravermelho longo e tecnologia magnética Eko'7. Distribuidor em Porto Alegre. Fale com nosso especialista."
