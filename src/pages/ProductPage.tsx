@@ -9,6 +9,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { PRODUCTS, INSTITUTIONAL_VIDEO_ID } from "@/data/products";
 import { YouTubeFacade } from "@/components/YouTubeFacade";
 import { SITE_URL } from "@/config/site";
+import ProductGallery from "@/components/ProductGallery";
 
 const WA_NUMBER = "5551984910838";
 
@@ -186,6 +187,9 @@ const ProductPage = () => {
                 )}
               </div>
             </div>
+
+            {/* Galeria de Fotos */}
+            <ProductGallery productSlug={productData.slug} />
 
             {/* 3. Tecnologias */}
             {productData.technologies.length > 0 && (

@@ -9,13 +9,62 @@ export interface NavItem {
   subItems?: NavItem[];
 }
 
-export const navigationData: NavItem[] = CATEGORIES.map(category => ({
-  id: category.slug,
-  name: category.name,
-  shortName: category.name,
-  slug: category.slug,
-  active: true,
-}));
+const getCategory = (slug: string): NavItem | null => {
+  const cat = CATEGORIES.find(c => c.slug === slug);
+  if (!cat) return null;
+  return {
+    id: cat.slug,
+    name: cat.name,
+    shortName: cat.name,
+    slug: cat.slug,
+    active: true,
+  };
+};
+
+export const navigationData: NavItem[] = [
+  {
+    id: 'linha-dormir',
+    name: 'Linha Dormir',
+    active: true,
+    subItems: [
+      getCategory('colchoes'),
+      getCategory('box-e-cama'),
+      getCategory('cabeceira'),
+      getCategory('travesseiros'),
+      getCategory('colchonetes'),
+    ].filter(Boolean) as NavItem[],
+  },
+  {
+    id: 'moveis',
+    name: 'Móveis',
+    active: true,
+    subItems: [
+      getCategory('cadeira-e-poltrona'),
+    ].filter(Boolean) as NavItem[],
+  },
+  {
+    id: 'acessorios-familia',
+    name: 'Acessórios',
+    active: true,
+    subItems: [
+      getCategory('acessorios'),
+      getCategory('linha-textil'),
+      getCategory('puff'),
+      getCategory('tapetes'),
+    ].filter(Boolean) as NavItem[],
+  },
+  {
+    id: 'bem-estar-estilo',
+    name: 'Bem-estar & Estilo',
+    active: true,
+    subItems: [
+      getCategory('linha-fitness'),
+      getCategory('linha-pet'),
+      getCategory('linha-intima'),
+      getCategory('calcados'),
+    ].filter(Boolean) as NavItem[],
+  }
+];
 
 export const getActiveHeaderLinks = () => {
   const links: { id: string; name: string; slug: string }[] = [];
@@ -29,8 +78,7 @@ export const getActiveHeaderLinks = () => {
           slug: item.slug,
         });
       }
-      
-      if (!item.active && item.subItems) {
+      if (item.subItems) {
         traverse(item.subItems);
       }
     }
