@@ -185,8 +185,69 @@ const ProductPage = () => {
                     <span className="font-medium">{productData.durability}</span>
                   </div>
                 )}
+                {productData.sizes && (
+                  <div className="flex flex-col border-b border-border pb-3 md:col-span-2">
+                    <span className="text-sm text-muted-foreground">Medidas disponíveis</span>
+                    <span className="font-medium">{productData.sizes}</span>
+                  </div>
+                )}
+                {productData.versions && (
+                  <div className="flex flex-col border-b border-border pb-3">
+                    <span className="text-sm text-muted-foreground">Versões</span>
+                    <span className="font-medium">{productData.versions}</span>
+                  </div>
+                )}
+                {productData.motor && (
+                  <div className="flex flex-col border-b border-border pb-3">
+                    <span className="text-sm text-muted-foreground">Motor</span>
+                    <span className="font-medium">{productData.motor}</span>
+                  </div>
+                )}
               </div>
+
+              {productData.structure && productData.structure.length > 0 && (
+                <div className="mt-6">
+                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                    Estrutura (camadas)
+                  </h3>
+                  <ol className="space-y-1">
+                    {productData.structure.map((layer, i) => (
+                      <li key={i} className="flex items-center gap-2 text-sm">
+                        <span className="w-5 h-5 rounded-full bg-accent/10 text-accent text-xs flex items-center justify-center font-bold shrink-0">
+                          {i + 1}
+                        </span>
+                        {layer}
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
+
+              {productData.contraindication && (
+                <p className="mt-5 text-sm text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20 rounded-lg px-4 py-3 border border-amber-200 dark:border-amber-800">
+                  ⚠ {productData.contraindication}
+                </p>
+              )}
             </div>
+
+            {productData.certifications && productData.certifications.length > 0 && (
+              <div className="glass-card rounded-2xl p-6 md:p-8">
+                <h2 className="font-display text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
+                  <ShieldCheck className="w-6 h-6 text-accent" />
+                  Certificações
+                </h2>
+                <div className="flex flex-wrap gap-3">
+                  {productData.certifications.map((cert) => (
+                    <span
+                      key={cert}
+                      className="text-sm px-4 py-2 rounded-full bg-green-500/10 text-green-700 dark:text-green-400 border border-green-500/20 font-semibold"
+                    >
+                      {cert}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Galeria de Fotos */}
             <ProductGallery productSlug={productData.slug} />

@@ -109,13 +109,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/serie-ouro-premium-pillow</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/serie-ouro-pillow</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/serie-ouro-premium</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/serie-ouro</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -127,7 +127,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/comfort</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/pangeia</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -151,7 +151,25 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/baby</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/renova</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://hrcolchoes.steintechnology.com.br/colchoes/flexibed-roma</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/flexibed-gran-jaguar</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

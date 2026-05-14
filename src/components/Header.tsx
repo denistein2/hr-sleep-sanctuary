@@ -38,7 +38,7 @@ const Header = () => {
   const suggestions = useMemo(() => {
     const query = searchQuery.toLowerCase().trim();
     if (!query) return { products: [], categories: [] };
-    const pMatch = PRODUCTS.filter(p => p.name.toLowerCase().includes(query) || p.type.toLowerCase().includes(query) || p.line.toLowerCase().includes(query)).slice(0, 4);
+    const pMatch = PRODUCTS.filter(p => !p.hidden && (p.name.toLowerCase().includes(query) || p.type.toLowerCase().includes(query) || p.line.toLowerCase().includes(query))).slice(0, 4);
     const cMatch = CATEGORIES.filter(c => c.name.toLowerCase().includes(query)).slice(0, 2);
     return { products: pMatch, categories: cMatch };
   }, [searchQuery]);

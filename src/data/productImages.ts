@@ -71,15 +71,19 @@ export const FOLDER_TITLES: Record<string, string> = new Proxy(
 
 /** Product slug (de products.ts) → pasta de imagens */
 export const PRODUCT_SLUG_TO_FOLDER: Record<string, string> = {
-  "diamante":                   "diamante",
-  "serie-ouro-premium-pillow":  "serie-ouro-com-pillow",
-  "serie-ouro-premium":         "serie-ouro-sem-pillow",
-  "seven":                      "seven",
-  "news":                       "news",
-  "unico":                      "unico",
-  "lunar":                      "lunar",
-  "flexibed-roma":              "flexibedroma",
-  "flexibed-lisboa":            "flexibedlisboa",
+  "diamante":              "diamante",
+  "serie-ouro-pillow":     "serie-ouro-com-pillow",
+  "serie-ouro":            "serie-ouro-sem-pillow",
+  "seven":                 "seven",
+  "pangeia":               "pangeia",
+  "news":                  "news",
+  "unico":                 "unico",
+  "lunar":                 "lunar",
+  "baby":                  "baby",
+  "renova":                "renova",
+  "flexibed-roma":         "flexibedroma",
+  "flexibed-gran-jaguar":  "flexibedgran-jaguar",
+  "flexibed-lisboa":       "flexibedlisboa",
 };
 
 /** Manifesto estático completo — gerado a partir dos arquivos em public/ */

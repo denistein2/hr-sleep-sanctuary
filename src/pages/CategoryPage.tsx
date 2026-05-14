@@ -33,9 +33,15 @@ const CategoryPage = () => {
   const [searchParams] = useSearchParams();
   const query = searchParams.get("q")?.toLowerCase().trim() || "";
 
+  const visibleProducts = PRODUCTS.filter((p) => !p.hidden);
   const filteredProducts = query
-    ? PRODUCTS.filter(p => p.name.toLowerCase().includes(query) || p.type.toLowerCase().includes(query) || p.line.toLowerCase().includes(query))
-    : PRODUCTS;
+    ? visibleProducts.filter(
+        (p) =>
+          p.name.toLowerCase().includes(query) ||
+          p.type.toLowerCase().includes(query) ||
+          p.line.toLowerCase().includes(query),
+      )
+    : visibleProducts;
 
   return (
     <>
