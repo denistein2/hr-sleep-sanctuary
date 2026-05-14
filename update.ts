@@ -131,8 +131,8 @@ const productUpdates = [
   { id: "linha-fitness-legge", slug: "linha-fitness-legge", name: "Linha Fitness Legge", categorySlug: "acessorios", display_order: 3, isNew: true, cloneFrom: "tenis-fn7" }
 ];
 
-let finalProducts = [];
-let usedIds = new Set();
+const finalProducts = [];
+const usedIds = new Set();
 
 for (const update of productUpdates) {
   if (update.isNew) {
@@ -172,7 +172,7 @@ for (const p of products) {
 }
 
 // Generate TS output
-let output = `export interface Category {
+const output = `export interface Category {
   id: string;
   name: string;
   slug: string;
