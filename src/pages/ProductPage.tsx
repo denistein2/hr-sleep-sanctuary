@@ -23,7 +23,7 @@ function buildWhatsAppMessage(productName: string, categorySlug?: string): strin
   const categoryStr = categorySlug && categoryMap[categorySlug] ? categoryMap[categorySlug] : "produto";
   
   return encodeURIComponent(
-    `Olá, tenho interesse ${article} ${categoryStr} ${productName}, gostaria de marcar uma consultoria.`
+    `Olá, tenho interesse ${article} ${categoryStr} ${productName}, gostaria de agendar uma consultoria gratuita.`
   );
 }
 
