@@ -91,18 +91,7 @@ export default function ProductGallery({
 
   return (
     <>
-      {hierarchy ? (
-        <div className="mb-4">
-          <span className="text-xs font-semibold uppercase tracking-widest text-accent">
-            {hierarchy.category}
-          </span>
-          <h2 className="font-display text-xl font-bold text-foreground leading-tight">
-            {hierarchy.subcategory}
-          </h2>
-        </div>
-      ) : title ? (
-        <h2 className="font-display text-xl font-bold text-foreground mb-4">{title}</h2>
-      ) : null}
+
 
       <div className={`grid ${gridCols} gap-2 sm:gap-3 ${className}`}>
         {images.map((src, i) => (

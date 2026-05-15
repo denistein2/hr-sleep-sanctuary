@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram } from "lucide-react";
-import logoImg from "@/assets/img/Logo Novo.png";
+import logoImg from "@/assets/img/LOGO HR COLCHAO E EKO'7.png";
 import { navigationData, NavItem } from "@/data/navigation";
 
 const Footer = () => {
@@ -48,17 +48,16 @@ const Footer = () => {
       <div className="container px-4">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-8">
           <div className="lg:col-span-1 space-y-6">
-            <Link to="/" className="inline-block bg-white rounded-lg p-1.5 shadow-sm border border-border/50">
+            <Link to="/" className="inline-block bg-white rounded-lg p-2 shadow-sm border border-border/50">
               <img 
                 src={logoImg} 
                 alt="HR Colchões" 
-                className="h-10 w-auto mix-blend-multiply" 
+                className="h-20 w-auto mix-blend-multiply object-contain" 
               />
             </Link>
             <div className="space-y-3">
-              <h3 className="font-display text-lg font-bold">Hr colchões</h3>
               <p className="text-primary-foreground/60 text-sm leading-relaxed">
-                Distribuidor Autorizado do Grupo Eko'7. Oferecemos soluções completas para saúde e sono profundo em Porto Alegre.
+                Oferecemos soluções completas para saúde e sono profundo em Porto Alegre.
               </p>
               <Link to="/sobre" className="text-accent hover:text-accent/80 text-sm font-semibold flex items-center gap-1 transition-colors">
                 Saiba mais sobre nós →
@@ -69,8 +68,8 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <h4 className="font-display text-sm font-bold uppercase tracking-wider mb-6">Produtos</h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-6">
-              <div>{renderNavSection(navigationData.slice(0, 7))}</div>
-              <div>{renderNavSection(navigationData.slice(7))}</div>
+              <div>{renderNavSection(navigationData.slice(0, 2))}</div>
+              <div>{renderNavSection(navigationData.slice(2))}</div>
             </div>
           </div>
 

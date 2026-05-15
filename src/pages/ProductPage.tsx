@@ -13,9 +13,17 @@ import ProductGallery from "@/components/ProductGallery";
 
 const WA_NUMBER = "5551984910838";
 
-function buildWhatsAppMessage(productName: string): string {
+function buildWhatsAppMessage(productName: string, categorySlug?: string): string {
+  const categoryMap: Record<string, string> = {
+    colchoes: "Colchão",
+    camas: "Cama Articulada",
+    acessorios: "Acessório"
+  };
+  const article = categorySlug === "camas" ? "na" : "no";
+  const categoryStr = categorySlug && categoryMap[categorySlug] ? categoryMap[categorySlug] : "produto";
+  
   return encodeURIComponent(
-    `Olá! Tenho interesse no produto *${productName}*. Poderia me passar mais informações sobre disponibilidade e condições?`
+    `Olá, tenho interesse ${article} ${categoryStr} ${productName}, gostaria de marcar uma consultoria.`
   );
 }
 
@@ -42,7 +50,7 @@ const ProductPage = () => {
     );
   }
 
-  const waLink = `https://wa.me/${WA_NUMBER}?text=${buildWhatsAppMessage(productData.name)}`;
+  const waLink = `https://wa.me/${WA_NUMBER}?text=${buildWhatsAppMessage(productData.name, productData.categorySlug)}`;
 
   const productSchema = {
     "@context": "https://schema.org/",
@@ -145,12 +153,60 @@ const ProductPage = () => {
               <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
                 {productData.name}
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                {productData.description}
-              </p>
             </div>
 
-            {/* 2. Especificações */}
+            {/* 2. Grid Imagens + Descrição/Tecnologias */}
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12">
+              <div className="md:col-span-3">
+                <ProductGallery productSlug={productData.slug} />
+              </div>
+              
+              <div className="md:col-span-2 flex flex-col gap-8">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {productData.description}
+                </p>
+
+                {productData.technologies.length > 0 && (
+                  <div className="glass-card rounded-xl p-5 md:p-6 border-accent/20">
+                    <h2 className="font-display text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+                      <Zap className="w-5 h-5 text-accent" />
+                      Tecnologias Integradas
+                    </h2>
+                    <div className="flex flex-wrap gap-2 md:gap-3">
+                      {productData.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="text-xs md:text-sm px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-accent/10 text-accent border border-accent/20 font-medium"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {productData.certifications && productData.certifications.length > 0 && (
+                  <div className="glass-card rounded-xl p-5 md:p-6">
+                    <h2 className="font-display text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+                      <ShieldCheck className="w-5 h-5 text-accent" />
+                      Certificações
+                    </h2>
+                    <div className="flex flex-wrap gap-2 md:gap-3">
+                      {productData.certifications.map((cert) => (
+                        <span
+                          key={cert}
+                          className="text-xs md:text-sm px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-green-500/10 text-green-700 dark:text-green-400 border border-green-500/20 font-semibold"
+                        >
+                          {cert}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* 3. Especificações */}
             <div className="glass-card rounded-2xl p-6 md:p-8">
               <h2 className="font-display text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
                 <Info className="w-6 h-6 text-accent" />
@@ -229,48 +285,6 @@ const ProductPage = () => {
                 </p>
               )}
             </div>
-
-            {productData.certifications && productData.certifications.length > 0 && (
-              <div className="glass-card rounded-2xl p-6 md:p-8">
-                <h2 className="font-display text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
-                  <ShieldCheck className="w-6 h-6 text-accent" />
-                  Certificações
-                </h2>
-                <div className="flex flex-wrap gap-3">
-                  {productData.certifications.map((cert) => (
-                    <span
-                      key={cert}
-                      className="text-sm px-4 py-2 rounded-full bg-green-500/10 text-green-700 dark:text-green-400 border border-green-500/20 font-semibold"
-                    >
-                      {cert}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Galeria de Fotos */}
-            <ProductGallery productSlug={productData.slug} />
-
-            {/* 3. Tecnologias */}
-            {productData.technologies.length > 0 && (
-              <div className="glass-card rounded-2xl p-6 md:p-8 border-accent/20">
-                <h2 className="font-display text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-                  <Zap className="w-6 h-6 text-accent" />
-                  Tecnologias Integradas
-                </h2>
-                <div className="flex flex-wrap gap-3">
-                  {productData.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-sm md:text-base px-4 py-2 rounded-full bg-accent/10 text-accent border border-accent/20 font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
 
             {/* 4. Vídeo */}
             <div className="mt-4">

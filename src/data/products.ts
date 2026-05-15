@@ -27,7 +27,7 @@ export type Product = {
 };
 
 const WARRANTY_STANDARD = "Altíssima durabilidade e assistência técnica vitalícia";
-const CERTS_STANDARD = ["ICV", "SBRT", "ISO 9001"];
+const CERTS_STANDARD = ["ICV", "SBRT", "ISO 9001", "ISO 14001"];
 const SIZES_STANDARD =
   "Solteiro 0,88x1,88 | Meio Casal 1,19x1,88 | Casal 1,38x1,88 | Queen 1,58x1,98 | King 1,93x2,03";
 
