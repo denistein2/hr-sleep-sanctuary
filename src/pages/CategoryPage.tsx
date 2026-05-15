@@ -18,8 +18,8 @@ const CATALOG_ORDER = [
     filter: (p: Product) => p.line === "Premium" || p.line === "Conforto",
   },
   {
-    title: "Camas e Box",
-    filter: (p: Product) => p.line === "Cama",
+    title: "Box",
+    filter: (p: Product) => p.categoryId === "box",
   },
   {
     title: "Acessórios",

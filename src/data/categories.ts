@@ -1,13 +1,15 @@
 export type Category = {
   name: string;
   slug: string;       // usado na URL
-  hasProducts: boolean; 
+  hasProducts: boolean;
+  description?: string;
+  icon?: string;
 };
 
 // Ordem do menu oficial Eko'7. Slugs em kebab-case sem acento.
 export const CATEGORIES: Category[] = [
   { name: "Acessórios",           slug: "acessorios",         hasProducts: true },
-  { name: "Camas e Box",          slug: "camas-e-box",         hasProducts: true },
+  { name: "Box",                  slug: "box",                hasProducts: true, description: "Box e bases para colchão Eko'7 — Slim, Clássico, Baú e Bicama", icon: "Package" },
   { name: "Camas Articuladas",    slug: "camas-articuladas",  hasProducts: true },
   { name: "Cabeceiras",           slug: "cabeceira",          hasProducts: true },
   { name: "Poltronas e Cadeiras", slug: "cadeira-e-poltrona", hasProducts: true },

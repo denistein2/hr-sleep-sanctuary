@@ -169,6 +169,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/box-slim</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://hrcolchoes.steintechnology.com.br/colchoes/box-classico</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -181,7 +187,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/box-slin</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/box-bicama</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

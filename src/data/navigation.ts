@@ -29,7 +29,7 @@ export const navigationData: NavItem[] = [
     subItems: [
       getCategory('colchoes'),
       getCategory('camas-articuladas'),
-      getCategory('camas-e-box'),
+      getCategory('box'),
       getCategory('cabeceira'),
       getCategory('travesseiros'),
       getCategory('colchonetes'),
