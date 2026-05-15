@@ -17,6 +17,7 @@ export type Product = {
   badge?: "TopOfLine" | "Launch" | "BestSeller" | null;
   // Campos estendidos (opcionais — retrocompatíveis)
   hidden?: boolean;
+  images?: string[];
   certifications?: string[];
   sizes?: string;
   contraindication?: string;
@@ -65,7 +66,22 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     contraindication:
       "Contraindicado para portadores de marcapasso (solicite versão sem magnetos)",
-    categorySlug: "colchoes",
+    categorySlug: "colchoes"
+  ,
+    hidden: false,
+    images: [
+      "/produtos/diamante/diamante-1.webp",
+      "/produtos/diamante/diamante-2.webp",
+      "/produtos/diamante/diamante-3.webp",
+      "/produtos/diamante/diamante-4.webp",
+      "/produtos/diamante/diamante-5.webp",
+      "/produtos/diamante/diamante-6.webp",
+      "/produtos/diamante/diamante-7.webp",
+      "/produtos/diamante/diamante-8.webp",
+      "/produtos/diamante/diamante-9.webp",
+      "/produtos/diamante/diamante-10.webp",
+      "/produtos/diamante/diamante-11.webp"
+    ],
   },
   {
     slug: "serie-ouro-pillow",
@@ -104,7 +120,28 @@ export const PRODUCTS: Product[] = [
       "Espuma D33 convencional — 10 cm",
       "Espuma D28 convencional — 6 cm",
     ],
-    categorySlug: "colchoes",
+    categorySlug: "colchoes"
+  ,
+    hidden: false,
+    images: [
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-1.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-2.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-3.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-4.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-5.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-6.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-7.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-8.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-9.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-10.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-11.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-12.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-13.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-14.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-15.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-16.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-17.webp"
+    ],
   },
   {
     slug: "serie-ouro",
@@ -134,7 +171,28 @@ export const PRODUCTS: Product[] = [
     badge: null,
     certifications: CERTS_STANDARD,
     sizes: SIZES_STANDARD,
-    categorySlug: "colchoes",
+    categorySlug: "colchoes"
+  ,
+    hidden: false,
+    images: [
+      "/produtos/serie-ouro/serie-ouro-1.webp",
+      "/produtos/serie-ouro/serie-ouro-2.webp",
+      "/produtos/serie-ouro/serie-ouro-3.webp",
+      "/produtos/serie-ouro/serie-ouro-4.webp",
+      "/produtos/serie-ouro/serie-ouro-5.webp",
+      "/produtos/serie-ouro/serie-ouro-6.webp",
+      "/produtos/serie-ouro/serie-ouro-7.webp",
+      "/produtos/serie-ouro/serie-ouro-8.webp",
+      "/produtos/serie-ouro/serie-ouro-9.webp",
+      "/produtos/serie-ouro/serie-ouro-10.webp",
+      "/produtos/serie-ouro/serie-ouro-11.webp",
+      "/produtos/serie-ouro/serie-ouro-12.webp",
+      "/produtos/serie-ouro/serie-ouro-13.webp",
+      "/produtos/serie-ouro/serie-ouro-14.webp",
+      "/produtos/serie-ouro/serie-ouro-15.webp",
+      "/produtos/serie-ouro/serie-ouro-16.webp",
+      "/produtos/serie-ouro/serie-ouro-17.webp"
+    ],
   },
   {
     slug: "seven",
@@ -159,7 +217,22 @@ export const PRODUCTS: Product[] = [
     badge: "Launch",
     certifications: CERTS_STANDARD,
     sizes: SIZES_STANDARD,
-    categorySlug: "colchoes",
+    categorySlug: "colchoes"
+  ,
+    hidden: false,
+    images: [
+      "/produtos/seven/seven-1.webp",
+      "/produtos/seven/seven-2.webp",
+      "/produtos/seven/seven-3.webp",
+      "/produtos/seven/seven-4.webp",
+      "/produtos/seven/seven-5.webp",
+      "/produtos/seven/seven-6.webp",
+      "/produtos/seven/seven-7.webp",
+      "/produtos/seven/seven-8.webp",
+      "/produtos/seven/seven-9.webp",
+      "/produtos/seven/seven-10.webp",
+      "/produtos/seven/seven-11.webp"
+    ],
   },
 
   // ─── Conforto ────────────────────────────────────────────────────────────────
@@ -190,7 +263,39 @@ export const PRODUCTS: Product[] = [
     badge: null,
     certifications: CERTS_STANDARD,
     sizes: SIZES_STANDARD,
-    categorySlug: "colchoes",
+    categorySlug: "colchoes"
+  ,
+    hidden: false,
+    images: [
+      "/produtos/pangeia/pangeia-1.webp",
+      "/produtos/pangeia/pangeia-2.webp",
+      "/produtos/pangeia/pangeia-3.webp",
+      "/produtos/pangeia/pangeia-4.webp",
+      "/produtos/pangeia/pangeia-5.webp",
+      "/produtos/pangeia/pangeia-6.webp",
+      "/produtos/pangeia/pangeia-7.webp",
+      "/produtos/pangeia/pangeia-8.webp",
+      "/produtos/pangeia/pangeia-9.webp",
+      "/produtos/pangeia/pangeia-10.webp",
+      "/produtos/pangeia/pangeia-11.webp",
+      "/produtos/pangeia/pangeia-12.webp",
+      "/produtos/pangeia/pangeia-13.webp",
+      "/produtos/pangeia/pangeia-14.webp",
+      "/produtos/pangeia/pangeia-15.webp",
+      "/produtos/pangeia/pangeia-16.webp",
+      "/produtos/pangeia/pangeia-17.webp",
+      "/produtos/pangeia/pangeia-18.webp",
+      "/produtos/pangeia/pangeia-19.webp",
+      "/produtos/pangeia/pangeia-20.webp",
+      "/produtos/pangeia/pangeia-21.webp",
+      "/produtos/pangeia/pangeia-22.webp",
+      "/produtos/pangeia/pangeia-23.webp",
+      "/produtos/pangeia/pangeia-24.webp",
+      "/produtos/pangeia/pangeia-25.webp",
+      "/produtos/pangeia/pangeia-26.webp",
+      "/produtos/pangeia/pangeia-27.webp",
+      "/produtos/pangeia/pangeia-28.webp"
+    ],
   },
   {
     slug: "news",
@@ -217,7 +322,21 @@ export const PRODUCTS: Product[] = [
     badge: null,
     certifications: CERTS_STANDARD,
     sizes: SIZES_STANDARD,
-    categorySlug: "colchoes",
+    categorySlug: "colchoes"
+  ,
+    hidden: false,
+    images: [
+      "/produtos/news/news-1.webp",
+      "/produtos/news/news-2.webp",
+      "/produtos/news/news-3.webp",
+      "/produtos/news/news-4.webp",
+      "/produtos/news/news-5.webp",
+      "/produtos/news/news-6.webp",
+      "/produtos/news/news-7.webp",
+      "/produtos/news/news-8.webp",
+      "/produtos/news/news-9.webp",
+      "/produtos/news/news-10.webp"
+    ],
   },
   {
     slug: "unico",
@@ -246,7 +365,13 @@ export const PRODUCTS: Product[] = [
     badge: null,
     certifications: CERTS_STANDARD,
     sizes: SIZES_STANDARD,
-    categorySlug: "colchoes",
+    categorySlug: "colchoes"
+  ,
+    hidden: false,
+    images: [
+      "/produtos/colchoes/unico/eko7-757-san-unico-rose.webp",
+      "/produtos/colchoes/unico/eko7-758-san-unico-rose.webp"
+    ],
   },
   {
     slug: "lunar",
@@ -272,7 +397,52 @@ export const PRODUCTS: Product[] = [
     badge: null,
     certifications: CERTS_STANDARD,
     sizes: SIZES_STANDARD,
-    categorySlug: "colchoes",
+    categorySlug: "colchoes"
+  ,
+    hidden: false,
+    images: [
+      "/produtos/lunar/lunar-1.webp",
+      "/produtos/lunar/lunar-2.webp",
+      "/produtos/lunar/lunar-3.webp",
+      "/produtos/lunar/lunar-4.webp",
+      "/produtos/lunar/lunar-5.webp",
+      "/produtos/lunar/lunar-6.webp",
+      "/produtos/lunar/lunar-7.webp",
+      "/produtos/lunar/lunar-8.webp",
+      "/produtos/lunar/lunar-9.webp",
+      "/produtos/lunar/lunar-10.webp",
+      "/produtos/lunar/lunar-11.webp",
+      "/produtos/lunar/lunar-12.webp",
+      "/produtos/lunar/lunar-13.webp",
+      "/produtos/lunar/lunar-14.webp",
+      "/produtos/lunar/lunar-15.webp",
+      "/produtos/lunar/lunar-16.webp",
+      "/produtos/lunar/lunar-17.webp",
+      "/produtos/lunar/lunar-18.webp",
+      "/produtos/lunar/lunar-19.webp",
+      "/produtos/lunar/lunar-20.webp",
+      "/produtos/lunar/lunar-21.webp",
+      "/produtos/lunar/lunar-22.webp",
+      "/produtos/lunar/lunar-23.webp",
+      "/produtos/lunar/lunar-24.webp",
+      "/produtos/lunar/lunar-25.webp",
+      "/produtos/lunar/lunar-26.webp",
+      "/produtos/lunar/lunar-27.webp",
+      "/produtos/lunar/lunar-28.webp",
+      "/produtos/lunar/lunar-29.webp",
+      "/produtos/lunar/lunar-30.webp",
+      "/produtos/lunar/lunar-31.webp",
+      "/produtos/lunar/lunar-32.webp",
+      "/produtos/lunar/lunar-33.webp",
+      "/produtos/lunar/lunar-34.webp",
+      "/produtos/lunar/lunar-35.webp",
+      "/produtos/lunar/lunar-36.webp",
+      "/produtos/lunar/lunar-37.webp",
+      "/produtos/lunar/lunar-38.webp",
+      "/produtos/lunar/lunar-39.webp",
+      "/produtos/lunar/lunar-40.webp",
+      "/produtos/lunar/lunar-41.webp"
+    ],
   },
   {
     slug: "baby",
@@ -290,7 +460,16 @@ export const PRODUCTS: Product[] = [
     videoId: null,
     badge: null,
     certifications: CERTS_STANDARD,
-    categorySlug: "colchoes",
+    categorySlug: "colchoes"
+  ,
+    hidden: true,
+    images: [
+      "/produtos/baby/baby-1.webp",
+      "/produtos/baby/baby-2.webp",
+      "/produtos/baby/baby-3.webp",
+      "/produtos/baby/baby-4.webp",
+      "/produtos/baby/baby-5.webp"
+    ],
   },
   {
     slug: "renova",
@@ -312,7 +491,27 @@ export const PRODUCTS: Product[] = [
     videoId: null,
     badge: null,
     certifications: CERTS_STANDARD,
-    categorySlug: "colchoes",
+    categorySlug: "colchoes"
+  ,
+    hidden: true,
+    images: [
+      "/produtos/renova/renova-1.webp",
+      "/produtos/renova/renova-2.webp",
+      "/produtos/renova/renova-3.webp",
+      "/produtos/renova/renova-4.webp",
+      "/produtos/renova/renova-5.webp",
+      "/produtos/renova/renova-6.webp",
+      "/produtos/renova/renova-7.webp",
+      "/produtos/renova/renova-8.webp",
+      "/produtos/renova/renova-9.webp",
+      "/produtos/renova/renova-10.webp",
+      "/produtos/renova/renova-11.webp",
+      "/produtos/renova/renova-12.webp",
+      "/produtos/renova/renova-13.webp",
+      "/produtos/renova/renova-14.webp",
+      "/produtos/renova/renova-15.webp",
+      "/produtos/renova/renova-16.webp"
+    ],
   },
 
   // ─── Camas Articuladas ───────────────────────────────────────────────────────
@@ -345,7 +544,13 @@ export const PRODUCTS: Product[] = [
     certifications: CERTS_STANDARD,
     versions: "Tradicional e Joelho",
     motor: "Bivolt",
-    categorySlug: "camas",
+    categorySlug: "camas"
+  ,
+    hidden: false,
+    images: [
+      "/produtos/flexibed-roma/flexibed-roma-1.webp",
+      "/produtos/flexibed-roma/flexibed-roma-2.webp"
+    ],
   },
   {
     slug: "flexibed-gran-jaguar",
@@ -375,7 +580,15 @@ export const PRODUCTS: Product[] = [
     certifications: CERTS_STANDARD,
     versions: "Tradicional e Joelho",
     motor: "Bivolt",
-    categorySlug: "camas",
+    categorySlug: "camas"
+  ,
+    hidden: false,
+    images: [
+      "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-1.webp",
+      "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-2.webp",
+      "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-3.webp",
+      "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-4.webp"
+    ],
   },
   {
     slug: "flexibed-lisboa",
@@ -405,7 +618,17 @@ export const PRODUCTS: Product[] = [
     certifications: CERTS_STANDARD,
     versions: "Tradicional e Joelho",
     motor: "Bivolt",
-    categorySlug: "camas",
+    categorySlug: "camas"
+  ,
+    hidden: false,
+    images: [
+      "/produtos/flexibed-lisboa/flexibed-lisboa-1.webp",
+      "/produtos/flexibed-lisboa/flexibed-lisboa-2.webp",
+      "/produtos/flexibed-lisboa/flexibed-lisboa-3.webp",
+      "/produtos/flexibed-lisboa/flexibed-lisboa-4.webp",
+      "/produtos/flexibed-lisboa/flexibed-lisboa-5.webp",
+      "/produtos/flexibed-lisboa/flexibed-lisboa-6.webp"
+    ],
   },
 
   // ─── Acessórios (hidden — sem imagens) ──────────────────────────────────────
@@ -423,8 +646,15 @@ export const PRODUCTS: Product[] = [
       "Manta com tecnologia quântica ativada por controle remoto. Tecido Jacquard luxuoso. Disponível em Solteiro, Casal, Queen e King.",
     officialUrl: "https://eko7.com.br/produto/colchao/manta-quantica/",
     videoId: null,
-    badge: null,
-    hidden: true,
+    badge: null
+  ,
+    hidden: false,
+    images: [
+      "/produtos/manta-quantica/manta-quantica-1.webp",
+      "/produtos/manta-quantica/manta-quantica-2.webp",
+      "/produtos/manta-quantica/manta-quantica-3.webp",
+      "/produtos/manta-quantica/manta-quantica-4.webp"
+    ],
   },
   {
     slug: "protetor-de-colchao",
@@ -440,7 +670,8 @@ export const PRODUCTS: Product[] = [
       "Protetor impermeável que evita umidade e dificulta proliferação de ácaros. Lateral flexível para fixação e respirabilidade do colchão.",
     officialUrl: "https://eko7.com.br/produto/protetor-de-colchao/",
     videoId: null,
-    badge: null,
+    badge: null
+  ,
     hidden: true,
   },
 ];

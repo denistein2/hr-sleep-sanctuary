@@ -1,0 +1,286 @@
+{
+  "diamante": {
+    "status": "optimized",
+    "images": [
+      "/produtos/diamante/diamante-1.webp",
+      "/produtos/diamante/diamante-2.webp",
+      "/produtos/diamante/diamante-3.webp",
+      "/produtos/diamante/diamante-4.webp",
+      "/produtos/diamante/diamante-5.webp",
+      "/produtos/diamante/diamante-6.webp",
+      "/produtos/diamante/diamante-7.webp",
+      "/produtos/diamante/diamante-8.webp",
+      "/produtos/diamante/diamante-9.webp",
+      "/produtos/diamante/diamante-10.webp",
+      "/produtos/diamante/diamante-11.webp"
+    ],
+    "oldSizeKB": "108689.4",
+    "newSizeKB": "867.4",
+    "count": 11
+  },
+  "serie-ouro-pillow": {
+    "status": "optimized",
+    "images": [
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-1.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-2.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-3.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-4.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-5.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-6.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-7.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-8.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-9.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-10.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-11.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-12.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-13.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-14.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-15.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-16.webp",
+      "/produtos/serie-ouro-pillow/serie-ouro-pillow-17.webp"
+    ],
+    "oldSizeKB": "264853.0",
+    "newSizeKB": "3483.1",
+    "count": 17
+  },
+  "serie-ouro": {
+    "status": "optimized",
+    "images": [
+      "/produtos/serie-ouro/serie-ouro-1.webp",
+      "/produtos/serie-ouro/serie-ouro-2.webp",
+      "/produtos/serie-ouro/serie-ouro-3.webp",
+      "/produtos/serie-ouro/serie-ouro-4.webp",
+      "/produtos/serie-ouro/serie-ouro-5.webp",
+      "/produtos/serie-ouro/serie-ouro-6.webp",
+      "/produtos/serie-ouro/serie-ouro-7.webp",
+      "/produtos/serie-ouro/serie-ouro-8.webp",
+      "/produtos/serie-ouro/serie-ouro-9.webp",
+      "/produtos/serie-ouro/serie-ouro-10.webp",
+      "/produtos/serie-ouro/serie-ouro-11.webp",
+      "/produtos/serie-ouro/serie-ouro-12.webp",
+      "/produtos/serie-ouro/serie-ouro-13.webp",
+      "/produtos/serie-ouro/serie-ouro-14.webp",
+      "/produtos/serie-ouro/serie-ouro-15.webp",
+      "/produtos/serie-ouro/serie-ouro-16.webp",
+      "/produtos/serie-ouro/serie-ouro-17.webp"
+    ],
+    "oldSizeKB": "264853.0",
+    "newSizeKB": "3483.1",
+    "count": 17
+  },
+  "seven": {
+    "status": "optimized",
+    "images": [
+      "/produtos/seven/seven-1.webp",
+      "/produtos/seven/seven-2.webp",
+      "/produtos/seven/seven-3.webp",
+      "/produtos/seven/seven-4.webp",
+      "/produtos/seven/seven-5.webp",
+      "/produtos/seven/seven-6.webp",
+      "/produtos/seven/seven-7.webp",
+      "/produtos/seven/seven-8.webp",
+      "/produtos/seven/seven-9.webp",
+      "/produtos/seven/seven-10.webp",
+      "/produtos/seven/seven-11.webp"
+    ],
+    "oldSizeKB": "15174.0",
+    "newSizeKB": "1546.0",
+    "count": 11
+  },
+  "pangeia": {
+    "status": "optimized",
+    "images": [
+      "/produtos/pangeia/pangeia-1.webp",
+      "/produtos/pangeia/pangeia-2.webp",
+      "/produtos/pangeia/pangeia-3.webp",
+      "/produtos/pangeia/pangeia-4.webp",
+      "/produtos/pangeia/pangeia-5.webp",
+      "/produtos/pangeia/pangeia-6.webp",
+      "/produtos/pangeia/pangeia-7.webp",
+      "/produtos/pangeia/pangeia-8.webp",
+      "/produtos/pangeia/pangeia-9.webp",
+      "/produtos/pangeia/pangeia-10.webp",
+      "/produtos/pangeia/pangeia-11.webp",
+      "/produtos/pangeia/pangeia-12.webp",
+      "/produtos/pangeia/pangeia-13.webp",
+      "/produtos/pangeia/pangeia-14.webp",
+      "/produtos/pangeia/pangeia-15.webp",
+      "/produtos/pangeia/pangeia-16.webp",
+      "/produtos/pangeia/pangeia-17.webp",
+      "/produtos/pangeia/pangeia-18.webp",
+      "/produtos/pangeia/pangeia-19.webp",
+      "/produtos/pangeia/pangeia-20.webp",
+      "/produtos/pangeia/pangeia-21.webp",
+      "/produtos/pangeia/pangeia-22.webp",
+      "/produtos/pangeia/pangeia-23.webp",
+      "/produtos/pangeia/pangeia-24.webp",
+      "/produtos/pangeia/pangeia-25.webp",
+      "/produtos/pangeia/pangeia-26.webp",
+      "/produtos/pangeia/pangeia-27.webp",
+      "/produtos/pangeia/pangeia-28.webp"
+    ],
+    "oldSizeKB": "245182.9",
+    "newSizeKB": "2987.0",
+    "count": 28
+  },
+  "news": {
+    "status": "optimized",
+    "images": [
+      "/produtos/news/news-1.webp",
+      "/produtos/news/news-2.webp",
+      "/produtos/news/news-3.webp",
+      "/produtos/news/news-4.webp",
+      "/produtos/news/news-5.webp",
+      "/produtos/news/news-6.webp",
+      "/produtos/news/news-7.webp",
+      "/produtos/news/news-8.webp",
+      "/produtos/news/news-9.webp",
+      "/produtos/news/news-10.webp"
+    ],
+    "oldSizeKB": "57628.8",
+    "newSizeKB": "951.4",
+    "count": 10
+  },
+  "unico": {
+    "status": "missing_raw",
+    "images": []
+  },
+  "lunar": {
+    "status": "optimized",
+    "images": [
+      "/produtos/lunar/lunar-1.webp",
+      "/produtos/lunar/lunar-2.webp",
+      "/produtos/lunar/lunar-3.webp",
+      "/produtos/lunar/lunar-4.webp",
+      "/produtos/lunar/lunar-5.webp",
+      "/produtos/lunar/lunar-6.webp",
+      "/produtos/lunar/lunar-7.webp",
+      "/produtos/lunar/lunar-8.webp",
+      "/produtos/lunar/lunar-9.webp",
+      "/produtos/lunar/lunar-10.webp",
+      "/produtos/lunar/lunar-11.webp",
+      "/produtos/lunar/lunar-12.webp",
+      "/produtos/lunar/lunar-13.webp",
+      "/produtos/lunar/lunar-14.webp",
+      "/produtos/lunar/lunar-15.webp",
+      "/produtos/lunar/lunar-16.webp",
+      "/produtos/lunar/lunar-17.webp",
+      "/produtos/lunar/lunar-18.webp",
+      "/produtos/lunar/lunar-19.webp",
+      "/produtos/lunar/lunar-20.webp",
+      "/produtos/lunar/lunar-21.webp",
+      "/produtos/lunar/lunar-22.webp",
+      "/produtos/lunar/lunar-23.webp",
+      "/produtos/lunar/lunar-24.webp",
+      "/produtos/lunar/lunar-25.webp",
+      "/produtos/lunar/lunar-26.webp",
+      "/produtos/lunar/lunar-27.webp",
+      "/produtos/lunar/lunar-28.webp",
+      "/produtos/lunar/lunar-29.webp",
+      "/produtos/lunar/lunar-30.webp",
+      "/produtos/lunar/lunar-31.webp",
+      "/produtos/lunar/lunar-32.webp",
+      "/produtos/lunar/lunar-33.webp",
+      "/produtos/lunar/lunar-34.webp",
+      "/produtos/lunar/lunar-35.webp",
+      "/produtos/lunar/lunar-36.webp",
+      "/produtos/lunar/lunar-37.webp",
+      "/produtos/lunar/lunar-38.webp",
+      "/produtos/lunar/lunar-39.webp",
+      "/produtos/lunar/lunar-40.webp",
+      "/produtos/lunar/lunar-41.webp"
+    ],
+    "oldSizeKB": "349343.2",
+    "newSizeKB": "5358.8",
+    "count": 41
+  },
+  "baby": {
+    "status": "optimized",
+    "images": [
+      "/produtos/baby/baby-1.webp",
+      "/produtos/baby/baby-2.webp",
+      "/produtos/baby/baby-3.webp",
+      "/produtos/baby/baby-4.webp",
+      "/produtos/baby/baby-5.webp"
+    ],
+    "oldSizeKB": "19881.0",
+    "newSizeKB": "271.0",
+    "count": 5
+  },
+  "renova": {
+    "status": "optimized",
+    "images": [
+      "/produtos/renova/renova-1.webp",
+      "/produtos/renova/renova-2.webp",
+      "/produtos/renova/renova-3.webp",
+      "/produtos/renova/renova-4.webp",
+      "/produtos/renova/renova-5.webp",
+      "/produtos/renova/renova-6.webp",
+      "/produtos/renova/renova-7.webp",
+      "/produtos/renova/renova-8.webp",
+      "/produtos/renova/renova-9.webp",
+      "/produtos/renova/renova-10.webp",
+      "/produtos/renova/renova-11.webp",
+      "/produtos/renova/renova-12.webp",
+      "/produtos/renova/renova-13.webp",
+      "/produtos/renova/renova-14.webp",
+      "/produtos/renova/renova-15.webp",
+      "/produtos/renova/renova-16.webp"
+    ],
+    "oldSizeKB": "359759.3",
+    "newSizeKB": "1418.5",
+    "count": 16
+  },
+  "flexibed-roma": {
+    "status": "optimized",
+    "images": [
+      "/produtos/flexibed-roma/flexibed-roma-1.webp",
+      "/produtos/flexibed-roma/flexibed-roma-2.webp"
+    ],
+    "oldSizeKB": "15917.2",
+    "newSizeKB": "255.1",
+    "count": 2
+  },
+  "flexibed-gran-jaguar": {
+    "status": "optimized",
+    "images": [
+      "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-1.webp",
+      "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-2.webp",
+      "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-3.webp",
+      "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-4.webp"
+    ],
+    "oldSizeKB": "25179.4",
+    "newSizeKB": "208.6",
+    "count": 4
+  },
+  "flexibed-lisboa": {
+    "status": "optimized",
+    "images": [
+      "/produtos/flexibed-lisboa/flexibed-lisboa-1.webp",
+      "/produtos/flexibed-lisboa/flexibed-lisboa-2.webp",
+      "/produtos/flexibed-lisboa/flexibed-lisboa-3.webp",
+      "/produtos/flexibed-lisboa/flexibed-lisboa-4.webp",
+      "/produtos/flexibed-lisboa/flexibed-lisboa-5.webp",
+      "/produtos/flexibed-lisboa/flexibed-lisboa-6.webp"
+    ],
+    "oldSizeKB": "34141.9",
+    "newSizeKB": "474.5",
+    "count": 6
+  },
+  "manta-quantica": {
+    "status": "optimized",
+    "images": [
+      "/produtos/manta-quantica/manta-quantica-1.webp",
+      "/produtos/manta-quantica/manta-quantica-2.webp",
+      "/produtos/manta-quantica/manta-quantica-3.webp",
+      "/produtos/manta-quantica/manta-quantica-4.webp"
+    ],
+    "oldSizeKB": "7953.6",
+    "newSizeKB": "281.2",
+    "count": 4
+  },
+  "protetor-de-colchao": {
+    "status": "no_images_in_raw",
+    "images": []
+  }
+}
