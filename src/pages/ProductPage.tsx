@@ -154,6 +154,25 @@ const ProductPage = () => {
                 <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
                   {productData.name}
                 </h1>
+
+                {/* Badge de linha Premium / Relax */}
+                {productData.line === "premium" && (
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 mb-6">
+                    <span className="w-2 h-2 rounded-full bg-amber-500" />
+                    <span className="text-sm font-semibold text-amber-600 dark:text-amber-400">
+                      Linha Premium · 5 anos de garantia
+                    </span>
+                  </div>
+                )}
+                {productData.line === "relax" && (
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 mb-6">
+                    <span className="w-2 h-2 rounded-full bg-blue-500" />
+                    <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+                      Linha Relax · 2 anos de garantia
+                    </span>
+                  </div>
+                )}
+
                 <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl">
                   {productData.description}
                 </p>
@@ -259,6 +278,12 @@ const ProductPage = () => {
                     <div className="flex flex-col border-b border-border/50 pb-3">
                       <span className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Motorização</span>
                       <span className="font-medium text-lg">{productData.motor}</span>
+                    </div>
+                  )}
+                  {productData.foamType && (
+                    <div className="flex flex-col border-b border-border/50 pb-3 sm:col-span-2">
+                      <span className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Composição</span>
+                      <span className="font-medium text-lg">{productData.foamType}</span>
                     </div>
                   )}
                 </div>
