@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { navigationData } from "@/data/navigation";
+import { CATEGORIES } from "@/data/categories";
 
 const CatalogSection = () => {
   return (
@@ -19,9 +19,9 @@ const CatalogSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {navigationData.map((cat, i) => (
+          {CATEGORIES.map((cat, i) => (
             <motion.div
-              key={cat.id}
+              key={cat.slug}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}

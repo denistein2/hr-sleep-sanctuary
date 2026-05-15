@@ -45,13 +45,13 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-lg border-b border-border/50">
-      <div className="container mx-auto flex items-center justify-between h-16 px-4">
+      <div className="container mx-auto flex items-center justify-between h-24 px-4">
         <Link to="/" className="flex items-center gap-3 group">
           <div className="bg-white rounded-lg p-1 shadow-sm border border-border/50 transition-transform group-hover:scale-105">
             <img 
               src={logoImg} 
               alt="HR Colchões" 
-              className="h-12 w-auto mix-blend-multiply object-contain" 
+              className="h-20 w-auto mix-blend-multiply object-contain" 
             />
           </div>
         </Link>

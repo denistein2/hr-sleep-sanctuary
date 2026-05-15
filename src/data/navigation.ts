@@ -28,7 +28,8 @@ export const navigationData: NavItem[] = [
     active: true,
     subItems: [
       getCategory('colchoes'),
-      getCategory('box-e-cama'),
+      getCategory('camas-articuladas'),
+      getCategory('camas-e-box'),
       getCategory('cabeceira'),
       getCategory('travesseiros'),
       getCategory('colchonetes'),
@@ -67,13 +68,13 @@ export const navigationData: NavItem[] = [
 ];
 
 export const getActiveHeaderLinks = () => {
-  const links: { id: string; name: string; slug: string }[] = [];
+  const links: { categoryId: string; name: string; slug: string }[] = [];
   
   const traverse = (items: NavItem[]) => {
     for (const item of items) {
       if (item.active && item.slug) {
         links.push({
-          id: item.id,
+          categoryId: item.id,
           name: item.shortName || item.name,
           slug: item.slug,
         });

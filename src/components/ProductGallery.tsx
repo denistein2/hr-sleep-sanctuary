@@ -131,7 +131,6 @@ export default function ProductGallery({
               className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
               onClick={closeLightbox}
             >
-              {/* Imagem central */}
               <motion.img
                 key={lightboxIndex}
                 src={images[lightboxIndex]}
@@ -141,7 +140,7 @@ export default function ProductGallery({
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.2 }}
                 className="max-h-[90vh] max-w-[90vw] w-auto h-auto object-contain rounded-lg shadow-2xl"
-                onClick={(e) => e.stopPropagation()}
+                onClick={(e: any) => e.stopPropagation()}
                 draggable={false}
               />
 

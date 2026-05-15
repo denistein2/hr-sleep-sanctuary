@@ -1,25 +1,26 @@
 export type Category = {
   name: string;
   slug: string;       // usado na URL
-  hasProducts: boolean; // true só para "Colchão" no MVP
+  hasProducts: boolean; 
 };
 
 // Ordem do menu oficial Eko'7. Slugs em kebab-case sem acento.
 export const CATEGORIES: Category[] = [
-  { name: "Acessórios",           slug: "acessorios",         hasProducts: false },
-  { name: "Camas e Box",          slug: "box-e-cama",         hasProducts: false },
-  { name: "Cabeceiras",           slug: "cabeceira",          hasProducts: false },
-  { name: "Poltronas e Cadeiras", slug: "cadeira-e-poltrona", hasProducts: false },
+  { name: "Acessórios",           slug: "acessorios",         hasProducts: true },
+  { name: "Camas e Box",          slug: "camas-e-box",         hasProducts: true },
+  { name: "Camas Articuladas",    slug: "camas-articuladas",  hasProducts: true },
+  { name: "Cabeceiras",           slug: "cabeceira",          hasProducts: true },
+  { name: "Poltronas e Cadeiras", slug: "cadeira-e-poltrona", hasProducts: true },
   { name: "Calçados",             slug: "calcados",           hasProducts: false },
   { name: "Colchões",             slug: "colchoes",           hasProducts: true  },
   { name: "Colchonetes",          slug: "colchonetes",        hasProducts: false },
-  { name: "Linha Fitness",        slug: "linha-fitness",      hasProducts: false },
+  { name: "Linha Fitness",        slug: "linha-fitness",      hasProducts: true },
   { name: "Linha Íntima",         slug: "linha-intima",       hasProducts: false },
   { name: "Linha Pet",            slug: "linha-pet",          hasProducts: false },
   { name: "Linha Têxtil",         slug: "linha-textil",       hasProducts: false },
   { name: "Puffs",                slug: "puff",               hasProducts: false },
   { name: "Tapetes",              slug: "tapetes",            hasProducts: false },
-  { name: "Travesseiros",         slug: "travesseiros",       hasProducts: false },
+  { name: "Travesseiros",         slug: "travesseiros",       hasProducts: true },
 ];
 
 /**
@@ -31,5 +32,4 @@ export function getCategoryPath(slug: string): string {
 }
 
 // Categorias placeholder = todas exceto a que tem produtos.
-// Útil para gerar rotas no App.tsx e entradas no sitemap.
 export const PLACEHOLDER_CATEGORIES = CATEGORIES.filter(c => !c.hasProducts);

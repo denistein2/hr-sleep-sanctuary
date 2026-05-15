@@ -49,10 +49,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-8">
           <div className="lg:col-span-1 space-y-6">
             <Link to="/" className="inline-block bg-white rounded-lg p-2 shadow-sm border border-border/50">
-              <img 
+            <img 
                 src={logoImg} 
                 alt="HR Colchões" 
-                className="h-20 w-auto mix-blend-multiply object-contain" 
+                className="h-14 w-auto mix-blend-multiply object-contain" 
               />
             </Link>
             <div className="space-y-3">

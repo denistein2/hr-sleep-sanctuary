@@ -103,6 +103,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/flexibed-gran-jaguar</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/flexibed-roma</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/flexibed-lisboa</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://hrcolchoes.steintechnology.com.br/colchoes/diamante</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -116,12 +134,6 @@
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/colchoes/serie-ouro</loc>
-    <lastmod>2026-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/seven</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -151,31 +163,169 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/baby</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/seven</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/renova</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/box-classico</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/flexibed-roma</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/box-bau</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/flexibed-gran-jaguar</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/box-slin</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/flexibed-lisboa</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/flutuante</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/gran-jaguar-base</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/roma-base</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/lisboa-base</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/infinit</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/modilar</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/gran-jaguar-cabeceira</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/roma-cabeceira</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/lisboa-cabeceira</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/olimpia</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/cincinati</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/maceio</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/rio</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/himalaia</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/travesseiro-visco-elastico-adulto</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/travesseiro-hangg-corpo</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/suporte-multi-conforto</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/poltrona</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/cadeira-presidente</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/cadeira-diretor</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/cadeira-secretaria</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/tenis-magnetico</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/palmilha-magnetica</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/linha-fitness-legge</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -188,6 +338,18 @@
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/colchoes/protetor-de-colchao</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/baby</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/renova</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

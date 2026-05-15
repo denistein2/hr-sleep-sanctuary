@@ -10,10 +10,8 @@ import ProductPage from "./pages/ProductPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import SobrePage from "./pages/SobrePage";
 import NotFound from "./pages/NotFound";
-import PlaceholderPage from "./pages/PlaceholderPage";
 import CookieConsent from "@/components/CookieConsent";
 import ScrollToTop from "@/components/ScrollToTop";
-import { PLACEHOLDER_CATEGORIES } from "@/data/categories";
 
 const queryClient = new QueryClient();
 
@@ -27,19 +25,12 @@ const App = () => (
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/colchoes" element={<CategoryPage />} />
-            <Route path="/colchoes/:slug" element={<ProductPage />} />
             <Route path="/privacidade" element={<PrivacyPage />} />
             <Route path="/sobre" element={<SobrePage />} />
 
-            {/* Categorias placeholder: rotas explícitas para SEO */}
-            {PLACEHOLDER_CATEGORIES.map((category) => (
-              <Route
-                key={category.slug}
-                path={`/${category.slug}`}
-                element={<PlaceholderPage />}
-              />
-            ))}
+            {/* Dynamic Category and Product routes */}
+            <Route path="/:categorySlug" element={<CategoryPage />} />
+            <Route path="/:categorySlug/:slug" element={<ProductPage />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
