@@ -1,20 +1,35 @@
 import { useState, useRef, useEffect, useMemo } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { Menu, X, ChevronDown, Search } from "lucide-react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Menu, X, ChevronDown, Search, BedDouble, SlidersHorizontal, Package, Armchair, Wind, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { navigationData } from "@/data/navigation";
 import { PRODUCTS } from "@/data/products";
 import { CATEGORIES } from "@/data/categories";
 import logoImg from "@/assets/img/LOGO HR COLCHAO E EKO'7.png";
 
+const MEGA_COL1 = [
+  { slug: "colchoes",          name: "Colchões",             href: "/colchoes",          Icon: BedDouble,          count: 8 },
+  { slug: "camas-articuladas", name: "Camas Articuladas",    href: "/camas-articuladas", Icon: SlidersHorizontal,  count: 3 },
+  { slug: "camas-e-box",       name: "Camas e Box",          href: "/camas-e-box",       Icon: Package,            count: 7 },
+];
+
+const MEGA_COL2 = [
+  { slug: "poltronas",   name: "Poltronas e Cadeiras", href: "/poltronas",   Icon: Armchair,  count: 4 },
+  { slug: "travesseiros", name: "Travesseiros",         href: "/travesseiros", Icon: Wind,      count: 3 },
+  { slug: "acessorios",  name: "Acessórios",            href: "/acessorios",  Icon: Sparkles,  count: 3 },
+];
+
+const CABECEIRAS_MENU = ["Infinity", "Modular Olímpia", "Origem", "Cincinnati", "Maceió", "Rio", "Himalaia"];
+
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
-  
+
   const searchRef = useRef<HTMLFormElement>(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -31,7 +46,7 @@ const Header = () => {
     if (searchQuery.trim()) {
       setShowSuggestions(false);
       navigate(`/produtos?q=${encodeURIComponent(searchQuery.trim())}`);
-      setMobileOpen(false); // Close mobile menu if open
+      setMobileOpen(false);
     }
   };
 
@@ -48,10 +63,10 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between h-24 px-4">
         <Link to="/" className="flex items-center gap-3 group">
           <div className="bg-white rounded-lg p-1 shadow-sm border border-border/50 transition-transform group-hover:scale-105">
-            <img 
-              src={logoImg} 
-              alt="HR Colchões" 
-              className="h-20 w-auto mix-blend-multiply object-contain" 
+            <img
+              src={logoImg}
+              alt="HR Colchões"
+              className="h-20 w-auto mix-blend-multiply object-contain"
             />
           </div>
         </Link>
@@ -59,29 +74,128 @@ const Header = () => {
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
           <Link to="/" className="text-foreground/80 hover:text-foreground transition-colors">Início</Link>
-          <div className="relative" onMouseEnter={() => setDropdownOpen(true)} onMouseLeave={() => setDropdownOpen(false)}>
+
+          {/* Mega menu trigger */}
+          <div
+            className="relative"
+            onMouseEnter={() => setDropdownOpen(true)}
+            onMouseLeave={() => setDropdownOpen(false)}
+          >
             <button className="flex items-center gap-1 py-4 text-foreground/80 hover:text-foreground transition-colors">
               Produtos <ChevronDown className="w-3.5 h-3.5" />
             </button>
+
             {dropdownOpen && (
-              <div className="absolute top-[100%] left-1/2 -translate-x-1/2 w-[700px] pt-0 animate-fade-in shadow-xl">
-                <div className="bg-card border border-border rounded-lg p-6 grid grid-cols-4 gap-6">
-                  {navigationData.map((family) => (
-                    <div key={family.id} className="flex flex-col gap-3">
-                      <h4 className="font-bold text-sm text-foreground pb-2 border-b border-border/50">{family.name}</h4>
-                      <div className="flex flex-col gap-2">
-                        {family.subItems?.map((item) => (
-                          <Link key={item.id} to={`/${item.slug}`} className="text-sm text-muted-foreground hover:text-accent transition-colors block">
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
+              <div className="absolute top-[100%] left-0 pt-2 animate-fade-in z-50">
+                <div
+                  className="bg-card rounded-xl p-5 grid grid-cols-3 gap-0 animate-fade-in"
+                  style={{
+                    minWidth: "600px",
+                    border: "0.5px solid var(--border)",
+                    boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
+                  }}
+                >
+                  {/* Coluna 1 */}
+                  <div className="pr-5 border-r border-border/30">
+                    <p
+                      className="text-muted-foreground mb-2.5 uppercase"
+                      style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.08em" }}
+                    >
+                      Produtos
+                    </p>
+                    <div className="flex flex-col gap-1">
+                      {MEGA_COL1.map(({ slug, name, href, Icon, count }) => (
+                        <Link
+                          key={slug}
+                          to={href}
+                          onClick={() => setDropdownOpen(false)}
+                          className={`flex items-center gap-2 px-2 py-1.5 rounded-md transition-colors group ${
+                            location.pathname === href ? "bg-muted" : "hover:bg-muted"
+                          }`}
+                        >
+                          <Icon
+                            className={`w-4 h-4 flex-shrink-0 transition-colors ${
+                              location.pathname === href
+                                ? "text-[#C9A84C]"
+                                : "text-muted-foreground group-hover:text-[#C9A84C]"
+                            }`}
+                          />
+                          <span className="text-[13px] font-medium text-foreground">{name}</span>
+                          <span className="text-[11px] text-muted-foreground ml-auto whitespace-nowrap">
+                            {count} produtos
+                          </span>
+                        </Link>
+                      ))}
                     </div>
-                  ))}
+                  </div>
+
+                  {/* Coluna 2 */}
+                  <div className="px-5 border-r border-border/30">
+                    <p
+                      className="mb-2.5 invisible"
+                      style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.08em" }}
+                    >
+                      .
+                    </p>
+                    <div className="flex flex-col gap-1">
+                      {MEGA_COL2.map(({ slug, name, href, Icon, count }) => (
+                        <Link
+                          key={slug}
+                          to={href}
+                          onClick={() => setDropdownOpen(false)}
+                          className={`flex items-center gap-2 px-2 py-1.5 rounded-md transition-colors group ${
+                            location.pathname === href ? "bg-muted" : "hover:bg-muted"
+                          }`}
+                        >
+                          <Icon
+                            className={`w-4 h-4 flex-shrink-0 transition-colors ${
+                              location.pathname === href
+                                ? "text-[#C9A84C]"
+                                : "text-muted-foreground group-hover:text-[#C9A84C]"
+                            }`}
+                          />
+                          <span className="text-[13px] font-medium text-foreground">{name}</span>
+                          <span className="text-[11px] text-muted-foreground ml-auto whitespace-nowrap">
+                            {count} produtos
+                          </span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Coluna 3 — Cabeceiras */}
+                  <div className="pl-5">
+                    <p
+                      className="text-muted-foreground mb-2.5 uppercase"
+                      style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.08em" }}
+                    >
+                      Cabeceiras
+                    </p>
+                    <div className="flex flex-col gap-0.5">
+                      {CABECEIRAS_MENU.map((name) => (
+                        <Link
+                          key={name}
+                          to="/cabeceira"
+                          onClick={() => setDropdownOpen(false)}
+                          className="block px-2 py-1 text-[12px] text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                          {name}
+                        </Link>
+                      ))}
+                      <Link
+                        to="/cabeceira"
+                        onClick={() => setDropdownOpen(false)}
+                        className="block px-2 py-1 mt-1 text-[11px] text-[#C9A84C] hover:underline"
+                      >
+                        Ver todas as cabeceiras →
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
           </div>
+
           <Link to="/sobre" className="text-foreground/80 hover:text-foreground transition-colors">Sobre</Link>
           <a href="#contato" className="text-foreground/80 hover:text-foreground transition-colors">Contato</a>
         </nav>
@@ -90,9 +204,9 @@ const Header = () => {
           {/* Desktop Search Bar */}
           <form ref={searchRef} onSubmit={handleSearchSubmit} className="relative hidden md:block mr-2">
             <div className="relative flex items-center">
-              <input 
-                type="text" 
-                placeholder="Buscar..." 
+              <input
+                type="text"
+                placeholder="Buscar..."
                 value={searchQuery}
                 onChange={(e) => {
                   setSearchQuery(e.target.value);
@@ -105,7 +219,7 @@ const Header = () => {
                 <Search className="w-4 h-4" />
               </button>
             </div>
-            
+
             {/* Search Suggestions */}
             {showSuggestions && searchQuery.trim().length > 0 && (
               <div className="absolute top-full right-0 mt-2 w-[300px] bg-card border border-border rounded-lg shadow-lg overflow-hidden flex flex-col z-50 animate-fade-in">
@@ -154,15 +268,15 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile nav */}
+      {/* Mobile nav — inalterado */}
       {mobileOpen && (
         <div className="lg:hidden bg-card border-t border-border animate-fade-in max-h-[80vh] overflow-y-auto">
           <nav className="container px-4 py-4 flex flex-col gap-3 text-sm font-medium">
             {/* Mobile Search */}
             <form onSubmit={handleSearchSubmit} className="relative mb-2">
-              <input 
-                type="text" 
-                placeholder="Buscar..." 
+              <input
+                type="text"
+                placeholder="Buscar..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="h-10 w-full rounded-md border border-input bg-background px-4 py-2 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent pr-10"
@@ -173,7 +287,7 @@ const Header = () => {
             </form>
 
             <Link to="/" onClick={() => setMobileOpen(false)} className="py-2 text-foreground/80 font-bold border-b border-border/30">Início</Link>
-            
+
             <div className="py-2 border-b border-border/30">
               <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2 font-bold">Produtos</p>
               <div className="flex flex-col gap-2 pl-2">
@@ -194,7 +308,7 @@ const Header = () => {
                 ))}
               </div>
             </div>
-            
+
             <Link to="/sobre" onClick={() => setMobileOpen(false)} className="py-2 text-foreground/80 font-bold border-b border-border/30">Sobre</Link>
             <a href="#contato" onClick={() => setMobileOpen(false)} className="py-2 text-foreground/80 font-bold">Contato</a>
           </nav>
@@ -205,4 +319,3 @@ const Header = () => {
 };
 
 export default Header;
-
