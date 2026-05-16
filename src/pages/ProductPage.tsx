@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, MessageCircle, Zap, ShieldCheck, Info } from "lucide-react";
+import { MessageCircle, Zap, ShieldCheck, Info } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -346,14 +346,7 @@ const ProductPage = () => {
                   <MessageCircle className="w-7 h-7" />
                   Falar sobre este produto
                 </a>
-                <a
-                  href={productData.officialUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-muted-foreground hover:text-accent hover:underline transition-colors flex items-center gap-1.5"
-                >
-                  Ver ficha técnica oficial na Eko'7 <ArrowLeft className="w-3.5 h-3.5 rotate-180" />
-                </a>
+
               </div>
             </div>
           </motion.div>
