@@ -46,7 +46,7 @@ const Index = () => (
     <Header />
     <main>
       <HeroSection />
-      {launchProduct && <LaunchSpotlight product={launchProduct} />}
+      {/* launchProduct && <LaunchSpotlight product={launchProduct} /> */}
       <AboutSection />
       <CatalogSection />
       <ContactForm />
