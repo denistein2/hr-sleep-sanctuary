@@ -282,7 +282,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 4,
+    order: 5,
     images: [
       "/produtos/pangeia/pangeia-21.webp",
       "/produtos/pangeia/pangeia-1.webp",
@@ -335,7 +335,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 5,
+    order: 6,
     images: [
       "/produtos/news/news-1.webp",
       "/produtos/news/news-2.webp",
@@ -369,7 +369,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 6,
+    order: 7,
     images: [
       "/produtos/colchoes/unico/eko7-757-san-unico-rose.webp",
       "/produtos/colchoes/unico/eko7-758-san-unico-rose.webp"
@@ -395,7 +395,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 7,
+    order: 8,
     images: [
       "/produtos/lunar/lunar-1.webp",
       "/produtos/lunar/lunar-2.webp",
@@ -460,7 +460,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 8,
+    order: 9,
     images: [
       "/produtos/seven/seven-1.webp",
       "/produtos/seven/seven-2.webp",
@@ -1177,12 +1177,12 @@ export const PRODUCTS: Product[] = [
   {
     slug: "renova",
     name: "Renova",
-    line: "premium",
+    line: "relax",
     type: "Espuma com Densidade Progressiva + Perfilado NanoEx",
     height: "26 cm",
     technologies: ["Perfilado NanoEx", "Magnetos", "Infravermelho Longo", "Sistema de Densidade Progressiva", "Vibromassagem (opcional)", "Quântica (opcional)"],
     fabric: "Malha superior | Linho Areia lateral",
-    warranty: WARRANTY_PREMIUM,
+    warranty: WARRANTY_RELAX,
     foamType: "Espuma 100% pura de produção própria Eko'7",
     durability: null,
     shortDescription: "Renove seu sono com a mais nova tecnologia Eko'7. Perfilado NanoEx impermeável e antimicrobiano, Magnetos e Infravermelho Longo para uma experiência verdadeiramente terapêutica.",
@@ -1195,7 +1195,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 0,
+    order: 4,
     images: [
       "/produtos/renova/renova-1.webp",
       "/produtos/renova/renova-2.webp",

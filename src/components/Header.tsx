@@ -57,7 +57,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
+        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
           <Link to="/" className="text-foreground/80 hover:text-foreground transition-colors">Início</Link>
           <div className="relative" onMouseEnter={() => setDropdownOpen(true)} onMouseLeave={() => setDropdownOpen(false)}>
             <button className="flex items-center gap-1 py-4 text-foreground/80 hover:text-foreground transition-colors">
