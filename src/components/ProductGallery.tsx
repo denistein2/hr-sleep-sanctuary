@@ -31,26 +31,20 @@ export default function ProductGallery({
   className = "",
 }: ProductGalleryProps) {
   const folder = folderProp ?? (productSlug ? PRODUCT_SLUG_TO_FOLDER[productSlug] : undefined);
-  
+
   // Se recebermos uma lista explícita de imagens, usamos ela.
   // Se houver folder, assumimos que são nomes de arquivos dentro daquela pasta.
   let allImages: string[] = [];
   if (imagesProp && imagesProp.length > 0) {
-    if (folder && !imagesProp[0].startsWith("/")) {
-      // BASE dinâmico ou padrão
-      const BASE = "/produtos";
-      allImages = imagesProp.map(f => `${BASE}/${folder}/${f}`);
+    if (folder) {
+      // BASE deve ser o mesmo de productImages.ts
+      const BASE = "/produtos/colchoes";
+      allImages = imagesProp.map(f => f.startsWith("/") ? f : `${BASE}/${folder}/${f}`);
     } else {
       allImages = imagesProp;
     }
   } else {
-    // Tenta por slug do produto primeiro (busca no PRODUCTS array)
-    const imagesFromSlug = productSlug ? getProductImages(productSlug) : [];
-    if (imagesFromSlug.length > 0) {
-      allImages = imagesFromSlug;
-    } else {
-      allImages = folder ? getProductImages(folder) : [];
-    }
+    allImages = folder ? getProductImages(folder) : [];
   }
 
   const images = limit ? allImages.slice(0, limit) : allImages;
