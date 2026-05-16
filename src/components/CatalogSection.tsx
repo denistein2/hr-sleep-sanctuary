@@ -7,8 +7,9 @@ import { PRODUCTS } from "@/data/products";
 // Imagem de capa de cada categoria (produto principal)
 const CATEGORY_COVER: Record<string, string> = {
   colchoes: "/produtos/diamante/diamante-1.webp",
-  "camas-articuladas": "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-01.webp",
+  "camas-articuladas": "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-1.webp",
   "camas-e-box": "/produtos/box-bau/box-bau-01.webp",
+  cabeceira: "/produtos/cabeceira-olimpia/cabeceira-olimpia-01.webp",
 };
 
 const FALLBACK_IMG = "/images/Logo Novo.png";
@@ -22,6 +23,7 @@ const CATEGORY_DESC: Record<string, string> = {
   colchoes: "Tecnologia de ponta para um sono restaurador",
   "camas-articuladas": "Articulação motorizada para conforto total",
   "camas-e-box": "Bases e conjuntos para elevar seu colchão",
+  cabeceira: "Design e elegância para transformar seu quarto",
   poltronas: "Conforto e ergonomia para o seu dia a dia",
   travesseiros: "Suporte ideal para noites perfeitas",
   acessorios: "Complementos de qualidade Eko'7",
