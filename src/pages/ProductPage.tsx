@@ -16,8 +16,8 @@ const WA_NUMBER = "5551984910838";
 function buildWhatsAppMessage(productName: string, categoryId?: string): string {
   const categoryMap: Record<string, string> = {
     colchoes: "Colchão",
-    "camas-articuladas": "Cama Articulada",
-    "camas-e-box": "Cama e Box",
+    camas: "Cama Articulada",
+    box: "Box e Bases",
     acessorios: "Acessório"
   };
   const categoryStr = categoryId && categoryMap[categoryId] ? categoryMap[categoryId] : "produto";

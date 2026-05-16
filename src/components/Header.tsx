@@ -30,7 +30,7 @@ const Header = () => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setShowSuggestions(false);
-      navigate(`/colchoes?q=${encodeURIComponent(searchQuery.trim())}`);
+      navigate(`/produtos?q=${encodeURIComponent(searchQuery.trim())}`);
       setMobileOpen(false); // Close mobile menu if open
     }
   };
@@ -127,7 +127,7 @@ const Header = () => {
                       <div className="p-2">
                         <span className="text-xs font-semibold text-muted-foreground uppercase px-2 mb-1 block">Produtos</span>
                         {suggestions.products.map(p => (
-                          <Link key={p.slug} to={`/colchoes/${p.slug}`} onClick={() => setShowSuggestions(false)} className="flex flex-col px-2 py-1.5 hover:bg-muted rounded-md transition-colors">
+                          <Link key={p.slug} to={`/${p.categoryId || 'produtos'}/${p.slug}`} onClick={() => setShowSuggestions(false)} className="flex flex-col px-2 py-1.5 hover:bg-muted rounded-md transition-colors">
                             <span className="text-sm font-medium">{p.name}</span>
                             <span className="text-xs text-muted-foreground">{p.type}</span>
                           </Link>

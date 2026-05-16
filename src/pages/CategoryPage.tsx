@@ -38,8 +38,8 @@ const CategoryPage = () => {
 
   const category = CATEGORIES.find(c => c.slug === categorySlug);
   
-  // Se a categoria não existe, ou é uma categoria placeholder, lidar de acordo
-  if (categorySlug && !category) {
+  // Se a categoria não existe (e não é a rota geral 'produtos'), ou é uma categoria placeholder, lidar de acordo
+  if (categorySlug && categorySlug !== 'produtos' && !category) {
     return <Navigate to="/404" replace />;
   }
   

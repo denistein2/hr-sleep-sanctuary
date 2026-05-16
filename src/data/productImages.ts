@@ -27,6 +27,10 @@ export const PRODUCT_SLUG_TO_FOLDER: Record<string, string> = {
   "flexibed-roma": "flexibed-roma",
   "flexibed-gran-jaguar": "flexibed-gran-jaguar",
   "flexibed-lisboa": "flexibed-lisboa",
+  "box-slim": "box-slim",
+  "box-bau": "box-bau",
+  "box-classico": "box-classico",
+  "box-bicama": "box-bicama",
 };
 
 export function getFolderTitle(folder: string): string {
