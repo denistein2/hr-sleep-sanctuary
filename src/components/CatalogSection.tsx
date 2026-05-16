@@ -10,6 +10,9 @@ const CATEGORY_COVER: Record<string, string> = {
   "camas-articuladas": "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-1.webp",
   "camas-e-box": "/produtos/box-bau/box-bau-01.webp",
   cabeceira: "/produtos/cabeceira-olimpia/cabeceira-olimpia-01.webp",
+  poltronas: "/produtos/poltrona/poltrona-01.webp",
+  travesseiros: "/produtos/travesseiro-visco/travesseiro-visco-01.webp",
+  acessorios: "/produtos/tenis-magnetico-fn1/tenis-magnetico-fn1-01.webp",
 };
 
 const FALLBACK_IMG = "/images/Logo Novo.png";
