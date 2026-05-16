@@ -282,7 +282,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 5,
+    order: 4,
     images: [
       "/produtos/pangeia/pangeia-21.webp",
       "/produtos/pangeia/pangeia-1.webp",
@@ -1195,7 +1195,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 4,
+    order: 5,
     images: [
       "/produtos/renova/renova-1.webp",
       "/produtos/renova/renova-2.webp",
