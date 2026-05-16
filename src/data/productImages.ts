@@ -31,6 +31,15 @@ export const PRODUCT_SLUG_TO_FOLDER: Record<string, string> = {
   "box-bau": "box-bau",
   "box-classico": "box-classico",
   "box-bicama": "box-bicama",
+  "cabeceira-olimpia": "cabeceira-olimpia",
+  "cabeceira-origem": "cabeceira-origem",
+  "cabeceira-infinity": "cabeceira-infinity",
+  "cabeceira-cincinnati": "cabeceira-cincinnati",
+  "cabeceira-maceio": "cabeceira-maceio",
+  "cabeceira-rio": "cabeceira-rio",
+  "cabeceira-himalaia": "cabeceira-himalaia",
+  "cabeceira-diamante": "cabeceira-diamante",
+  "cabeceira-havai": "cabeceira-havai",
 };
 
 export function getFolderTitle(folder: string): string {
