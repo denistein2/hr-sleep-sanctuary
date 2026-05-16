@@ -50,6 +50,10 @@ export const PRODUCT_SLUG_TO_FOLDER: Record<string, string> = {
   "tenis-magnetico-fn1": "tenis-magnetico-fn1",
   "palmilha-magnetica": "palmilha-magnetica",
   "linha-fitness-legge": "linha-fitness-legge",
+  "poltrona": "poltrona",
+  "cadeira-presidente": "cadeira-presidente",
+  "cadeira-diretor": "cadeira-diretor",
+  "cadeira-secretaria": "cadeira-secretaria",
 };
 
 export function getFolderTitle(folder: string): string {
