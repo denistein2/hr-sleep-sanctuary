@@ -91,8 +91,7 @@ const CatalogSection = () => {
                   <img
                     src={cover}
                     alt={cat.name}
-                    loading="lazy"
-                    decoding="async"
+                    loading="eager"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     onError={(e) => {
                       (e.currentTarget as HTMLImageElement).src = FALLBACK_IMG;
