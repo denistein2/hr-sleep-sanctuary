@@ -25,7 +25,7 @@ export const CATEGORIES: Category[] = [
   { name: "Cabeceiras",           slug: "cabeceira",         hasProducts: true },
   { name: "Poltronas e Cadeiras", slug: "poltronas",         hasProducts: false, hidden: true },
   { name: "Travesseiros",         slug: "travesseiros",      hasProducts: true },
-  { name: "Acessórios",           slug: "acessorios",        hasProducts: false, hidden: true },
+  { name: "Acessórios",           slug: "acessorios",        hasProducts: true, hidden: false },
 ];
 
 export function getCategoryPath(slug: string): string {
