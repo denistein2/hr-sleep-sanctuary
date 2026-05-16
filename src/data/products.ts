@@ -238,7 +238,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 2,
+    order: 3,
     images: [
       "/produtos/serie-ouro/serie-ouro-1.webp",
       "/produtos/serie-ouro/serie-ouro-2.webp",
@@ -283,7 +283,7 @@ export const PRODUCTS: Product[] = [
     certifications: CERTS_STANDARD,
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
-    hidden: false,
+    hidden: true,
     order: 3,
     images: [
       "/produtos/pangeia/pangeia-21.webp",
@@ -337,7 +337,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 4,
+    order: 5,
     images: [
       "/produtos/news/news-1.webp",
       "/produtos/news/news-2.webp",
@@ -371,7 +371,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 5,
+    order: 6,
     images: [
       "/produtos/colchoes/unico/eko7-757-san-unico-rose.webp",
       "/produtos/colchoes/unico/eko7-758-san-unico-rose.webp"
@@ -397,7 +397,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 6,
+    order: 7,
     images: [
       "/produtos/lunar/lunar-1.webp",
       "/produtos/lunar/lunar-2.webp",
@@ -462,7 +462,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 7,
+    order: 8,
     images: [
       "/produtos/seven/seven-1.webp",
       "/produtos/seven/seven-2.webp",
@@ -1372,7 +1372,7 @@ export const PRODUCTS: Product[] = [
     badge: null,
     certifications: ["ICV", "SBRT", "ISO 9001", "ISO 14001"],
     categoryId: "cabeceira",
-    hidden: true,
+    hidden: false,
     order: 6,
     images: [
       "/produtos/cabeceira-origem/cabeceira-origem-01.webp",
