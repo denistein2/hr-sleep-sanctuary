@@ -8,18 +8,17 @@ import { CATEGORIES } from "@/data/categories";
 import logoImg from "@/assets/img/LOGO HR COLCHAO E EKO'7.png";
 
 const MEGA_COL1 = [
-  { slug: "colchoes",          name: "Colchões",             href: "/colchoes",          Icon: BedDouble,          count: 8 },
-  { slug: "camas-articuladas", name: "Camas Articuladas",    href: "/camas-articuladas", Icon: SlidersHorizontal,  count: 3 },
-  { slug: "camas-e-box",       name: "Camas e Box",          href: "/camas-e-box",       Icon: Package,            count: 7 },
+  { slug: "colchoes",          name: "Colchões",          href: "/colchoes",          Icon: BedDouble,         count: 8 },
+  { slug: "camas-articuladas", name: "Camas Articuladas", href: "/camas-articuladas", Icon: SlidersHorizontal, count: 3 },
+  { slug: "camas-e-box",       name: "Camas e Box",       href: "/camas-e-box",       Icon: Package,           count: 7 },
+  { slug: "cabeceira",         name: "Cabeceiras",        href: "/cabeceira",         Icon: Layers,            count: 7 },
 ];
 
 const MEGA_COL2 = [
-  { slug: "poltronas",   name: "Poltronas",             href: "/poltronas",   Icon: Armchair,  count: 4 },
-  { slug: "travesseiros", name: "Travesseiros",         href: "/travesseiros", Icon: Wind,      count: 3 },
-  { slug: "acessorios",  name: "Acessórios",            href: "/acessorios",  Icon: Sparkles,  count: 3 },
+  { slug: "poltronas",    name: "Poltronas",    href: "/poltronas",    Icon: Armchair,  count: 4 },
+  { slug: "travesseiros", name: "Travesseiros", href: "/travesseiros", Icon: Wind,      count: 3 },
+  { slug: "acessorios",   name: "Acessórios",   href: "/acessorios",   Icon: Sparkles,  count: 3 },
 ];
-
-const CABECEIRAS_MENU = ["Infinity", "Modular Olímpia", "Origem", "Cincinnati", "Maceió", "Rio", "Himalaia"];
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -88,9 +87,9 @@ const Header = () => {
             {dropdownOpen && (
               <div className="absolute top-[100%] left-0 pt-2 animate-fade-in z-50">
                 <div
-                  className="bg-card rounded-xl p-5 grid grid-cols-3 gap-0 animate-fade-in"
+                  className="bg-card rounded-xl p-5 grid grid-cols-2 gap-0 animate-fade-in"
                   style={{
-                    minWidth: "680px",
+                    minWidth: "460px",
                     border: "0.5px solid var(--border)",
                     boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
                   }}
@@ -131,7 +130,7 @@ const Header = () => {
                   </div>
 
                   {/* Coluna 2 */}
-                  <div style={{ padding: "0 20px" }} className="border-r border-border/30">
+                  <div style={{ paddingLeft: "20px" }}>
                     <p
                       className="mb-2.5 invisible"
                       style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.08em" }}
@@ -165,45 +164,6 @@ const Header = () => {
                     </div>
                   </div>
 
-                  {/* Coluna 3 — Cabeceiras (mesmo padrão visual) */}
-                  <div style={{ paddingLeft: "20px" }}>
-                    <p
-                      className="text-muted-foreground mb-2.5 uppercase"
-                      style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.08em" }}
-                    >
-                      Cabeceiras
-                    </p>
-                    <div className="flex flex-col gap-0.5">
-                      {CABECEIRAS_MENU.map((name) => (
-                        <Link
-                          key={name}
-                          to="/cabeceira"
-                          onClick={() => setDropdownOpen(false)}
-                          className={`flex items-center rounded-md transition-colors group ${
-                            location.pathname === "/cabeceira" ? "bg-muted" : "hover:bg-muted"
-                          }`}
-                          style={{ gap: "10px", padding: "5px 8px" }}
-                        >
-                          <Layers
-                            className={`w-4 h-4 flex-shrink-0 transition-colors ${
-                              location.pathname === "/cabeceira"
-                                ? "text-[#C9A84C]"
-                                : "text-muted-foreground group-hover:text-[#C9A84C]"
-                            }`}
-                          />
-                          <span className="text-[12px] font-medium text-foreground whitespace-nowrap">{name}</span>
-                        </Link>
-                      ))}
-                      <Link
-                        to="/cabeceira"
-                        onClick={() => setDropdownOpen(false)}
-                        className="block mt-1 text-[11px] text-[#C9A84C] hover:underline"
-                        style={{ padding: "5px 8px" }}
-                      >
-                        Ver todas as cabeceiras →
-                      </Link>
-                    </div>
-                  </div>
                 </div>
               </div>
             )}
