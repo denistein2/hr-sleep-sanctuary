@@ -1025,9 +1025,18 @@ export const PRODUCTS: Product[] = [
     certifications: CERTS_STANDARD,
     categoryId: "poltronas",
     categorySlug: "poltronas",
-    hidden: true,
+    hidden: false,
     order: 1,
-    images: [],
+    images: [
+      "/produtos/poltrona/poltrona-01.webp",
+      "/produtos/poltrona/poltrona-02.webp",
+      "/produtos/poltrona/poltrona-03.webp",
+      "/produtos/poltrona/poltrona-04.webp",
+      "/produtos/poltrona/poltrona-05.webp",
+      "/produtos/poltrona/poltrona-06.webp",
+      "/produtos/poltrona/poltrona-07.webp",
+      "/produtos/poltrona/poltrona-08.webp"
+    ],
   },
   {
     id: "cadeira-presidente",
@@ -1049,9 +1058,12 @@ export const PRODUCTS: Product[] = [
     certifications: CERTS_STANDARD,
     categoryId: "poltronas",
     categorySlug: "poltronas",
-    hidden: true,
+    hidden: false,
     order: 2,
-    images: [],
+    images: [
+      "/produtos/cadeira-presidente/cadeira-presidente-01.webp",
+      "/produtos/cadeira-presidente/cadeira-presidente-02.webp"
+    ],
   },
   {
     id: "cadeira-diretor",
@@ -1073,9 +1085,12 @@ export const PRODUCTS: Product[] = [
     certifications: CERTS_STANDARD,
     categoryId: "poltronas",
     categorySlug: "poltronas",
-    hidden: true,
+    hidden: false,
     order: 3,
-    images: [],
+    images: [
+      "/produtos/cadeira-diretor/cadeira-diretor-01.webp",
+      "/produtos/cadeira-diretor/cadeira-diretor-02.webp"
+    ],
   },
   {
     id: "cadeira-secretaria",
@@ -1097,9 +1112,12 @@ export const PRODUCTS: Product[] = [
     certifications: CERTS_STANDARD,
     categoryId: "poltronas",
     categorySlug: "poltronas",
-    hidden: true,
+    hidden: false,
     order: 4,
-    images: [],
+    images: [
+      "/produtos/cadeira-secretaria/cadeira-secretaria-01.webp",
+      "/produtos/cadeira-secretaria/cadeira-secretaria-02.webp"
+    ],
   },
 
   // ─── ACESSÓRIOS E COMPLEMENTOS ───────────────────────────────────────────────

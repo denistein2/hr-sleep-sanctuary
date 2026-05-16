@@ -181,19 +181,55 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/colchoes/renova</loc>
+    <loc>https://hrcolchoes.steintechnology.com.br/travesseiros/suporte-multi-conforto</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/poltronas/poltrona</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/poltronas/cadeira-presidente</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/poltronas/cadeira-diretor</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/poltronas/cadeira-secretaria</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/acessorios/tenis-magnetico-fn1</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/acessorios/palmilha-magnetica</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/acessorios/linha-fitness-legge</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/cabeceira/cabeceira-olimpia</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hrcolchoes.steintechnology.com.br/cabeceira/cabeceira-origem</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -224,6 +260,12 @@
   </url>
   <url>
     <loc>https://hrcolchoes.steintechnology.com.br/cabeceira/cabeceira-himalaia</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hrcolchoes.steintechnology.com.br/travesseiros/travesseiro-visco</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

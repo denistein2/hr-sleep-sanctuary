@@ -22,8 +22,8 @@ export const CATEGORIES: Category[] = [
   { name: "Colchões",             slug: "colchoes",          hasProducts: true },
   { name: "Camas Articuladas",    slug: "camas-articuladas", hasProducts: true },
   { name: "Camas e Box",          slug: "camas-e-box",       hasProducts: true },
-  { name: "Cabeceiras",           slug: "cabeceira",         hasProducts: true },
-  { name: "Poltronas e Cadeiras", slug: "poltronas",         hasProducts: false, hidden: true },
+  { name: "Cabeceiras",           slug: "cabeceira",         hasProducts: true, hidden: true },
+  { name: "Poltronas e Cadeiras", slug: "poltronas",         hasProducts: true, hidden: false },
   { name: "Travesseiros",         slug: "travesseiros",      hasProducts: true },
   { name: "Acessórios",           slug: "acessorios",        hasProducts: true, hidden: false },
 ];
