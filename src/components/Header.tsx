@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useMemo } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, Search, BedDouble, SlidersHorizontal, Package, Armchair, Wind, Sparkles } from "lucide-react";
+import { Menu, X, ChevronDown, Search, BedDouble, SlidersHorizontal, Package, Armchair, Wind, Sparkles, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { navigationData } from "@/data/navigation";
 import { PRODUCTS } from "@/data/products";
@@ -14,7 +14,7 @@ const MEGA_COL1 = [
 ];
 
 const MEGA_COL2 = [
-  { slug: "poltronas",   name: "Poltronas e Cadeiras", href: "/poltronas",   Icon: Armchair,  count: 4 },
+  { slug: "poltronas",   name: "Poltronas",             href: "/poltronas",   Icon: Armchair,  count: 4 },
   { slug: "travesseiros", name: "Travesseiros",         href: "/travesseiros", Icon: Wind,      count: 3 },
   { slug: "acessorios",  name: "Acessórios",            href: "/acessorios",  Icon: Sparkles,  count: 3 },
 ];
@@ -90,13 +90,13 @@ const Header = () => {
                 <div
                   className="bg-card rounded-xl p-5 grid grid-cols-3 gap-0 animate-fade-in"
                   style={{
-                    minWidth: "600px",
+                    minWidth: "680px",
                     border: "0.5px solid var(--border)",
                     boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
                   }}
                 >
                   {/* Coluna 1 */}
-                  <div className="pr-5 border-r border-border/30">
+                  <div style={{ paddingRight: "20px" }} className="border-r border-border/30">
                     <p
                       className="text-muted-foreground mb-2.5 uppercase"
                       style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.08em" }}
@@ -109,9 +109,10 @@ const Header = () => {
                           key={slug}
                           to={href}
                           onClick={() => setDropdownOpen(false)}
-                          className={`flex items-center gap-2 px-2 py-1.5 rounded-md transition-colors group ${
+                          className={`flex items-center px-2 py-1.5 rounded-md transition-colors group ${
                             location.pathname === href ? "bg-muted" : "hover:bg-muted"
                           }`}
+                          style={{ gap: "10px" }}
                         >
                           <Icon
                             className={`w-4 h-4 flex-shrink-0 transition-colors ${
@@ -120,7 +121,7 @@ const Header = () => {
                                 : "text-muted-foreground group-hover:text-[#C9A84C]"
                             }`}
                           />
-                          <span className="text-[13px] font-medium text-foreground">{name}</span>
+                          <span className="text-[13px] font-medium text-foreground whitespace-nowrap">{name}</span>
                           <span className="text-[11px] text-muted-foreground ml-auto whitespace-nowrap">
                             {count} produtos
                           </span>
@@ -130,7 +131,7 @@ const Header = () => {
                   </div>
 
                   {/* Coluna 2 */}
-                  <div className="px-5 border-r border-border/30">
+                  <div style={{ padding: "0 20px" }} className="border-r border-border/30">
                     <p
                       className="mb-2.5 invisible"
                       style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.08em" }}
@@ -143,9 +144,10 @@ const Header = () => {
                           key={slug}
                           to={href}
                           onClick={() => setDropdownOpen(false)}
-                          className={`flex items-center gap-2 px-2 py-1.5 rounded-md transition-colors group ${
+                          className={`flex items-center px-2 py-1.5 rounded-md transition-colors group ${
                             location.pathname === href ? "bg-muted" : "hover:bg-muted"
                           }`}
+                          style={{ gap: "10px" }}
                         >
                           <Icon
                             className={`w-4 h-4 flex-shrink-0 transition-colors ${
@@ -154,7 +156,7 @@ const Header = () => {
                                 : "text-muted-foreground group-hover:text-[#C9A84C]"
                             }`}
                           />
-                          <span className="text-[13px] font-medium text-foreground">{name}</span>
+                          <span className="text-[13px] font-medium text-foreground whitespace-nowrap">{name}</span>
                           <span className="text-[11px] text-muted-foreground ml-auto whitespace-nowrap">
                             {count} produtos
                           </span>
@@ -163,8 +165,8 @@ const Header = () => {
                     </div>
                   </div>
 
-                  {/* Coluna 3 — Cabeceiras */}
-                  <div className="pl-5">
+                  {/* Coluna 3 — Cabeceiras (mesmo padrão visual) */}
+                  <div style={{ paddingLeft: "20px" }}>
                     <p
                       className="text-muted-foreground mb-2.5 uppercase"
                       style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.08em" }}
@@ -177,15 +179,26 @@ const Header = () => {
                           key={name}
                           to="/cabeceira"
                           onClick={() => setDropdownOpen(false)}
-                          className="block px-2 py-1 text-[12px] text-muted-foreground hover:text-foreground transition-colors"
+                          className={`flex items-center rounded-md transition-colors group ${
+                            location.pathname === "/cabeceira" ? "bg-muted" : "hover:bg-muted"
+                          }`}
+                          style={{ gap: "10px", padding: "5px 8px" }}
                         >
-                          {name}
+                          <Layers
+                            className={`w-4 h-4 flex-shrink-0 transition-colors ${
+                              location.pathname === "/cabeceira"
+                                ? "text-[#C9A84C]"
+                                : "text-muted-foreground group-hover:text-[#C9A84C]"
+                            }`}
+                          />
+                          <span className="text-[12px] font-medium text-foreground whitespace-nowrap">{name}</span>
                         </Link>
                       ))}
                       <Link
                         to="/cabeceira"
                         onClick={() => setDropdownOpen(false)}
-                        className="block px-2 py-1 mt-1 text-[11px] text-[#C9A84C] hover:underline"
+                        className="block mt-1 text-[11px] text-[#C9A84C] hover:underline"
+                        style={{ padding: "5px 8px" }}
                       >
                         Ver todas as cabeceiras →
                       </Link>
