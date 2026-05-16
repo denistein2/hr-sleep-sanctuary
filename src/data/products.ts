@@ -88,8 +88,9 @@ export const PRODUCTS: Product[] = [
     certifications: CERTS_STANDARD,
     versions: "Tradicional e Joelho",
     motor: "Bivolt",
-    categoryId: "camas",
+    categoryId: "camas-articuladas",
     hidden: false,
+    order: 2,
     images: [
       "/produtos/flexibed-roma/flexibed-roma-01.webp",
       "/produtos/flexibed-roma/flexibed-roma-02.webp",
@@ -116,8 +117,9 @@ export const PRODUCTS: Product[] = [
     certifications: CERTS_STANDARD,
     versions: "Tradicional e Joelho",
     motor: "Bivolt",
-    categoryId: "camas",
+    categoryId: "camas-articuladas",
     hidden: false,
+    order: 3,
     images: [
       "/produtos/flexibed-lisboa/flexibed-lisboa-01.webp",
       "/produtos/flexibed-lisboa/flexibed-lisboa-02.webp",
@@ -156,6 +158,7 @@ export const PRODUCTS: Product[] = [
     contraindication: "Contraindicado para portadores de marcapasso (solicite versão sem magnetos)",
     categoryId: "colchoes",
     hidden: false,
+    order: 1,
     images: [
       "/produtos/diamante/diamante-1.webp",
       "/produtos/diamante/diamante-2.webp",
@@ -191,6 +194,7 @@ export const PRODUCTS: Product[] = [
     structure: ["Perfilado NanoEx", "Espuma D40 hipermacia — 3 cm", "Espuma D60 alta resiliência — 3 cm", "Espuma D35 macia — 4 cm", "Espuma D28 convencional — 6 cm", "Espuma D33 convencional — 10 cm", "Espuma D28 convencional — 6 cm"],
     categoryId: "colchoes",
     hidden: false,
+    order: 2,
     images: [
       "/produtos/serie-ouro-pillow/serie-ouro-pillow-1.webp",
       "/produtos/serie-ouro-pillow/serie-ouro-pillow-2.webp",
@@ -231,6 +235,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
+    order: 3,
     images: [
       "/produtos/serie-ouro/serie-ouro-1.webp",
       "/produtos/serie-ouro/serie-ouro-2.webp",
@@ -276,6 +281,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
+    order: 4,
     images: [
       "/produtos/pangeia/pangeia-21.webp",
       "/produtos/pangeia/pangeia-1.webp",
@@ -328,6 +334,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
+    order: 5,
     images: [
       "/produtos/news/news-1.webp",
       "/produtos/news/news-2.webp",
@@ -361,6 +368,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
+    order: 6,
     images: [
       "/produtos/colchoes/unico/eko7-757-san-unico-rose.webp",
       "/produtos/colchoes/unico/eko7-758-san-unico-rose.webp"
@@ -386,6 +394,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
+    order: 7,
     images: [
       "/produtos/lunar/lunar-1.webp",
       "/produtos/lunar/lunar-2.webp",
@@ -450,6 +459,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
+    order: 8,
     images: [
       "/produtos/seven/seven-1.webp",
       "/produtos/seven/seven-2.webp",
@@ -481,8 +491,9 @@ export const PRODUCTS: Product[] = [
     description: "O Box Slim confere perspectiva de cama extremamente confortável com espessura baixa da caixaria e pés de madeira natural, resultando em extrema elegância. Fabricado com multilâminas e madeira tratada.",
     officialUrl: "https://eko7.com.br",
     videoId: null,
-    categoryId: "box",
+    categoryId: "camas-e-box",
     hidden: false,
+    order: 3,
     images: [
       "/produtos/box-slim/box-slim-01.webp",
       "/produtos/box-slim/box-slim-02.webp",
@@ -505,8 +516,9 @@ export const PRODUCTS: Product[] = [
     description: "O Box Clássico oferece design moderno aliando praticidade e elegância com mobilidade e resistência. Fabricado com multilâminas e madeira tratada, com tecido conforme o modelo do colchão. Disponível também na versão antirrefluxo.",
     officialUrl: "https://eko7.com.br",
     videoId: null,
-    categoryId: "box",
+    categoryId: "camas-e-box",
     hidden: false,
+    order: 1,
     images: [
       "/produtos/box-classico/box-classico-01.webp",
       "/produtos/box-classico/box-classico-02.webp",
@@ -528,8 +540,9 @@ export const PRODUCTS: Product[] = [
     description: "O Box Baú une otimização de espaço, praticidade e design moderno, oferecendo armazenamento discreto sob o colchão. Tampa revestida com camada de 2cm de espuma e goleiras clássicas cromadas. Fabricado em multilâminas e madeira maciça tratada com fundo em MDF melamina. Pés disponíveis em 2,5cm, 7cm ou 12cm.",
     officialUrl: "https://eko7.com.br",
     videoId: "5rI7_mFKTak",
-    categoryId: "box",
+    categoryId: "camas-e-box",
     hidden: false,
+    order: 2,
     images: [
       "/produtos/box-bau/box-bau-01.webp",
       "/produtos/box-bau/box-bau-02.webp",
@@ -571,8 +584,8 @@ export const PRODUCTS: Product[] = [
     description: "O Box Bicama é ideal para quem busca conforto, otimização de espaços e praticidade. Possui cama auxiliar embutida com perfilado NanoEx, magnetos e infravermelho longo inseridos na superfície. Fabricado em MDF com melamina, amortecedores de suspensão e abertura longitudinal. Colchão principal 20cm e cama auxiliar 16cm.",
     officialUrl: "https://eko7.com.br",
     videoId: "dScCoxqG7OM",
-    categoryId: "box",
-    hidden: false,
+    categoryId: "camas-e-box",
+    hidden: true,
     images: [
       "/produtos/box-bicama/box-bicama-01.webp",
       "/produtos/box-bicama/box-bicama-02.webp",
@@ -608,8 +621,9 @@ export const PRODUCTS: Product[] = [
     description: "A linha Floating Bed by Eko'7 alia tecnologias de ponta, materiais de altíssima qualidade e design moderno e requintado para que você durma nas nuvens e acorde ainda melhor. Estrutura resistente disponível nos tamanhos casal, queen e king.",
     officialUrl: "https://eko7.com.br",
     videoId: "pusSyQWSLzs",
-    categoryId: "camas",
+    categoryId: "camas-e-box",
     hidden: false,
+    order: 4,
     images: [
       "/produtos/floating-bed/floating-bed-01.webp",
       "/produtos/floating-bed/floating-bed-02.webp",

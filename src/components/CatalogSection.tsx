@@ -1,17 +1,14 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { CATEGORIES } from "@/data/categories";
+import { CATEGORIES, CATEGORY_ORDER, Category } from "@/data/categories";
 import { PRODUCTS } from "@/data/products";
-
-// Carros-chefe sempre primeiro — LEI DO PROJETO
-const PRIORITY_CATEGORIES = ["colchoes", "camas", "box"];
 
 // Imagem de capa de cada categoria (produto principal)
 const CATEGORY_COVER: Record<string, string> = {
   colchoes: "/produtos/diamante/diamante-1.webp",
-  camas: "/produtos/flexibed-roma/flexibed-roma-01.webp",
-  box: "/produtos/box-bau/box-bau-01.webp",
+  "camas-articuladas": "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-01.webp",
+  "camas-e-box": "/produtos/box-bau/box-bau-01.webp",
 };
 
 const FALLBACK_IMG = "/images/Logo Novo.png";
@@ -23,9 +20,9 @@ function getCover(slug: string): string {
 // Descrições curtas por categoria
 const CATEGORY_DESC: Record<string, string> = {
   colchoes: "Tecnologia de ponta para um sono restaurador",
-  camas: "Articulação motorizada para conforto total",
-  box: "Bases e conjuntos para elevar seu colchão",
-  cabeceira: "Design e elegância para o seu quarto",
+  "camas-articuladas": "Articulação motorizada para conforto total",
+  "camas-e-box": "Bases e conjuntos para elevar seu colchão",
+  poltronas: "Conforto e ergonomia para o seu dia a dia",
   travesseiros: "Suporte ideal para noites perfeitas",
   acessorios: "Complementos de qualidade Eko'7",
 };
@@ -35,15 +32,10 @@ const CatalogSection = () => {
   const countByCategory = (slug: string) =>
     PRODUCTS.filter((p) => !p.hidden && p.categoryId === slug).length;
 
-  // Ordenação forçada: priority first, resto alfabético
-  const hasProducts = CATEGORIES.filter((c) => c.hasProducts);
-  const prioritized = PRIORITY_CATEGORIES.flatMap((slug) =>
-    hasProducts.filter((c) => c.slug === slug)
-  );
-  const rest = hasProducts
-    .filter((c) => !PRIORITY_CATEGORIES.includes(c.slug))
-    .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
-  const sorted = [...prioritized, ...rest];
+  // Ordem oficial: CATEGORY_ORDER, apenas categorias não ocultas
+  const sorted = CATEGORY_ORDER
+    .map(slug => CATEGORIES.find(c => c.slug === slug))
+    .filter((c): c is Category => !!c && !c.hidden);
 
   return (
     <section

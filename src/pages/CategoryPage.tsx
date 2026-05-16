@@ -51,15 +51,17 @@ const CategoryPage = () => {
 
   const visibleProducts = PRODUCTS.filter((p) => !p.hidden);
   
-  const filteredProducts = visibleProducts.filter((p) => {
-    const matchesQuery = !query || (
-      p.name.toLowerCase().includes(query) ||
-      p.type.toLowerCase().includes(query) ||
-      p.line.toLowerCase().includes(query)
-    );
-    const matchesCategory = !categorySlug || p.categoryId === categorySlug;
-    return matchesQuery && matchesCategory;
-  });
+  const filteredProducts = visibleProducts
+    .filter((p) => {
+      const matchesQuery = !query || (
+        p.name.toLowerCase().includes(query) ||
+        p.type.toLowerCase().includes(query) ||
+        p.line.toLowerCase().includes(query)
+      );
+      const matchesCategory = !categorySlug || p.categoryId === categorySlug;
+      return matchesQuery && matchesCategory;
+    })
+    .sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
 
   return (
     <>

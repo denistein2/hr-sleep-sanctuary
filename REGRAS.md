@@ -30,10 +30,11 @@ Qualquer alteração nesses componentes DEVE ser explicitamente solicitada.
 
 ### ✅ CATEGORIAS E ROTAS
 - /colchoes → colchoes
-- /camas → camas (NÃO camas-articuladas)
-- /box → box
-- /cabeceira → cabeceira
-- /travesseiros → travesseiros
+- /camas-articuladas → camas-articuladas
+- /camas-e-box → camas-e-box
+- /poltronas → poltronas (hidden — sem produtos ainda)
+- /travesseiros → travesseiros (hidden — sem produtos ainda)
+- /acessorios → acessorios (hidden — sem produtos ainda)
 - Produtos ocultos: hidden: true filtra em CategoryPage e Header
 
 ### ✅ FOOTER
@@ -68,15 +69,37 @@ Qualquer alteração nesses componentes DEVE ser explicitamente solicitada.
 - Se não há URL específica disponível = omitir completamente o link
 
 ### ORDEM DO CATÁLOGO (LEI)
-- Carros-chefe SEMPRE primeiros: 1. Colchões 2. Camas Articuladas 3. Box
-- Demais categorias em ordem alfabética após os carros-chefe
-- Implementado via PRIORITY_CATEGORIES array em CatalogSection.tsx — não alterar a ordem
+- Implementado via CATEGORY_ORDER em categories.ts — não alterar sem autorização
+- Apenas categorias com hidden !== true são exibidas no catálogo e menu
 
 ### IMAGEM DE CAPA DAS CATEGORIAS
 - Cada categoria usa imagem real do seu produto principal como capa
-- Colchões → diamante-1.webp | Camas → flexibed-roma-01.webp | Box → box-bau-01.webp
+- Colchões → diamante-1.webp | Camas Articuladas → flexibed-gran-jaguar-01.webp | Camas e Box → box-bau-01.webp
 - Fallback: /images/Logo Novo.png
 - Não usar imagens genéricas ou placeholders
+
+---
+
+## ORDEM OFICIAL DAS CATEGORIAS (DEFINITIVA — 16/05/2026)
+Aprovada pelo cliente. Não alterar sem autorização explícita.
+
+### CATEGORIAS VISÍVEIS (em ordem):
+1. Colchões (slug: colchoes)
+2. Camas Articuladas (slug: camas-articuladas)
+3. Camas e Box (slug: camas-e-box)
+4. Poltronas e Cadeiras (slug: poltronas) — oculto até ter produtos
+5. Travesseiros (slug: travesseiros) — oculto até ter produtos
+6. Acessórios (slug: acessorios) — oculto até ter produtos
+
+### REGRA: Categoria sem produto com hidden: false → hidden: true automático.
+### REGRA: Produtos não listados na ordem oficial → hidden: true.
+
+### ORDEM DOS PRODUTOS POR CATEGORIA:
+**[Colchões]** Diamante → Série Ouro Pillow → Série Ouro → Pangeia → News → Único → Lunar → Seven
+
+**[Camas Articuladas]** Gran Jaguar → Roma → Lisboa
+
+**[Camas e Box]** Box Clássico → Box Baú → Box Slim → Floating Bed
 
 ---
 Última atualização: 16/05/2026
