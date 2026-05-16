@@ -14,35 +14,31 @@ const SITE_URL = "https://hrcolchoes.steintechnology.com.br";
 const productsFile = readFileSync(resolve(root, "src/data/products.ts"), "utf8");
 const categoriesFile = readFileSync(resolve(root, "src/data/categories.ts"), "utf8");
 
-const productsBlock = productsFile.match(/export const PRODUCTS: Product\[\] = \[\s*([\s\S]*?)\n\];/);
-if (!productsBlock) {
-  console.error("Não foi possível extrair products");
-  process.exit(1);
-}
+const productsMatch = productsFile.split('slug:').slice(1);
+const productEntries = productsMatch.map(block => {
+  const slug = block.match(/"(.*?)"/)?.[1];
+  const cat = block.match(/categoryId:\s*"(.*?)"/)?.[1];
+  const hidden = block.includes('hidden: true');
+  return { slug, cat, hidden };
+}).filter(p => p.slug && !p.hidden);
 
-const productSlugs = [...productsBlock[1].matchAll(/slug:\s*"([^"]+)"/g)].map((m) => m[1]);
-
-// 13 placeholder categories slugs
-const placeholderSlugs = [
-  "acessorios", "box-e-cama", "cabeceira", "cadeira-e-poltrona", "calcados",
-  "colchonetes", "linha-fitness", "linha-intima", "linha-pet", "linha-textil",
-  "puff", "tapetes", "travesseiros"
-];
+const categoriesBlock = categoriesFile.match(/export const CATEGORIES: Category\[\] = (\[[\s\S]*?\]);/);
+const categorySlugs = [...categoriesFile.matchAll(/slug:\s*"([^"]+)"/g)].map((m) => m[1]);
 
 const today = new Date().toISOString().slice(0, 10);
 
 const urls = [
   { loc: `${SITE_URL}/`, changefreq: "weekly", priority: "1.0" },
-  { loc: `${SITE_URL}/colchoes`, changefreq: "weekly", priority: "1.0" },
-  { loc: `${SITE_URL}/sobre`, changefreq: "monthly", priority: "1.0" },
+  { loc: `${SITE_URL}/sobre`, changefreq: "monthly", priority: "0.8" },
   { loc: `${SITE_URL}/privacidade`, changefreq: "yearly", priority: "0.3" },
-  ...placeholderSlugs.map((s) => ({
+  { loc: `${SITE_URL}/produtos`, changefreq: "weekly", priority: "0.9" },
+  ...categorySlugs.map((s) => ({
     loc: `${SITE_URL}/${s}`,
     changefreq: "weekly",
-    priority: "0.3",
+    priority: "0.8",
   })),
-  ...productSlugs.map((s) => ({
-    loc: `${SITE_URL}/colchoes/${s}`,
+  ...productEntries.map((p) => ({
+    loc: `${SITE_URL}/${p.cat || 'produtos'}/${p.slug}`,
     changefreq: "monthly",
     priority: "0.6",
   })),

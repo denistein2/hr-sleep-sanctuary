@@ -686,7 +686,7 @@ export const PRODUCTS: Product[] = [
     officialUrl: "https://eko7.com.br",
     videoId: null,
     categoryId: "cabeceira",
-    hidden: false,
+    hidden: true,
   },
   {
     slug: "modilar",
@@ -1013,7 +1013,7 @@ export const PRODUCTS: Product[] = [
     videoId: null,
     badge: null,
     categoryId: "acessorios",
-    hidden: false,
+    hidden: true,
     images: [
       "/produtos/manta-quantica/manta-quantica-1.webp",
       "/produtos/manta-quantica/manta-quantica-2.webp",
@@ -1036,7 +1036,7 @@ export const PRODUCTS: Product[] = [
     videoId: null,
     badge: null,
     categoryId: "acessorios",
-    hidden: false, // Make it visible as an accessory since they requested Accessories
+    hidden: true,
   },
 
   // ─── OUTROS / HIDDEN ─────────────────────────────────────────────────────────

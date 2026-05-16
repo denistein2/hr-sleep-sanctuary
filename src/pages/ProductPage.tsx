@@ -322,12 +322,14 @@ const ProductPage = () => {
               </div>
 
               {/* 4. Vídeo Institucional ou do Produto */}
-              <div className="mt-4 rounded-2xl overflow-hidden shadow-2xl border border-border/50">
-                <YouTubeFacade
-                  videoId={productData.videoId ?? INSTITUTIONAL_VIDEO_ID}
-                  title={`Apresentação: ${productData.name}`}
-                />
-              </div>
+              {productData.videoId && (
+                <div className="mt-4 rounded-2xl overflow-hidden shadow-2xl border border-border/50">
+                  <YouTubeFacade
+                    videoId={productData.videoId}
+                    title={`Apresentação: ${productData.name}`}
+                  />
+                </div>
+              )}
 
               {/* 5. CTA WhatsApp */}
               <div className="mt-12 flex flex-col items-center text-center space-y-6">
