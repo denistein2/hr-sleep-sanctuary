@@ -44,6 +44,12 @@ export const PRODUCT_SLUG_TO_FOLDER: Record<string, string> = {
   "cabeceira-himalaia": "cabeceira-himalaia",
   "cabeceira-diamante": "cabeceira-diamante",
   "cabeceira-havai": "cabeceira-havai",
+  "travesseiro-visco": "travesseiro-visco",
+  "travesseiro-hugging": "travesseiro-hugging",
+  "suporte-multi-conforto": "suporte-multi-conforto",
+  "tenis-magnetico-fn1": "tenis-magnetico-fn1",
+  "palmilha-magnetica": "palmilha-magnetica",
+  "linha-fitness-legge": "linha-fitness-legge",
 };
 
 export function getFolderTitle(folder: string): string {
