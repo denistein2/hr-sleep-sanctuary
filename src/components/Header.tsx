@@ -263,21 +263,16 @@ const Header = () => {
 
             <div className="py-2 border-b border-border/30">
               <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2 font-bold">Produtos</p>
-              <div className="flex flex-col gap-2 pl-2">
-                {navigationData.map((family) => (
-                  <details key={family.id} className="group">
-                    <summary className="flex items-center justify-between cursor-pointer py-2 text-foreground/90 font-semibold list-none">
-                      {family.name}
-                      <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
-                    </summary>
-                    <div className="flex flex-col gap-2 pl-4 py-2 border-l-2 border-accent/20 ml-1 mt-1">
-                      {family.subItems?.map((item) => (
-                        <Link key={item.id} to={`/${item.slug}`} onClick={() => setMobileOpen(false)} className="py-1.5 text-muted-foreground hover:text-accent">
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </details>
+              <div className="flex flex-col gap-1 pl-2">
+                {[...MEGA_COL1, ...MEGA_COL2].map(({ slug, name, href }) => (
+                  <Link
+                    key={slug}
+                    to={href}
+                    onClick={() => setMobileOpen(false)}
+                    className="py-2 text-foreground/80 hover:text-accent transition-colors"
+                  >
+                    {name}
+                  </Link>
                 ))}
               </div>
             </div>
