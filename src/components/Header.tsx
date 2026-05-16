@@ -89,7 +89,7 @@ const Header = () => {
                 <div
                   className="bg-card rounded-xl p-5 grid grid-cols-2 gap-0 animate-fade-in"
                   style={{
-                    minWidth: "460px",
+                    minWidth: "520px",
                     border: "0.5px solid var(--border)",
                     boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
                   }}
@@ -121,7 +121,7 @@ const Header = () => {
                             }`}
                           />
                           <span className="text-[13px] font-medium text-foreground whitespace-nowrap">{name}</span>
-                          <span className="text-[11px] text-muted-foreground ml-auto whitespace-nowrap">
+                          <span className="text-[11px] text-muted-foreground ml-auto pl-6 whitespace-nowrap">
                             {count} produtos
                           </span>
                         </Link>
@@ -156,7 +156,7 @@ const Header = () => {
                             }`}
                           />
                           <span className="text-[13px] font-medium text-foreground whitespace-nowrap">{name}</span>
-                          <span className="text-[11px] text-muted-foreground ml-auto whitespace-nowrap">
+                          <span className="text-[11px] text-muted-foreground ml-auto pl-6 whitespace-nowrap">
                             {count} produtos
                           </span>
                         </Link>
