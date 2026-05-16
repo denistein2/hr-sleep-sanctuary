@@ -1299,7 +1299,7 @@ export const PRODUCTS: Product[] = [
     certifications: CERTS_STANDARD,
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
-    hidden: true,
+    hidden: false,
     order: 4,
     images: [
       "/produtos/renova/renova-1.webp",
