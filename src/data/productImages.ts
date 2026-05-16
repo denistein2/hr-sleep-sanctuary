@@ -31,6 +31,7 @@ export const PRODUCT_SLUG_TO_FOLDER: Record<string, string> = {
   "box-bau": "box-bau",
   "box-classico": "box-classico",
   "box-bicama": "box-bicama",
+  "floating-bed": "floating-bed",
   "cabeceira-olimpia": "cabeceira-olimpia",
   "cabeceira-origem": "cabeceira-origem",
   "cabeceira-infinity": "cabeceira-infinity",
