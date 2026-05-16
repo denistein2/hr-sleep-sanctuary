@@ -337,7 +337,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 6,
+    order: 5,
     images: [
       "/produtos/news/news-1.webp",
       "/produtos/news/news-2.webp",
@@ -626,7 +626,7 @@ export const PRODUCTS: Product[] = [
     videoId: "pusSyQWSLzs",
     categoryId: "camas-e-box",
     hidden: false,
-    order: 1,
+    order: 4,
     images: [
       "/produtos/floating-bed/floating-bed-01.webp",
       "/produtos/floating-bed/floating-bed-02.webp",
@@ -665,7 +665,7 @@ export const PRODUCTS: Product[] = [
     certifications: CERTS_STANDARD,
     categoryId: "camas-e-box",
     hidden: false,
-    order: 2,
+    order: 5,
     images: [
       "/produtos/cama-gran-jaguar/cama-gran-jaguar-01.webp",
       "/produtos/cama-gran-jaguar/cama-gran-jaguar-02.webp",
@@ -692,7 +692,7 @@ export const PRODUCTS: Product[] = [
     certifications: CERTS_STANDARD,
     categoryId: "camas-e-box",
     hidden: false,
-    order: 3,
+    order: 6,
     images: [
       "/produtos/cama-roma/cama-roma-01.webp",
       "/produtos/cama-roma/cama-roma-02.webp",
@@ -717,7 +717,7 @@ export const PRODUCTS: Product[] = [
     certifications: CERTS_STANDARD,
     categoryId: "camas-e-box",
     hidden: false,
-    order: 4,
+    order: 7,
     images: [
       "/produtos/cama-lisboa/cama-lisboa-01.webp",
       "/produtos/cama-lisboa/cama-lisboa-02.webp",
@@ -1282,7 +1282,7 @@ export const PRODUCTS: Product[] = [
     sizes: SIZES_STANDARD,
     categoryId: "colchoes",
     hidden: false,
-    order: 5,
+    order: 4,
     images: [
       "/produtos/renova/renova-1.webp",
       "/produtos/renova/renova-2.webp",
