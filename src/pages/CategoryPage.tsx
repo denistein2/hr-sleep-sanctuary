@@ -118,7 +118,12 @@ const CategoryPage = () => {
                       to={`/${product.categoryId || 'produtos'}/${product.slug}`}
                       className="group glass-card rounded-xl overflow-hidden flex flex-col h-full hover:border-accent/30 transition-all duration-300 relative"
                     >
-                      {product.badge === "Launch" && (
+                      {product.isLaunch && (
+                        <span className="absolute top-2 left-2 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10 animate-pulse">
+                          🔥 LANÇAMENTO
+                        </span>
+                      )}
+                      {!product.isLaunch && product.badge === "Launch" && (
                         <div className="absolute top-3 left-3 z-10 bg-accent text-accent-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
                           Lançamento
                         </div>

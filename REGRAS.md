@@ -102,5 +102,23 @@ Aprovada pelo cliente. Não alterar sem autorização explícita.
 **[Camas e Box]** Box Clássico → Box Baú → Box Slim → Floating Bed
 
 ---
+
+## SISTEMA DE LANÇAMENTOS
+
+### Flag isLaunch
+- Campo `isLaunch: true` em products.ts marca produto como lançamento ativo
+- Apenas UM produto deve ter isLaunch: true por vez (o mais recente)
+- Para trocar o lançamento: setar false no anterior, true no novo
+- Produto com isLaunch: true aparece:
+  1. Na seção LaunchSpotlight na Home (destaque total)
+  2. Com badge "🔥 LANÇAMENTO" no card do catálogo
+  3. Com order: 0 em sua categoria (primeiro da lista)
+
+### Componente LaunchSpotlight
+- Arquivo: src/components/LaunchSpotlight.tsx
+- NÃO alterar sem solicitação explícita do cliente
+- Design aprovado em 16/05/2026
+
+---
 Última atualização: 16/05/2026
 Responsável: Denis (Stein Technology)

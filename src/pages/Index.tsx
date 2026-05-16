@@ -3,11 +3,15 @@ import { Helmet } from "react-helmet-async";
 import { SITE_URL } from "@/config/site";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import LaunchSpotlight from "@/components/LaunchSpotlight";
 import AboutSection from "@/components/AboutSection";
 import CatalogSection from "@/components/CatalogSection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { PRODUCTS } from "@/data/products";
+
+const launchProduct = PRODUCTS.find(p => p.isLaunch === true && !p.hidden);
 
 const Index = () => (
   <>
@@ -42,6 +46,7 @@ const Index = () => (
     <Header />
     <main>
       <HeroSection />
+      {launchProduct && <LaunchSpotlight product={launchProduct} />}
       <AboutSection />
       <CatalogSection />
       <ContactForm />

@@ -16,6 +16,7 @@ export type Product = {
   videoId: string | null;
   badge?: "TopOfLine" | "Launch" | "BestSeller" | null;
   hidden?: boolean;
+  isLaunch?: boolean;
   order?: number;
   images?: string[];
   certifications?: string[];
@@ -1086,21 +1087,25 @@ export const PRODUCTS: Product[] = [
   {
     slug: "renova",
     name: "Renova",
-    line: "relax",
-    type: "Espuma com Densidade Progressiva",
-    height: null,
-    technologies: ["Infravermelho Longo", "Magnetos", "Sistema de Densidade Progressiva"],
-    fabric: null,
-    warranty: WARRANTY_RELAX,
+    line: "premium",
+    type: "Espuma com Densidade Progressiva + Perfilado NanoEx",
+    height: "26 cm",
+    technologies: ["Perfilado NanoEx", "Magnetos", "Infravermelho Longo", "Sistema de Densidade Progressiva", "Vibromassagem (opcional)", "Quântica (opcional)"],
+    fabric: "Malha superior | Linho Areia lateral",
+    warranty: WARRANTY_PREMIUM,
     foamType: "Espuma 100% pura de produção própria Eko'7",
     durability: null,
-    description: "Renovação para seu descanso. Estrutura ergonômica com espumas de alta qualidade para suporte ideal da coluna.",
-    officialUrl: "https://eko7.com.br",
+    shortDescription: "Renove seu sono com a mais nova tecnologia Eko'7. Perfilado NanoEx impermeável e antimicrobiano, Magnetos e Infravermelho Longo para uma experiência verdadeiramente terapêutica.",
+    description: "O Colchão Renova representa a evolução do descanso terapêutico Eko'7. Com Perfilado NanoEx — espuma de nanotecnologia com propriedades anti-ácaros, anti-alérgica e antimicrobiana — aliado ao Sistema de Densidade Progressiva, oferece suporte ergonômico preciso para cada região do corpo. Pastilhas de Magnetos e Infravermelho Longo distribuídas em toda a superfície promovem circulação e bem-estar ao longo de toda a noite. Revestimento lateral em Linho Areia e tampo superior em malha respirável.",
+    officialUrl: "https://eko7.com.br/produto/colchao/colchao-renova/",
     videoId: null,
     badge: null,
+    isLaunch: true,
     certifications: CERTS_STANDARD,
+    sizes: SIZES_STANDARD,
     categoryId: "colchoes",
-    hidden: true,
+    hidden: false,
+    order: 0,
     images: [
       "/produtos/renova/renova-1.webp",
       "/produtos/renova/renova-2.webp",
