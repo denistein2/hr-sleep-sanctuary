@@ -1,6 +1,28 @@
 # ⚠️ REGRAS DO PROJETO — HR COLCHÕES
 # Leia ANTES de qualquer alteração. Estas regras são LEI.
 
+## ⛔ LEI MÁXIMA — ANTES DE QUALQUER AÇÃO
+
+ANTES de modificar QUALQUER arquivo, responda:
+1. O Denis pediu EXPLICITAMENTE para alterar este arquivo? NÃO → NÃO TOQUE.
+2. Este arquivo está na lista de PROTEGIDOS? SIM → NÃO TOQUE.
+3. Está em dúvida? SIM → PERGUNTE AO DENIS ANTES DE AGIR.
+
+### ARQUIVOS PROTEGIDOS — NUNCA ALTERAR SEM PEDIDO EXPLÍCITO:
+- src/components/ProductGallery.tsx   ← quebrar = vídeos e imagens somem
+- src/components/YouTubeFacade.tsx    ← quebrar = embed YouTube para
+- src/pages/ProductPage.tsx           ← quebrar = layout produto quebra
+- src/components/ProductCard.tsx      ← quebrar = catálogo quebra
+- public/produtos/**                  ← nunca deletar imagens
+
+### COMPROMETIMENTO ASSUMIDO:
+Toda sessão nova: leia REGRAS.md PRIMEIRO.
+Na dúvida sobre tocar em arquivo → PERGUNTE.
+Uma pergunta custa 10 segundos.
+Refazer o que quebrou custa horas e frustra o cliente.
+
+---
+
 ## FUNCIONALIDADES PROTEGIDAS — NÃO TOCAR
 Os itens abaixo foram testados e aprovados pelo cliente.
 Qualquer alteração nesses componentes DEVE ser explicitamente solicitada.
