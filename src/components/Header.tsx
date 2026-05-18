@@ -42,10 +42,21 @@ const Header = () => {
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    performSearch();
+  };
+
+  const performSearch = () => {
     if (searchQuery.trim()) {
       setShowSuggestions(false);
       navigate(`/produtos?q=${encodeURIComponent(searchQuery.trim())}`);
       setMobileOpen(false);
+    }
+  };
+
+  const handleMobileSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      performSearch();
     }
   };
 
@@ -89,7 +100,7 @@ const Header = () => {
                 <div
                   className="bg-card rounded-xl p-5 grid grid-cols-2 gap-0 animate-fade-in"
                   style={{
-                    minWidth: "520px",
+                    minWidth: "700px",
                     border: "0.5px solid var(--border)",
                     boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
                   }}
@@ -108,7 +119,7 @@ const Header = () => {
                           key={slug}
                           to={href}
                           onClick={() => setDropdownOpen(false)}
-                          className={`flex items-center px-2 py-1.5 rounded-md transition-colors group ${
+                          className={`flex items-center px-3 py-1.5 rounded-md transition-colors group whitespace-nowrap ${
                             location.pathname === href ? "bg-muted" : "hover:bg-muted"
                           }`}
                           style={{ gap: "10px" }}
@@ -143,7 +154,7 @@ const Header = () => {
                           key={slug}
                           to={href}
                           onClick={() => setDropdownOpen(false)}
-                          className={`flex items-center px-2 py-1.5 rounded-md transition-colors group ${
+                          className={`flex items-center px-3 py-1.5 rounded-md transition-colors group whitespace-nowrap ${
                             location.pathname === href ? "bg-muted" : "hover:bg-muted"
                           }`}
                           style={{ gap: "10px" }}
@@ -252,6 +263,7 @@ const Header = () => {
                 placeholder="Buscar..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyDown={handleMobileSearchKeyDown}
                 className="h-10 w-full rounded-md border border-input bg-background px-4 py-2 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent pr-10"
               />
               <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">
