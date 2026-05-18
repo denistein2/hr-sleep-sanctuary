@@ -7,7 +7,7 @@ import { PRODUCTS } from "@/data/products";
 // Imagem de capa de cada categoria (produto principal)
 const CATEGORY_COVER: Record<string, string> = {
   colchoes: "/produtos/diamante/diamante-1.webp",
-  "camas-articuladas": "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-1.webp",
+  "camas-articuladas": "/produtos/flexibed-roma/flexibed-roma-articulada-01.webp",
   "camas-e-box": "/produtos/box-bau/box-bau-01.webp",
   cabeceira: "/produtos/cabeceira-olimpia/cabeceira-olimpia-01.webp",
   poltronas: "/produtos/poltrona/poltrona-01.webp",
