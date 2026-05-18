@@ -9,7 +9,7 @@ import logoImg from "@/assets/img/LOGO HR COLCHAO E EKO'7.png";
 
 const MEGA_COL1 = [
   { slug: "colchoes",          name: "Colchões",          href: "/colchoes",          Icon: BedDouble,         count: 8 },
-  { slug: "camas-articuladas", name: "Camas Articuladas", href: "/camas-articuladas", Icon: SlidersHorizontal, count: 3 },
+  { slug: "camas-articuladas", name: "Linha Flexibed",    href: "/camas-articuladas", Icon: SlidersHorizontal, count: 3 },
   { slug: "camas-e-box",       name: "Camas e Box",       href: "/camas-e-box",       Icon: Package,           count: 7 },
   { slug: "cabeceira",         name: "Cabeceiras",        href: "/cabeceira",         Icon: Layers,            count: 7 },
 ];

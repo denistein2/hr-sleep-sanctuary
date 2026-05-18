@@ -52,3 +52,10 @@ Thumbs.db
 
 src/assets/**/*.mp4
 src/assets/**/*.MP4
+
+# Scripts de conversão/otimização pontuais — não commitar
+convert-*.mjs
+optimize-*.mjs
+rename-*.mjs
+audit-*.js
+generate_sitemap.js
