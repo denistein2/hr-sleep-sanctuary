@@ -50,10 +50,5 @@ Thumbs.db
 # Vercel
 .vercel
 
-# Vídeos locais — usar YouTube em vez disso
-public/produtos/**/*.mp4
-public/produtos/**/*.MP4
-public/*.mp4
-public/*.MP4
 src/assets/**/*.mp4
 src/assets/**/*.MP4

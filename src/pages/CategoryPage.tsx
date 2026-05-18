@@ -58,7 +58,7 @@ const CategoryPage = () => {
         p.type.toLowerCase().includes(query) ||
         p.line.toLowerCase().includes(query)
       );
-      const matchesCategory = !categorySlug || p.categoryId === categorySlug;
+      const matchesCategory = !categorySlug || categorySlug === 'produtos' || p.categoryId === categorySlug;
       return matchesQuery && matchesCategory;
     })
     .sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
