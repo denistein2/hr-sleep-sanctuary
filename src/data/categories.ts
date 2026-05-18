@@ -20,7 +20,7 @@ export const CATEGORY_ORDER = [
 
 export const CATEGORIES: Category[] = [
   { name: "Colchões",             slug: "colchoes",          hasProducts: true },
-  { name: "Camas Articuladas",    slug: "camas-articuladas", hasProducts: true },
+  { name: "Linha Flexibed",       slug: "camas-articuladas", hasProducts: true },
   { name: "Camas e Box",          slug: "camas-e-box",       hasProducts: true },
   { name: "Cabeceiras",           slug: "cabeceira",         hasProducts: true, hidden: true },
   { name: "Poltronas e Cadeiras", slug: "poltronas",         hasProducts: true, hidden: false },

@@ -289,5 +289,27 @@ Campo sugerido: `customSize: "sob-medida" | "molas" | null`
 - `null` → não exibir nada
 
 ---
+
+### TECNOLOGIAS POR LINHA (18/05/2026)
+
+BASE (todos colchões):
+  Magnetos | Infravermelho Longo | Terapia Quântica |
+  Massagem | Sistema de Densidade Progressiva
+
+PREMIUM adiciona: Perfilado NanoEx | Cromoterapia
+RELAX: apenas a base acima
+
+SEVEN = RELAX (corrigido 18/05/2026)
+
+SOB MEDIDA:
+  Mola ensacada (Diamante, Seven) → "Consulte medidas especiais"
+  100% espuma → "Disponível sob medida"
+
+CATEGORIA "Linha Flexibed" = slug "camas-articuladas" (URL não muda)
+
+NÃO EXIBIR: badges de linha, garantia no topo, aviso marcapasso,
+estrutura de camadas, botão de compra. (removidos 18/05/2026)
+
+---
 FIM DO DOCUMENTO DE REGRAS
 ---

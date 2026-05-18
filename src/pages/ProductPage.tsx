@@ -51,6 +51,14 @@ const ProductPage = () => {
   }
 
   const waLink = `https://wa.me/${WA_NUMBER}?text=${buildWhatsAppMessage(productData.name, productData.categoryId)}`;
+  const serieOuroVariants = PRODUCTS.filter((p) => p.slug === "serie-ouro-pillow" || p.slug === "serie-ouro");
+  const showSerieOuroVariants = productData.slug === "serie-ouro-pillow" || productData.slug === "serie-ouro";
+  const customSizeLabel =
+    productData.customSize === "molas"
+      ? "Consulte medidas especiais"
+      : productData.customSize === "sob-medida"
+        ? "Disponível sob medida"
+        : null;
 
   const productSchema = {
     "@context": "https://schema.org/",
@@ -147,6 +155,24 @@ const ProductPage = () => {
                   {productData.name}
                 </h1>
 
+                {showSerieOuroVariants && (
+                  <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-6">
+                    {serieOuroVariants.map((variant) => (
+                      <Link
+                        key={variant.slug}
+                        to={`/${variant.categoryId || "produtos"}/${variant.slug}`}
+                        className={`px-4 py-2 rounded-lg border text-sm font-semibold transition-colors ${
+                          variant.slug === productData.slug
+                            ? "bg-accent text-accent-foreground border-accent"
+                            : "border-border text-foreground hover:border-accent hover:text-accent"
+                        }`}
+                      >
+                        {variant.variant === "com-pillow" ? "Com Pillow" : "Sem Pillow"}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+
                 <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl">
                   {productData.description}
                 </p>
@@ -169,12 +195,12 @@ const ProductPage = () => {
                       Tecnologias Integradas
                     </h2>
                     <div className="flex flex-wrap gap-2 md:gap-3">
-                      {productData.technologies.map((tech) => (
+                      {productData.technologies.map((tech, i) => (
                         <span
-                          key={tech}
+                          key={`${tech}-${i}`}
                           className="text-xs md:text-sm px-3 md:px-4 py-2 rounded-full bg-accent/5 text-accent border border-accent/10 font-medium"
                         >
-                          {tech}
+                          {tech.replace(" (opcional)", "")}
                         </span>
                       ))}
                     </div>
@@ -242,6 +268,12 @@ const ProductPage = () => {
                       <span className="font-medium text-lg">{productData.sizes}</span>
                     </div>
                   )}
+                  {customSizeLabel && (
+                    <div className="flex flex-col border-b border-border/50 pb-3">
+                      <span className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Sob Medida</span>
+                      <span className="font-medium text-lg">{customSizeLabel}</span>
+                    </div>
+                  )}
                   {productData.versions && (
                     <div className="flex flex-col border-b border-border/50 pb-3">
                       <span className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Versões</span>
@@ -262,37 +294,6 @@ const ProductPage = () => {
                   )}
                 </div>
 
-                {productData.structure && productData.structure.length > 0 && (
-                  <div className="mt-10 pt-8 border-t border-border/50">
-                    <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-widest mb-6">
-                      Composição de Camadas (Estrutura)
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {productData.structure.map((layer, i) => (
-                        <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-muted/30 border border-border/30">
-                          <span className="w-8 h-8 rounded-full bg-accent/10 text-accent text-sm flex items-center justify-center font-bold shrink-0">
-                            {i + 1}
-                          </span>
-                          <p className="text-sm pt-1.5">{layer}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {productData.contraindication && (
-                  <div className="mt-8 p-5 rounded-2xl bg-amber-500/5 border border-amber-500/20 flex gap-4">
-                    <div className="w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center shrink-0">
-                      <span className="text-amber-500 font-bold text-xl">!</span>
-                    </div>
-                    <div>
-                      <h4 className="text-amber-500 font-bold text-sm uppercase tracking-wider mb-1">Informação Importante</h4>
-                      <p className="text-sm text-amber-700/80 dark:text-amber-400/80 leading-relaxed">
-                        {productData.contraindication}
-                      </p>
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* 4. Vídeo Institucional ou do Produto */}
