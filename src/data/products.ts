@@ -457,7 +457,7 @@ export const PRODUCTS: Product[] = [
     description: "O Colchão Seven by Eko'7 combina tecnologia, conforto e desempenho em cada detalhe. Desenvolvido em duas versões — Soft e Firm — traz uma experiência única adaptada ao seu estilo de dormir. Mais que um colchão, é uma inovação criada para transformar suas noites de sono com ergonomia e qualidade Eko'7.",
     officialUrl: "https://eko7.com.br/orcamentocolchao/colchao-seven",
     videoId: "_Vz7dGdXozs",
-    badge: "Launch",
+    badge: null,
     isLaunch: false,
     certifications: CERTS_STANDARD,
     sizes: SIZES_STANDARD,

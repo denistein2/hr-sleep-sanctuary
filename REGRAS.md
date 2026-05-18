@@ -1,3 +1,24 @@
+## 🚨 HISTÓRICO DE VIOLAÇÕES (LEIA)
+
+Você já violou as regras múltiplas vezes mexendo em coisas que não foram pedidas.
+Cada violação custa horas para reverter e frustra o cliente.
+
+EXEMPLOS DE VIOLAÇÕES RECENTES:
+- Trocou o vídeo da home sem pedido
+- Alterou a frase inicial do hero sem pedido
+- Trocou imagens do Série Ouro sem pedido
+- Marcou Seven como isLaunch sem pedido
+- Quebrou ProductGallery na "auditoria" sem necessidade
+
+ANTES DE QUALQUER MUDANÇA:
+1. Pergunte: "Isso foi explicitamente pedido?"
+2. Se não → NÃO FAÇA
+3. Em qualquer dúvida → PERGUNTE AO DENIS PRIMEIRO
+
+Não há orçamento para refatoração espontânea. Apenas pedidos explícitos.
+
+---
+
 # ⚠️ REGRAS DO PROJETO — HR COLCHÕES
 # Última atualização: 16/05/2026
 # Responsável: Denis Stein (Stein Technology)
@@ -26,7 +47,7 @@ Uma pergunta custa 10 segundos. Refazer o que quebrou custa horas.
 | src/components/ProductCard.tsx | Cards do catálogo quebram |
 | src/components/LaunchSpotlight.tsx | Componente de lançamento (guardado para uso futuro) |
 | src/components/CatalogSection.tsx | Capas do catálogo quebram |
-| src/components/Header.tsx | Menu de navegação quebra |
+| src/components/Header.tsx | Menu de navegação quebra — APROVADO em 17/05/2026. Mega menu 3 colunas com ícones está correto e aprovado. Qualquer refactor não solicitado = violação da lei. |
 | src/components/Footer.tsx | Rodapé quebra |
 | public/produtos/** | NUNCA deletar imagens WebP |
 
