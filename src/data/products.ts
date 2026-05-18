@@ -64,8 +64,7 @@ export const PRODUCTS: Product[] = [
     hidden: false,
     order: 1,
     images: [
-      "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-1.webp",
-      "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-2.webp"
+      "/produtos/flexibed-gran-jaguar/flexibed-gran-jaguar-articulada-01.webp"
     ]
   },
   {
