@@ -264,5 +264,30 @@ FASE 4 — Campanhas (Julho):
   □ Dashboard de ROI
 
 ---
+
+## 🗑️ INFORMAÇÕES REMOVIDAS A PEDIDO DO CLIENTE (18/05/2026)
+
+REMOVIDO DA UI (dados mantidos em products.ts):
+- Badge "LINHA PREMIUM / RELAX" no topo da página de produto
+- Badge "TOPO DE LINHA" no topo da página de produto
+- Pill "Linha X · X anos de garantia" abaixo do H1
+- Aviso "INFORMAÇÃO IMPORTANTE — Contraindicado marcapasso" dos colchões
+
+NÃO RECOLOCAR esses elementos sem pedido explícito do Denis.
+
+---
+
+## 📐 REGRA SOB MEDIDA
+
+- Colchões com molas ensacadas (ex: Diamante) NÃO podem ser feitos sob medida.
+- Apenas colchões 100% espuma aceitam personalização de medida.
+- Esta informação deve ser exibida na página do produto quando relevante.
+
+Campo sugerido: `customSize: "sob-medida" | "molas" | null`
+- `"sob-medida"` → exibir "Disponível sob medida"
+- `"molas"` → NÃO exibir opção sob medida
+- `null` → não exibir nada
+
+---
 FIM DO DOCUMENTO DE REGRAS
 ---

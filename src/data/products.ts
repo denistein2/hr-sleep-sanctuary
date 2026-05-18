@@ -158,7 +158,6 @@ export const PRODUCTS: Product[] = [
     badge: "TopOfLine",
     certifications: CERTS_STANDARD,
     sizes: SIZES_STANDARD,
-    contraindication: "Contraindicado para portadores de marcapasso (solicite versão sem magnetos)",
     categoryId: "colchoes",
     hidden: false,
     order: 1,

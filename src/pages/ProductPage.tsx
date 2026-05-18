@@ -132,17 +132,9 @@ const ProductPage = () => {
             <div className="space-y-6">
               <div className="text-center md:text-left">
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-4">
-                  <span className="text-sm font-semibold uppercase tracking-wider text-accent">
-                    Linha {productData.line}
-                  </span>
                   {productData.badge === "Launch" && (
                     <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-accent text-accent-foreground">
                       Lançamento
-                    </span>
-                  )}
-                  {productData.badge === "TopOfLine" && (
-                    <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-amber-500 text-white">
-                      Topo de Linha
                     </span>
                   )}
                   {productData.badge === "BestSeller" && (
@@ -154,24 +146,6 @@ const ProductPage = () => {
                 <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
                   {productData.name}
                 </h1>
-
-                {/* Badge de linha Premium / Relax */}
-                {productData.line === "premium" && (
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 mb-6">
-                    <span className="w-2 h-2 rounded-full bg-amber-500" />
-                    <span className="text-sm font-semibold text-amber-600 dark:text-amber-400">
-                      Linha Premium · 5 anos de garantia
-                    </span>
-                  </div>
-                )}
-                {productData.line === "relax" && (
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 mb-6">
-                    <span className="w-2 h-2 rounded-full bg-blue-500" />
-                    <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
-                      Linha Relax · 2 anos de garantia
-                    </span>
-                  </div>
-                )}
 
                 <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl">
                   {productData.description}
